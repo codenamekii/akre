@@ -16,7 +16,7 @@
   <div class="wrapper" >
     <header data-aos="fade-up" data-aos-duration="800">Login</header>
     @if (session()->has('error'))
-      <div class="alert alert-danger" role="alert">
+      <div style="color: red; font-weight: bold;" role="alert" data-aos="fade-up" data-aos-duration="800">
         {{ session()->get('error') }}
       </div>
     @endif

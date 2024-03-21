@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -26,7 +25,7 @@ class LoginController extends Controller
             return redirect()->intended('/dashboard');
         }
 
-        return redirect('/')->with('error', 'Login gagal!');
+        return redirect('/login')->with('error', 'Username/Password Salah!');
     }
 
     public function deauthenticate(Request $request){

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Dokumen;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Str;
@@ -30,5 +31,7 @@ class DatabaseSeeder extends Seeder
             'is_admin' => false,
             'remember_token' => Str::random(10),
         ]);
+
+        Dokumen::factory(10)->create();
     }
 }
