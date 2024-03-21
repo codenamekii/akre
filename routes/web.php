@@ -13,3 +13,5 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', fn () => view('dashboard.index'))->name('dashboard')->middleware('no-cache');
 });
+
+Route::view('/dashboard/dokumen', 'dashboard.dokumen.index');
