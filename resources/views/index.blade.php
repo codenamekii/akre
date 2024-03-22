@@ -75,7 +75,7 @@
             <i class="lni-cog"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/daftar-dokumen">Kondisi Eksternal</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=kondisi-eksternal">Kondisi Eksternal</a></h3>
             <p>Donec tincidunt bibendum gravida. </p>
           </div>
         </div>
@@ -87,7 +87,7 @@
             <i class="lni-stats-up"></i>
           </div>
           <div class="services-content">
-            <h3><a href="#">Profil Institusi</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=profil-institusi">Profil Institusi</a></h3>
             <p>Donec tincidunt bibendum gravida. </p>
           </div>
         </div>
@@ -99,7 +99,7 @@
             <i class="lni-users"></i>
           </div>
           <div class="services-content">
-            <h3><a href="#">Kriteria 1</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=1">Kriteria 1</a></h3>
             <p>Visi, Misi, Tujuan dan Startegi</p>
           </div>
         </div>

@@ -7,8 +7,10 @@
     <a href="{{ route('dokumen.create') }}" class="btn btn-primary">Buat Dokumen</a>
     <table class="table">
       <tr>
-        <th>No</th>
-        <th>Nama File</th>
+        <th>#</th>
+        <th>Nama</th>
+        <th>Kriteria</th>
+        <th>Sub Kriteria</th>
         <th>Tipe</th>
         <th>Aksi</th>
       </tr>
@@ -16,8 +18,11 @@
         <tr>
           <td>{{ $dokumens->firstItem() + $loop->index }}</td>
           <td><a href="{{ route('dokumen.show', $dokumen->id) }}">{{ $dokumen->nama }}</a></td>
+          <td>{{ $dokumen->kriteria }}</td>
+          <td>{{ $dokumen->sub_kriteria }}</td>
           <td>{{ $dokumen->tipe }}</td>
           <td>
+            <a href="{{ route('dokumen.edit', $dokumen->id) }}" class="btn btn-warning">Edit</a>
             <form action="{{ route('dokumen.destroy', $dokumen->id) }}" method="post">
               @csrf
               @method('DELETE')

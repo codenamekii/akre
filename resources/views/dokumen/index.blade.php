@@ -11,155 +11,19 @@
     </div>
     <div class="row">
       <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020</p>
-            </a>
+      @foreach ($dokumens as $dokumen)
+        <div class="col-md-6 col-lg-6 col-xs-12 my-2">
+          <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
+            <span class="icon">
+              <i class="ini lni-files"></i>
+            </span>
+            <div class="text">
+              <h4><a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/'.$dokumen->path) }}" target="_blank">{{ $dokumen->nama }}</a></h4>
+              <p>{{ $dokumen->catatan }}</p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020 Lorem, ipsum dolor.</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020 Lorem ipsum dolor sit amet consectetur.
-                lorem20</p>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Services item -->
-      <!-- Services item -->
-      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-          <span class="icon">
-            <i class="ini lni-files"></i>
-          </span>
-          <div class="text">
-            <a href="">
-              <h4>Dokumen</h4>
-              <p>Pedoman Sistem Penjaminan Mutu - Standar Formulir Mutu 2020</p>
-            </a>
-          </div>
-        </div>
-      </div>
+      @endforeach
       <!-- Services item -->
     </div>
   </div>

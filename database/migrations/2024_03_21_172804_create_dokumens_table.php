@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('kriteria');
-            $table->string('sub_kriteria');
-            $table->text('catatan');
+            $table->string('sub_kriteria')->nullable();
+            $table->text('catatan')->nullable();
             $table->string('tipe');
-            $table->string('file');
+            $table->string('path');
             $table->timestamps();
         });
     }

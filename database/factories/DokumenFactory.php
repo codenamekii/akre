@@ -17,12 +17,12 @@ class DokumenFactory extends Factory
     public function definition(): array
     {
         return [
-            'nama' => $this->faker->word(),
-            'kriteria' => $this->faker->randomElement(['1', '2', '3', '4', '5']),
-            'sub_kriteria' => $this->faker->word(),
-            'catatan' => $this->faker->sentence(),
-            'tipe' => $this->faker->randomElement(['pdf', 'url', 'image']),
-            'file' => $this->faker->word(),
+            'nama' => $this->faker->realText(20),
+            'kriteria' => $this->faker->numberBetween(1, 5),
+            'sub_kriteria' => $this->faker->realText(30),
+            'catatan' => $this->faker->realText(100),
+            'tipe' => $this->faker->randomElement(['PDF', 'URL', 'Image']),
+            'path' => $this->faker->imageUrl()
         ];
     }
 }
