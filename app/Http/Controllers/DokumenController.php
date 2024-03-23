@@ -11,23 +11,59 @@ class DokumenController extends Controller
     public function getDokumen(Request $request)
     {
         $kriteria = $request->query('kriteria');
-        if(!in_array($kriteria, [1, 2, 3, 4, 5, 6, 7, 8, 9]))
+        if(!in_array($kriteria, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
             return abort(404);
+
+        $h2s = [
+            1 => 'Kriteria 1',
+            2 => 'Kriteria 2',
+            3 => 'Kriteria 3',
+            4 => 'Kriteria 4',
+            5 => 'Kriteria 5',
+            6 => 'Kriteria 6',
+            7 => 'Kriteria 7',
+            8 => 'Kriteria 8',
+            9 => 'Kriteria 9',
+            10 => 'Kondisi Eksternal',
+            11 => 'Profil Institusi',
+            12 => 'Analisis & Penetapan Program Pengembangan',
+        ];
+        $h2 = $h2s[$kriteria];
 
         return view('dokumen.index', [
             'title' => 'Daftar Dokumen',
+            'h2' => $h2,
             'dokumens' => Dokumen::where('kriteria', $kriteria)->get()
         ]);
     }
+
+    public function searchDokumen(Request $request)
+    {
+        $term = $request->input('result');
+        $kriteria = $request->input('kriteria');
+        $tipe = $request->input('tipe');
+    
+        $dokumens = (new Dokumen)->search($term, $kriteria, $tipe);
+    
+        return view('dokumen.result', [
+            'title' => 'Hasil Pencarian',
+            'dokumens' => $dokumens,
+        ]);
+    }
+    
     
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $term = $request->input('result');
+        $kriteria = $request->input('kriteria');
+        $tipe = $request->input('tipe');
+    
         return view('admin.dokumen.index', [
             'title' => 'Admin Daftar Dokumen',
-            'dokumens' => Dokumen::latest()->paginate(4),
+            'dokumens' => (new Dokumen)->search($term, $kriteria, $tipe),
         ]);
     }
 
@@ -48,7 +84,7 @@ class DokumenController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255',
-            'kriteria' => 'required|numeric|between:1,9',
+            'kriteria' => 'required|numeric|between:1,12',
             'sub_kriteria' => 'max:255',
             'catatan' => 'max:255',
             'file' => 'required_without_all:url|mimes:pdf,png,jpg,jpeg|max:2048',
@@ -75,8 +111,6 @@ class DokumenController extends Controller
             'kriteria' => $request->kriteria,
             'sub_kriteria' => $request->sub_kriteria,
             'catatan' => $request->catatan,
-            // 'path' => $request->file('file') ? $request->file('file')->store('dokumen') : null,
-            // 'url' => $request->url
         ];
 
         $mimeType = $request->file('file') ? $request->file('file')->getMimeType() : $prepareData['tipe'] = 'URL';
@@ -126,7 +160,7 @@ class DokumenController extends Controller
     {
         $request->validate([
             'nama' => 'required|max:255',
-            'kriteria' => 'required|numeric|between:1,9',
+            'kriteria' => 'required|numeric|between:1,12',
             'sub_kriteria' => 'max:255',
             'catatan' => 'max:255',
             'file' => 'nullable|mimes:pdf,png,jpg,jpeg|max:2048|prohibits:url',
@@ -153,8 +187,6 @@ class DokumenController extends Controller
             'kriteria' => $request->kriteria,
             'sub_kriteria' => $request->sub_kriteria,
             'catatan' => $request->catatan,
-            // 'path' => $request->file('file') ? $request->file('file')->store('dokumen') : null,
-            // 'url' => $request->url
         ];
 
         if($dokuman->tipe != 'URL' && $request->url) {
@@ -162,14 +194,12 @@ class DokumenController extends Controller
         }
 
         if($request->hasFile('file')) {
+            Storage::delete($dokuman->path);
             $prepareData['path'] = $request->file('file')->store('dokumen');
             $prepareData['tipe'] = str_contains($request->file('file')->getMimeType(), 'pdf') ? 'PDF' : 'Image';
         } else if($request->url) {
             $prepareData['path'] = $request->url;
             $prepareData['tipe'] = 'URL';
-        } else {
-            $prepareData['path'] = $dokuman->path;
-            $prepareData['tipe'] = $dokuman->tipe;
         }
 
         $dokuman->update($prepareData);

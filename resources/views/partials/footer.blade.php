@@ -13,3 +13,14 @@
   </div>   
 </footer> 
 <!-- Footer Section End -->
+
+<!-- Go to Top Link -->
+<a href="#" class="back-to-top">
+  <i class="bi bi-caret-up-fill"></i>
+</a>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader" id="loader-1"></div>
+</div>
+<!-- End Preloader -->

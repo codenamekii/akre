@@ -21,26 +21,25 @@
     <!-- Animate -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
 
-    <!-- Main Style -->
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <!-- Visual Style -->
+    <link rel="stylesheet" href="{{ asset('css/visual.css') }}">
 
     <!-- Responsive Style -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    
+
 </head>
 <body>
-  
-  @include('partials.header')
+  @include('partials.header-visual')
 
   @yield('content')
 
   @include('partials.footer')
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="{{ asset('js/jquery-min.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="{{ asset('js/popper.min.js') }}"></script>
   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
@@ -51,5 +50,6 @@
   <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>      
   <script src="{{ asset('js/waypoints.min.js') }}"></script>   
   <script src="{{ asset('js/main.js') }}"></script>
+  <script src="{{ asset('js/visual.js') }}"></script>
 </body>
 </html>
