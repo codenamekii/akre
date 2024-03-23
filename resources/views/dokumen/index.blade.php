@@ -12,18 +12,21 @@
     <div class="row">
       <!-- Services item -->
       @foreach ($dokumens as $dokumen)
-        <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-          <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
+<div class="col-md-6 col-lg-6 col-xs-12 my-2">
+    <a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/'.$dokumen->path) }}" class="box-link">
+        <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
             <span class="icon">
-              <i class="ini lni-files"></i>
+                <i class="bi bi-cloud-download-fill"></i>
             </span>
             <div class="text">
-              <h4><a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/'.$dokumen->path) }}" target="_blank">{{ $dokumen->nama }}</a></h4>
-              <p>{{ $dokumen->catatan }}</p>
+                <h4>{{ $dokumen->nama }}</h4>
+                <p>{{ $dokumen->catatan }}</p>
             </div>
-          </div>
         </div>
-      @endforeach
+    </a>
+</div>
+@endforeach
+
       <!-- Services item -->
     </div>
   </div>

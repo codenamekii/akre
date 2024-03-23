@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <!-- Responsive Style -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
 
 </head>
 <body>
@@ -35,7 +38,7 @@
 
   <!-- Go to Top Link -->
   <a href="#" class="back-to-top">
-    <i class="lni-arrow-up"></i>
+    <i class="bi bi-caret-up-fill"></i>
   </a>
   
   <!-- Preloader -->

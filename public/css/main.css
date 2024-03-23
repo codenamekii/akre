@@ -433,19 +433,7 @@ hr {
 .content-right span {
   float: left;
 }
-#features .box-item {
-  box-shadow: 0 0 12px #F4F4F4;
-  padding: 15px;
-  line-height: 22px;
-  margin-top: 30px;
-  border-radius: 3px;
-  background-color: #fff;
-  -webkit-transition: all .3s ease-in-out;
-  -mox-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  position: relative;
-  top: 0;
-}
+#features .box-item,
 .box-item {
   box-shadow: 0 0 12px #F4F4F4;
   padding: 15px;
@@ -453,107 +441,62 @@ hr {
   margin-top: 30px;
   border-radius: 3px;
   background-color: #fff;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   position: relative;
   top: 0;
-  display:flex;
-  height: 100%; /* Tambahkan properti ini */
-  overflow: hidden; /* Tambahkan properti ini */
+  display: flex;
+  height: 100%;
+  overflow: hidden;
 }
 
+#features .box-item .icon,
 .box-item .icon {
   text-align: center;
   margin: 12px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
+#features .box-item .icon i,
 .box-item .icon i {
   color: #098107;
   font-size: 30px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
+#features .box-item .text h4,
 .box-item .text h4 {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
+#features .box-item .text p,
 .box-item .text p {
   font-size: 14px;
+  color:black;
   line-height: 26px;
 }
 
+#features .box-item .text a,
 .box-item .text a {
   color: black;
 }
 
-#features .box-item .icon {
-  text-align: center;
-  margin: 12px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-
-#features .box-item .icon i {
-  color: #098107;
-  font-size: 30px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-
-#features .box-item .text h4 {
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 22px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-#features .box-item .text p {
-  font-size: 14px;
-  line-height: 26px;
-}
-
-#features .box-item:hover {
-  box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
-}
+#features .box-item:hover,
 .box-item:hover {
   box-shadow: 0 10px 22px 10px rgba(27, 38, 49, 0.1);
+  background-color: #098107; /* Warna latar belakang saat hover */
 }
 
-#features .box-item:hover h4 {
-  color: #098107;
-}
-.box-item:hover h4 {
-  color: #098107;
-}
-
-#features .show-box {
-  margin-top: 50px;
-}
-
-#features .show-box img {
-  width: 100%;
+#features .box-item:hover .icon i,
+#features .box-item:hover .text h4,
+#features .box-item:hover .text p,
+.box-item:hover .icon i,
+.box-item:hover .text h4,
+.box-item:hover .text p {
+  color: #ffffff; /* Warna teks dan ikon saat hover */
 }
 
 /* Services Item */
