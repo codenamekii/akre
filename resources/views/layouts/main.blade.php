@@ -8,8 +8,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+
     <!-- Icon -->
     <link rel="stylesheet" href="{{ asset('fonts/line-icons.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Owl carousel -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
@@ -23,16 +26,14 @@
 
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom-toast.css') }}">
 
     <!-- Responsive Style -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    
 </head>
 <body>
-  
+  <ul class="notifications" style="z-index: 999"></ul>
   @include('partials.header')
 
   @yield('content')
@@ -51,5 +52,6 @@
   <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>      
   <script src="{{ asset('js/waypoints.min.js') }}"></script>   
   <script src="{{ asset('js/main.js') }}"></script>
+  <script src="{{ asset('js/custom-toast.js') }}"></script>
 </body>
 </html>

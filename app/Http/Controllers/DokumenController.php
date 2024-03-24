@@ -11,8 +11,12 @@ class DokumenController extends Controller
     public function getDokumen(Request $request)
     {
         $kriteria = $request->query('kriteria');
-        if(!in_array($kriteria, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]))
-            return abort(404);
+        if(!in_array($kriteria, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])){
+            // return redirect('/')->with('error', 'Kriteria tidak ditemukan');
+            // return abort(404);
+        }
+        $term = $request->input('result');
+        $tipe = $request->input('tipe');
 
         $h2s = [
             1 => 'Kriteria 1',
@@ -33,7 +37,9 @@ class DokumenController extends Controller
         return view('dokumen.index', [
             'title' => 'Daftar Dokumen',
             'h2' => $h2,
-            'dokumens' => Dokumen::where('kriteria', $kriteria)->get()
+            'dokumens' => (new Dokumen)->search($term, $kriteria, $tipe),
+            // 'dokumens' => Dokumen::where('kriteria', $kriteria)->get()
+            'dokumenCount' => Dokumen::where('kriteria', $kriteria)->count(),
         ]);
     }
 

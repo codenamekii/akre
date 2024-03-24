@@ -18,7 +18,7 @@ class DokumenFactory extends Factory
     {
         return [
             'nama' => $this->faker->realText(20),
-            'kriteria' => $this->faker->numberBetween(1, 5),
+            'kriteria' => $this->faker->numberBetween(1, 12),
             'sub_kriteria' => $this->faker->realText(30),
             'catatan' => $this->faker->realText(100),
             'tipe' => $this->faker->randomElement(['PDF', 'URL', 'Image']),

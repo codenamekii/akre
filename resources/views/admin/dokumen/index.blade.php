@@ -5,27 +5,26 @@
 <section class="section-padding" style="margin-top: 12vh ;">
   <div class="container">
     <a href="{{ route('dokumen.create') }}" class="btn btn-primary">Buat Dokumen</a>
-    <form class="d-inline" action="/admin/dokumen" method="get">
+    <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/admin/dokumen" method="get">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
-        <select name="kriteria" id="" style="width: 70px;">
+        <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 80px;">
           <option value="" selected>Kriteria</option>
           @for ($i = 1; $i <= 9; $i++)
-            <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
+          <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
           @endfor
           <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Kondisi Eksternal</option>
           <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
           <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
         </select>
-        <select name="tipe" id="" style="width: 70px;">
+        <select class="form-select p2 bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
           <option value="" selected>Tipe</option>
           <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
           <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
           <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
         </select>
+        <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
         <div class="input-group-append">
-          <button class="btn btn-common" id="button-addon2"><i class="bi bi-search"></i> Cari</button>
-          <a class="btn btn-danger" href="/admin/dokumen"><i class="bi bi-arrow-clockwise"></i> Reset</a>
+          <button class="btn btn-success shadow" id="button-addon2"><i class="bi bi-search"></i></button>
         </div>
       </div>
     </form>
@@ -57,7 +56,7 @@
       @endforeach
     </table>
 
-    {{ $dokumens->links() }}
+    {{ $dokumens->onEachSide(1)->links() }}
   </div>
 </section>
 

@@ -5,7 +5,7 @@
   <div class="container">
     <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/dokumen-hasil" method="get">
       <div class="input-group mb-3">
-        <select class="form-select p-1 bg-success text-light " name="kriteria" id="" style="width: 80px;">
+        <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 80px;">
           <option value="" selected>Kriteria</option>
           @for ($i = 1; $i <= 9; $i++)
           <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
@@ -14,7 +14,7 @@
           <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
           <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
         </select>
-        <select class="form-select p2  bg-success text-light " name="tipe" id="" style="width: 60px;">
+        <select class="form-select p2  bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
           <option value="" selected>Tipe</option>
           <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
           <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
@@ -56,7 +56,7 @@
         </div>
       @endforeach
     </div>
-    {{ $dokumens->links() }}
+    {{ $dokumens->onEachSide(1)->links() }}
     <div class="row mt-5">
       <div class="col-12">
         <a href="/"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>

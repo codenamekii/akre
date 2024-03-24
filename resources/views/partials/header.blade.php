@@ -4,7 +4,7 @@
   <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <a href="https://uinsu.ac.id" class="navbar-brand"><img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin-dan-blu-png-2.png" alt=""></a>       
+      <a href="/" class="navbar-brand"><img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin-dan-blu-png-2.png" alt=""></a>       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <i class="lni-menu"></i>
       </button>
@@ -15,9 +15,15 @@
               Beranda
             </a>
           </li>
-          @if (Request::is('daftar-dokumen*'))
+          @if (Request::is('dokumen-daftar*'))
             <li class="nav-item active">
               <a class="nav-link" href="#">
+                Laporan
+              </a>
+            </li>
+          @else
+            <li class="nav-item {{ Request::is('dokumen-hasil*') ? 'active' : '' }}">
+              <a class="nav-link" href="/dokumen-hasil">
                 Laporan
               </a>
             </li>

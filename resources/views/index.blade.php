@@ -12,7 +12,7 @@
           <div class="header-button wow fadeInRight" ata-wow-delay="0.5s">
             <form class="d-inline" action="/dokumen-hasil" method="get">
               <div class="input-group mb-3">
-                <select class="form-select p-1 bg-success text-light " name="kriteria" id="" style="width: 80px;">
+                <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 80px;">
                   <option value="" selected>Kriteria</option>
                   @for ($i = 1; $i <= 9; $i++)
                   <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
@@ -21,7 +21,7 @@
                   <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
                   <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
                 </select>
-                <select class="form-select p2  bg-success text-light " name="tipe" id="" style="width: 60px;">
+                <select class="form-select p2 bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
                   <option value="" selected>Tipe</option>
                   <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
                   <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
@@ -340,4 +340,21 @@
   </div>
 </section>
 <!-- Features Section End -->   
+
+@if (session()->has('success'))
+<script>
+  // Call the createToast function after the document has finished loading
+  document.addEventListener("DOMContentLoaded", function() {
+      createToast("success", "{{ session('success') }}");
+  });
+</script>
+@elseif (session()->has('error'))
+<script>
+  // Call the createToast function after the document has finished loading
+  document.addEventListener("DOMContentLoaded", function() {
+      createToast("error", "{{ session('error') }}");
+  });
+</script>
+@endif
+
 @endsection

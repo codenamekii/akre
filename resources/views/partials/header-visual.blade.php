@@ -4,7 +4,7 @@
   <nav>
     <div class="navbar">
       <i class='bx bx-menu'></i>
-      <div class="logo"><a href="#"><img width="130vh" src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin-dan-blu-png-2.png"  alt=""></a></div>
+      <div class="logo"><a href="/"><img width="130vh" src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin-dan-blu-png-2.png"  alt=""></a></div>
       <div class="nav-links">
         <div class="sidebar-logo">
           <span class="logo-name">CodingLab</span>

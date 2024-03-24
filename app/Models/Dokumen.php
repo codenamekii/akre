@@ -29,9 +29,10 @@ class Dokumen extends Model
     
         $query->orderBy('created_at', 'desc');
     
-        $results = $query->paginate(6);
+        $results = $query->paginate(6)->withQueryString();
 
-        $results->appends(['result' => $term, 'kriteria' => $kriteria, 'tipe' => $tipe]);
+        // $results->appends(['result' => $term, 'kriteria' => $kriteria, 'tipe' => $tipe]);
+        // $results->appends(request()->input());
 
         return $results;
     }

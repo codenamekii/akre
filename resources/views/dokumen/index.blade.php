@@ -7,11 +7,25 @@
     <div class="section-header">
       <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">{{ strtoupper($h2) }}</h2>
       <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-      <span class="text-secondary wow fadeInDown" data-wow-delay="0.3s">{{ count($dokumens) }} Dokumen</span>
+      <span class="text-secondary wow fadeInDown" data-wow-delay="0.3s">{{ $dokumenCount }} Dokumen</span>
     </div>
-    <div class="row">
+    <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/dokumen-daftar" method="get">
+      <div class="input-group mb-3">
+        <input type="hidden" name="kriteria" value="{{ request()->input('kriteria') }}">
+        <select class="form-select p-1 bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
+          <option value="" selected>Tipe</option>
+          <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
+          <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
+          <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
+        </select>
+        <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
+        <div class="input-group-append">
+          <button class="btn btn-success shadow" id="button-addon2"><i class="bi bi-search"></i></button>
+        </div>
+      </div>
+    </form>
+    <div class="row mb-5">
       <!-- Services item -->
-      
       @foreach ($dokumens as $dokumen)
       <div class="col-md-6 col-lg-6 col-xs-12 my-2">
         <a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/'.$dokumen->path) }}" class="box-link" target="_blank">
@@ -42,6 +56,7 @@
       @endforeach
       <!-- Services Section End -->
     </div>
+    {{ $dokumens->onEachSide(1)->links() }}
     <div class="row mt-5">
       <div class="col-12">
         <a href="/"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
