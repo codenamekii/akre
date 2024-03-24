@@ -265,7 +265,7 @@
 <section id="features" class="section-padding">
   <div class="container">
     <div class="section-header text-center">          
-      <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Visi % Misi</h2>
+      <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Visi & Misi</h2>
       <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
     </div>
     <div class="row">
