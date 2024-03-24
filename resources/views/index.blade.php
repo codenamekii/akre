@@ -12,7 +12,7 @@
           <div class="header-button wow fadeInRight" ata-wow-delay="0.5s">
             <form class="d-inline" action="/daftar-dokumen" method="get">
               <div class="input-group mb-3">
-                <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 80px;">
+                <select class="form-select p-1 bg-success text-light " name="kriteria" id="" style="width: 80px;">
                   <option value="" selected>Kriteria</option>
                   @for ($i = 1; $i <= 9; $i++)
                   <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
@@ -21,7 +21,7 @@
                   <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
                   <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
                 </select>
-                <select class="form-select p2 bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
+                <select class="form-select p2 bg-success text-light " name="tipe" id="" style="width: 60px;">
                   <option value="" selected>Tipe</option>
                   <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
                   <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
@@ -89,7 +89,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
           <div class="icon">
-            <i class="lni-cog"></i>
+            <i class="bi bi-globe2"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=10">Kondisi Eksternal</a></h3>
@@ -101,7 +101,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
           <div class="icon">
-            <i class="lni-stats-up"></i>
+            <i class="bi bi-building-fill-gear"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=11">Profil Institusi</a></h3>
@@ -113,7 +113,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
           <div class="icon">
-            <i class="lni-users"></i>
+            <i class="bi bi-flag"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=1">Kriteria 1</a></h3>
@@ -125,7 +125,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
           <div class="icon">
-            <i class="lni-layers"></i>
+            <i class="bi bi-people"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=2">Kriteria 2</a></h3>
@@ -137,7 +137,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
           <div class="icon">
-            <i class="lni-mobile"></i>
+            <i class="bi bi-mortarboard"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=3">Kriteria 3</a></h3>
@@ -149,7 +149,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
           <div class="icon">
-            <i class="lni-rocket"></i>
+            <i class="bi bi-person-standing"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=4">Kriteria 4</a></h3>
@@ -161,7 +161,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
           <div class="icon">
-            <i class="lni-layers"></i>
+            <i class="bi bi-gear-wide-connected"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=5">Kriteria 5</a></h3>
@@ -173,7 +173,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
           <div class="icon">
-            <i class="lni-mobile"></i>
+            <i class="bi bi-book-half"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=6">Kriteria 6</a></h3>
@@ -185,7 +185,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
           <div class="icon">
-            <i class="lni-rocket"></i>
+            <i class="bi bi-journal"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=7">Kriteria 7</a></h3>
@@ -197,7 +197,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
           <div class="icon">
-            <i class="lni-layers"></i>
+            <i class="bi bi-heart-pulse-fill"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=8">Kriteria 8</a></h3>
@@ -209,7 +209,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
           <div class="icon">
-            <i class="lni-mobile"></i>
+            <i class="bi bi-trophy"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=9">Kriteria 9</a></h3>
@@ -221,7 +221,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12">
         <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
           <div class="icon">
-            <i class="lni-rocket"></i>
+            <i class="bi bi-graph-up-arrow"></i>
           </div>
           <div class="services-content">
             <h3><a href="/daftar-dokumen?kriteria=12">Analisi & Penetapan Program Pengembangan</a></h3>
@@ -246,14 +246,14 @@
             </div>
             <div class="content">
               <p>
-                Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio quis metus. Donec vulputate arcu quam. Morbi quis tincidunt ligula. Sed rutrum tincidunt pretium. Mauris auctor, purus a pulvinar fermentum, odio dui vehicula lorem, nec pharetra justo risus quis mi. Ut ac ex sagittis, viverra nisl vel, rhoncus odio. 
+                UIN Sumatera Utara Medan, yang sering dikenal dengan singkatan UINSU, adalah sebuah lembaga pendidikan tinggi Islam yang berlokasi di Medan, Sumatera Utara. Keberadaan UINSU adalah suatu kebanggaan bagi kami semua, dan hal ini tercermin dalam berbagai aspek kehidupan kampus ini.UIN Sumatera Utara Medan memiliki 8 Fakultas dan 1 Program Pascasarjana. UINSU adalah kampus islam yang memiliki moto “Smart Islamic University”
               </p>
               <a href="https://uinsu.ac.id" class="btn btn-success mt-3">Kunjungi <i class="bi bi-chevron-double-right"></i></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
+      <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight " data-wow-delay="0.3s">
         <img class="img-fluid" src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin-dan-blu-png-2.png" alt="" >
       </div>
     </div>
@@ -265,7 +265,7 @@
 <section id="features" class="section-padding">
   <div class="container">
     <div class="section-header text-center">          
-      <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Awesome Features</h2>
+      <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Visi & Misi</h2>
       <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
     </div>
     <div class="row">
@@ -276,8 +276,8 @@
               <i class="lni-rocket"></i>
             </span>
             <div class="text">
-              <h4>Bootstrap 4 Based</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h4>Integrasi Ilmu (Wahdatul 'Ulum)</h4>
+              <p>Menciptakan ulul albab, cendekiawan yang ulama, dan kader bangsa yang menerapkan ilmunya untuk kemajuan Indonesia dan umat manusia.</p>
             </div>
           </div>
           <div class="box-item wow fadeInLeft" data-wow-delay="0.6s">
@@ -285,8 +285,8 @@
               <i class="lni-laptop-phone"></i>
             </span>
             <div class="text">
-              <h4>Fully Responsive</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h4>Pembangunan Peradaban</h4>
+              <p>Menetapkan pusat keunggulan institusional dan fakultatif, sebagai kelanjutan dari Sumatera Utara sebagai 'titik nol' peradaban di Asia Tenggara.</p>
             </div>
           </div>
           <div class="box-item wow fadeInLeft" data-wow-delay="0.9s">
@@ -294,14 +294,14 @@
               <i class="lni-cog"></i>
             </span>
             <div class="text">
-              <h4>HTML5, CSS3 & SASS</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <h4>Moderasi Beragama</h4>
+              <p>Menjadikan moderasi beragama sebagai sikap dasar bagi seluruh Sivitas Akademika, sehingga ilmu pengetahuan Islam membawa kebaikan bagi semua.</p>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-        <div class="show-box wow fadeInUp" data-wow-delay="0.3s">
+        <div class="show-box wow fadeInUp d-flex justify-content-center" data-wow-delay="0.3s">
           <img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/03/bu-rektor-baru-Copy.png" width="350px" alt="">
         </div>
       </div>
@@ -312,8 +312,8 @@
               <i class="lni-leaf"></i>
             </span>
             <div class="text">
-              <h4>Modern Design</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <h4>Peningkatan Kesejahteraan</h4>
+              <p>Meningkatkan kesejahteraan seluruh Dosen dan karyawan Universitas melalui peningkatan grade remunerasi, pemberdayaan Badan Layanan Umum</p>
             </div>
           </div>
           <div class="box-item wow fadeInRight" data-wow-delay="0.6s">
@@ -321,8 +321,8 @@
               <i class="lni-layers"></i>
             </span>
             <div class="text">
-              <h4>Multi-purpose Template</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h4>Peningkatan Sarana</h4>
+              <p>Terus-menerus meningkatkan kelengkapan sarana dan prasarana pembelajaran, berorientasi digital, riset yang bermanfaat bagi pembangunan</p>
             </div>
           </div>
           <div class="box-item wow fadeInRight" data-wow-delay="0.9s">
@@ -330,8 +330,8 @@
               <i class="lni-leaf"></i>
             </span>
             <div class="text">
-              <h4>Working Contact Form</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h4>Pengembangan Ilmu</h4>
+              <p> maksimalisasi peran Indonesia dalam pembangunan peradaban sebagai kelanjutan logis dari Sumatera Utara sebagai ‘titik nol’ peradaban</p>
             </div>
           </div>
         </div>

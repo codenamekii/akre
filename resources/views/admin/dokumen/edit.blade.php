@@ -3,7 +3,7 @@
 @section('content')
 <section class="section-padding" style="margin-top: 9vh ;">
   <div class="section-header text-center">
-    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Dokumen Baru</h2>
+    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Edit Dokumen</h2>
     <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
   </div>
   <div class="container border rounded shadow" style="width:70%;">

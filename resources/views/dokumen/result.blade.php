@@ -68,11 +68,7 @@
       <!-- End Services item -->
     </div>
     {{ $dokumens->onEachSide(1)->links() }}
-    <div class="row mt-5">
-      <div class="col-12">
-        <a href="/"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
-      </div>
-    </div>
+
   </div>
   
 </section>
