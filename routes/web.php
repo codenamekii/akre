@@ -15,8 +15,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/', [LandingController::class, 'index'])->name('dashboard')->middleware('no-cache');
 
-    Route::get('/dokumen-daftar', [DokumenController::class, 'getDokumen']);
-    Route::get('/dokumen-hasil', [DokumenController::class, 'searchDokumen']);
+    Route::get('/daftar-dokumen', [DokumenController::class, 'getDokumen']);
 
     Route::get('/visualisasi', fn()=> view('visualisasi.index'));
 });

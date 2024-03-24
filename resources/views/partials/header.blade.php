@@ -15,19 +15,11 @@
               Beranda
             </a>
           </li>
-          @if (Request::is('dokumen-daftar*'))
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
+            <li class="nav-item {{ Request::is('daftar-dokumen*') ? 'active' : '' }}">
+              <a class="nav-link" href="/daftar-dokumen">
                 Laporan
               </a>
             </li>
-          @else
-            <li class="nav-item {{ Request::is('dokumen-hasil*') ? 'active' : '' }}">
-              <a class="nav-link" href="/dokumen-hasil">
-                Laporan
-              </a>
-            </li>
-          @endif
           <li class="nav-item">
             <a class="nav-link" href="/visualisasi">
               Visualisasi Data

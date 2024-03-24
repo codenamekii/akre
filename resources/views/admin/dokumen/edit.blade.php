@@ -1,78 +1,107 @@
 @extends('layouts.main')
 
 @section('content')
-<section class="section-padding" style="margin-top: 12vh ;">
-  <div class="container">
-    <form action="/admin/dokumen/{{ $dokumen->id }}" method="POST" enctype="multipart/form-data">
-      @method('PUT')
-      @csrf
-      <label for="nama">Nama</label>
-      <input type="text" name="nama" id="nama" value="{{ $dokumen->nama }}" required>
-      @if ($errors->has('nama'))
-        <p class="error">{{ $errors->first('nama') }}</p>
-      @endif
-      <label for="kriteria">Kriteria</label>
-      <select name="kriteria" id="kriteria" required>
-        @for ($i = 1; $i <= 9; $i++)
-          <option value="{{ $i }}" {{ $dokumen->kriteria == $i ? 'selected' : '' }}>{{ $i }}</option>
-        @endfor
-      </select>
-      @if ($errors->has('kriteria'))
-        <p class="error">{{ $errors->first('kriteria') }}</p>
-      @endif
-      <label for="sub_kriteria">Sub Kriteria</label>
-      <input type="text" name="sub_kriteria" id="sub_kriteria" value="{{ $dokumen->sub_kriteria }}">
-      @if ($errors->has('sub_kriteria'))
-        <p class="error">{{ $errors->first('sub_kriteria') }}</p>
-      @endif
-      <label for="catatan">Catatan</label>
-      <input type="text" name="catatan" id="catatan" value="{{ $dokumen->catatan }}">
-      @if ($errors->has('catatan'))
-        <p class="error">{{ $errors->first('catatan') }}</p>
-      @endif
-      <label for="tipe_dokumen">Tipe Dokumen</label>
-      <select name="tipe_dokumen" id="tipe_dokumen">
-        <option value="file" {{ $dokumen->tipe != 'URL' ? 'selected' : '' }}>File</option>
-        <option value="url" {{ $dokumen->tipe == 'URL' ? 'selected' : '' }}>URL</option>
-      </select>
-      <div id="file-container">
-        <label for="file">File</label>
-        <input type="file" name="file" id="file" {{ $dokumen->tipe == 'URL' ? 'disabled' : '' }}>
-      </div>
-      @if ($dokumen->tipe != 'URL')
-        <a href="{{ url('storage/'.$dokumen->path) }}" target="_blank">{{ basename($dokumen->path) }}</a>
-      @endif
-      @if ($errors->has('file'))
-        <p class="error">{{ $errors->first('file') }}</p>
-      @endif
-      <div id="url-container">
-        <label for="url">URL</label>
-        <input type="text" name="url" id="url" value="{{ $dokumen->tipe == 'URL' ? $dokumen->path : '' }}" {{ $dokumen->tipe != 'URL' ? 'disabled' : '' }}>
-      </div>
-      @if ($dokumen->tipe == 'URL')
-        <a href="{{ $dokumen->path }}" target="_blank">{{ $dokumen->nama }}</a>
-      @endif
-      @if ($errors->has('url'))
-        <p class="error">{{ $errors->first('url') }}</p>
-      @endif
-      <script>
-        document.getElementById('tipe_dokumen').addEventListener('change', function() {
-          const value = this.value;
-          const fileInput = document.getElementById('file');
-          const urlInput = document.getElementById('url');
-          
-          if (value == 'file') {
-            fileInput.disabled = false;
-            urlInput.disabled = true;
-          } else {
-            fileInput.disabled = true;
-            urlInput.disabled = false;
-          }
-        });
-      </script>
-      </script>
-      <button type="submit">Submit</button>
-    </form>
+<section class="section-padding" style="margin-top: 9vh ;">
+  <div class="section-header text-center">
+    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Dokumen Baru</h2>
+    <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
   </div>
+  <div class="container border rounded shadow" style="width:70%;">
+    
+    <form action="/admin/dokumen/{{ $dokumen->id }}" method="POST" enctype="multipart/form-data">
+      <div class="row justify-content-between align-items-center p-3">
+        @method('PUT')
+        @csrf
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+            <label for="nama" class=" text-dark">Nama</label>
+            <input  class="form-control @error('nama') is-invalid @enderror" type="text" name="nama" id="nama" value="{{ old('nama', $dokumen->nama) }}" required>
+            @if ($errors->has('nama'))
+              <p class="error text-danger">{{ $errors->first('nama') }}</p>
+            @endif
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+            <label for="kriteria"  class=" text-dark" >Kriteria</label> <br>
+            <select class="form-control @error('kriteria') is-invalid @enderror" name="kriteria" id="kriteria" required>
+              @for ($i = 1; $i <= 9; $i++)
+                <option value="{{ $i }}" {{ old('kriteria', $dokumen->kriteria) == $i ? 'selected' : '' }}>{{ 'Kriteria '. $i }}</option>
+              @endfor
+              <option value="10" {{ old('kriteria', $dokumen->kriteria) == 10 ? 'selected' : '' }}>Kondisi Eksternal</option>
+              <option value="11" {{ old('kriteria', $dokumen->kriteria) == 11 ? 'selected' : '' }}>Profil Institusi</option>
+              <option value="12" {{ old('kriteria', $dokumen->kriteria) == 12 ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
+            </select>
+            @if ($errors->has('kriteria'))
+              <p class="error text-danger">{{ $errors->first('kriteria') }}</p>
+            @endif
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+            <label for="sub_kriteria" class=" text-dark">Sub Kriteria</label>
+            <input class="form-control @error('sub_kriteria') is-invalid @enderror" type="text" name="sub_kriteria" id="sub_kriteria" value="{{ old('sub_kriteria', $dokumen->sub_kriteria) }}">
+            @if ($errors->has('sub_kriteria'))
+              <p class="error text-danger">{{ $errors->first('sub_kriteria') }}</p>
+            @endif
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+            <label for="catatan" class=" text-dark @error('catatan') is-invalid @enderror">Catatan</label>
+            <input class="form-control" type="text" name="catatan" id="catatan" value="{{ old('catatan', $dokumen->catatan) }}">
+            @if ($errors->has('catatan'))
+              <p class="error text-danger">{{ $errors->first('catatan') }}</p>
+            @endif
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+            <label class=" text-dark" for="tipe_dokumen">Tipe Dokumen</label><br>
+            <select class="form-control" name="tipe_dokumen" id="tipe_dokumen">
+              <option value="file" {{ old('tipe_dokumen', $dokumen->tipe) != 'URL' ? 'selected' : '' }}>File</option>
+              <option value="url" {{ old('tipe_dokumen', $dokumen->tipe) == 'URL' ? 'selected' : '' }}>URL</option>
+            </select>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+          <div class="mb-3">
+            <label  class=" text-dark" for="file">File</label>
+            <input class="form-control @error('file') is-invalid @enderror" type="file" name="file" id="file" required>
+          </div>                     
+          @if ($errors->has('file'))
+            <p class="error text-danger">{{ $errors->first('file') }}</p>
+          @endif
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+          <label class=" text-dark" for="url">URL</label>
+          <input class="form-control @error('url') is-invalid @enderror" type="text" name="url" id="url" value="{{ old('url') }}" disabled>
+          @if ($errors->has('url'))
+            <p class="error text-danger">{{ $errors->first('url') }}</p>
+          @endif
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+          <a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/' . $dokumen->path) }}" class="btn btn-link" target="_blank">
+              {!! $dokumen->tipe == 'URL' ? preg_replace('/(.{30})/', '$1<br>', $dokumen->path) : preg_replace('/(.{30})/', '$1<br>', basename($dokumen->path)) !!}
+          </a>
+        </div>
+      
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2 d-flex justify-content-end">
+          <a href="/admin/dokumen"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
+          <button class="btn btn-success mx-1 wow fadeInRight" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <script>
+    document.getElementById('tipe_dokumen').addEventListener('change', function() {
+      const value = this.value;
+      const fileInput = document.getElementById('file');
+      const urlInput = document.getElementById('url');
+      
+      if (value == 'file') {
+        fileInput.required = true;
+        urlInput.required = false;
+        fileInput.disabled = false;
+        urlInput.disabled = true;
+      } else {
+        fileInput.required = false;
+        urlInput.required = true;
+        fileInput.disabled = true;
+        urlInput.disabled = false;
+      }
+    });
+  </script>
 </section>
 @endsection

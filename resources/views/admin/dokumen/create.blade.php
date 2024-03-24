@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<section class="section-padding" style="margin-top: 12vh ;">
+<section class="section-padding" style="margin-top: 9vh ;">
   <div class="section-header text-center">
     <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Dokumen Baru</h2>
     <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
@@ -49,8 +49,8 @@
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
             <label class=" text-dark" for="tipe_dokumen">Tipe Dokumen</label><br>
             <select class="form-control" name="tipe_dokumen" id="tipe_dokumen">
-              <option value="file" {{ old('tipe_dokumen') == 'file' ? 'selected' : '' }}>File</option>
-              <option value="url" {{ old('tipe_dokumen') == 'url' ? 'selected' : '' }}>URL</option>
+              <option value="file" {{ old('tipe_dokumen') != 'URL' ? 'selected' : '' }}>File</option>
+              <option value="url" {{ old('tipe_dokumen') == 'URL' ? 'selected' : '' }}>URL</option>
             </select>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
@@ -71,14 +71,13 @@
         </div>        
         <div class="col-lg-4 col-md-2 col-sm-12 m-2 d-flex justify-content-end">
           <a href="/admin/dokumen"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
-          <button class="btn btn-success mx-1 " type="submit">Submit</button>
+          <button class="btn btn-success mx-1 wow fadeInRight" type="submit">Submit</button>
         </div>
       </div>
     </form>
 
   </div>
   <script>
-
     document.getElementById('tipe_dokumen').addEventListener('change', function() {
       const value = this.value;
       const fileInput = document.getElementById('file');

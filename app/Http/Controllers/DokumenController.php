@@ -11,14 +11,14 @@ class DokumenController extends Controller
     public function getDokumen(Request $request)
     {
         $kriteria = $request->query('kriteria');
-        if(!in_array($kriteria, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])){
-            // return redirect('/')->with('error', 'Kriteria tidak ditemukan');
-            // return abort(404);
+        if(!in_array($kriteria, ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])){
+            return redirect('/')->with('error', 'Kriteria tidak ditemukan');
         }
         $term = $request->input('result');
         $tipe = $request->input('tipe');
 
         $h2s = [
+            '' => 'Semua Dokumen',
             1 => 'Kriteria 1',
             2 => 'Kriteria 2',
             3 => 'Kriteria 3',
@@ -34,29 +34,15 @@ class DokumenController extends Controller
         ];
         $h2 = $h2s[$kriteria];
 
+        $dokumens = (new Dokumen)->search($term, $kriteria, $tipe, 10);
+
         return view('dokumen.index', [
             'title' => 'Daftar Dokumen',
             'h2' => $h2,
-            'dokumens' => (new Dokumen)->search($term, $kriteria, $tipe),
-            // 'dokumens' => Dokumen::where('kriteria', $kriteria)->get()
-            'dokumenCount' => Dokumen::where('kriteria', $kriteria)->count(),
+            'dokumens' => $dokumens['data'],
+            'dokumenCount' => $dokumens['count'],
         ]);
     }
-
-    public function searchDokumen(Request $request)
-    {
-        $term = $request->input('result');
-        $kriteria = $request->input('kriteria');
-        $tipe = $request->input('tipe');
-    
-        $dokumens = (new Dokumen)->search($term, $kriteria, $tipe);
-    
-        return view('dokumen.result', [
-            'title' => 'Hasil Pencarian',
-            'dokumens' => $dokumens,
-        ]);
-    }
-    
     
     /**
      * Display a listing of the resource.
@@ -67,9 +53,12 @@ class DokumenController extends Controller
         $kriteria = $request->input('kriteria');
         $tipe = $request->input('tipe');
     
+        $dokumens = (new Dokumen)->search($term, $kriteria, $tipe, 10);
+
         return view('admin.dokumen.index', [
             'title' => 'Admin Daftar Dokumen',
-            'dokumens' => (new Dokumen)->search($term, $kriteria, $tipe),
+            'dokumens' => $dokumens['data'],
+            'dokumenCount' => $dokumens['count'],
         ]);
     }
 

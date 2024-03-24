@@ -3,7 +3,7 @@
 @section('content')
 <section class="" style="margin-top: 18vh">
   <div class="container">
-    <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/dokumen-hasil" method="get">
+    <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/dokumen-daftar" method="get">
       <div class="input-group mb-3">
         <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 80px;">
           <option value="" selected>Kriteria</option>
@@ -26,37 +26,46 @@
         </div>
       </div>
     </form>
+    <div class="row my-1 justify-content-center">
+      <span class="text-secondary wow fadeInDown" data-wow-delay="0.3s" style="display: inline-block">{{ $dokumenCount }} Dokumen</span>
+    </div>
     <div class="row mb-5">
+      <!-- Services item -->
       @foreach ($dokumens as $dokumen)
-        <div class="col-md-6 col-lg-6 col-xs-12 my-2">
-          <a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/'.$dokumen->path) }}" class="box-link" target="_blank">
-              <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-                  <span class="icon">
-                    @switch($dokumen->tipe)
-                        @case('URL')
-                            <i class="bi bi-link-45deg text-primary"></i>
-                            <span class="d-block text-white bg-primary mt-1" style="font-size: 10px; border-radius: 20px">URL</span>
-                            @break
-                        @case('PDF')
-                            <i class="bi bi-file-pdf-fill"></i>
-                            <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">PDF</span>
-                            @break
-                        @case('Image')
-                            <i class="bi bi-image-fill text-secondary"></i>
-                            <span class="d-block text-white bg-secondary mt-1" style="font-size: 10px; border-radius: 20px">IMG</span>
-                            @break
-                    @endswitch
-                  </span>
-                  <div class="text">
-                    <h4>{{ $dokumen->nama }}</h4>
-                    <p class="text-secondary">Subjudul</p>
-                    <p>{{ $dokumen->catatan }}</p>
-                    <p class="text-end" style="position: absolute; top: 8px; right: 10px;">23 Maret 2024</p>
-                  </div>
-              </div>
-          </a>
-        </div>
+      <div class="col-md-6 col-lg-6 col-xs-12 my-2">
+        <a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/'.$dokumen->path) }}" class="box-link"
+          target="_blank">
+          <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
+            <span class="icon">
+              @switch($dokumen->tipe)
+              @case('URL')
+              <i class="bi bi-link-45deg text-primary"></i>
+              <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">URL</span>
+              @break
+              @case('PDF')
+              <i class="bi bi-file-pdf-fill"></i>
+              <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">PDF</span>
+              @break
+              @case('Image')
+              <i class="bi bi-image-fill text-success"></i>
+              <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">IMG</span>
+              @break
+              @endswitch
+            </span>
+            <div class="text">
+              <h4>{{ $dokumen->nama }}</h4>
+              <p class="text-secondary">
+                {{ __(($dokumen->kriteria > 9 ? ['Kondisi Eksternal', 'Profil Institusi', 'Analisis & Penetapan Program Pengembangan'][$dokumen->kriteria-10] : 'Kriteria '.$dokumen->kriteria)) }}
+              </p>
+              <p>{{ $dokumen->catatan }}</p>
+              <p class="text-end" style="position: absolute; top: 8px; right: 10px;">{{
+                \Carbon\Carbon::parse($dokumen->updated_at)->translatedFormat('d F Y') }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
       @endforeach
+      <!-- End Services item -->
     </div>
     {{ $dokumens->onEachSide(1)->links() }}
     <div class="row mt-5">

@@ -24,9 +24,9 @@ Artisan::command('fresh', function () {
     Artisan::call('config:clear');
     $this->info('Config cleared');
 
-    $this->info('Making config cache...');
-    Artisan::call('config:cache');
-    $this->info('Config cache made');
+    // $this->info('Making config cache...');
+    // Artisan::call('config:cache');
+    // $this->info('Config cache made');
 
     $this->info('Migrating fresh...');
     Artisan::call('migrate:fresh --seed');

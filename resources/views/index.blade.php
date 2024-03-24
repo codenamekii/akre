@@ -10,7 +10,7 @@
           <h2 class="head-title wow fadeInRight" ata-wow-delay="0.3s">Selamat Datang di Website Pusat Data Akreditasi</h2>
           <p class=" wow fadeInRight" ata-wow-delay="0.3s">Pusat Data Bukti Fisik Pendukung Akreditasi Universitas Islam Negeri Sumatera Utara Medan</p>
           <div class="header-button wow fadeInRight" ata-wow-delay="0.5s">
-            <form class="d-inline" action="/dokumen-hasil" method="get">
+            <form class="d-inline" action="/daftar-dokumen" method="get">
               <div class="input-group mb-3">
                 <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 80px;">
                   <option value="" selected>Kriteria</option>
@@ -92,7 +92,7 @@
             <i class="lni-cog"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=10">Kondisi Eksternal</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=10">Kondisi Eksternal</a></h3>
             <p>Donec tincidunt bibendum gravida. </p>
           </div>
         </div>
@@ -104,7 +104,7 @@
             <i class="lni-stats-up"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=11">Profil Institusi</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=11">Profil Institusi</a></h3>
             <p>Donec tincidunt bibendum gravida. </p>
           </div>
         </div>
@@ -116,7 +116,7 @@
             <i class="lni-users"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=1">Kriteria 1</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=1">Kriteria 1</a></h3>
             <p>Visi, Misi, Tujuan dan Startegi</p>
           </div>
         </div>
@@ -128,7 +128,7 @@
             <i class="lni-layers"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=2">Kriteria 2</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=2">Kriteria 2</a></h3>
             <p>Tata Pamong, Tata Kelola, dan Kerja Sama</p>
           </div>
         </div>
@@ -140,7 +140,7 @@
             <i class="lni-mobile"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=3">Kriteria 3</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=3">Kriteria 3</a></h3>
             <p>Mahasisawa</p>
           </div>
         </div>
@@ -152,7 +152,7 @@
             <i class="lni-rocket"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=4">Kriteria 4</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=4">Kriteria 4</a></h3>
             <p>Sumber Daya Manusia</p>
           </div>
         </div>
@@ -164,7 +164,7 @@
             <i class="lni-layers"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=5">Kriteria 5</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=5">Kriteria 5</a></h3>
             <p>Keuangan, Sarana dan Prasarana</p>
           </div>
         </div>
@@ -176,7 +176,7 @@
             <i class="lni-mobile"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=6">Kriteria 6</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=6">Kriteria 6</a></h3>
             <p>Pendidikan</p>
           </div>
         </div>
@@ -188,7 +188,7 @@
             <i class="lni-rocket"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=7">Kriteria 7</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=7">Kriteria 7</a></h3>
             <p>Penelitian</p>
           </div>
         </div>
@@ -200,7 +200,7 @@
             <i class="lni-layers"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=8">Kriteria 8</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=8">Kriteria 8</a></h3>
             <p>Pengabian Kepada Masyarakat</p>
           </div>
         </div>
@@ -212,7 +212,7 @@
             <i class="lni-mobile"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=9">Kriteria 9</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=9">Kriteria 9</a></h3>
             <p>Luaran dan Capaian Tridharma</p>
           </div>
         </div>
@@ -224,7 +224,7 @@
             <i class="lni-rocket"></i>
           </div>
           <div class="services-content">
-            <h3><a href="/dokumen-daftar?kriteria=12">Analisi & Penetapan Program Pengembangan</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=12">Analisi & Penetapan Program Pengembangan</a></h3>
           </div>
         </div>
       </div>

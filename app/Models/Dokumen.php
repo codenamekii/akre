@@ -11,7 +11,7 @@ class Dokumen extends Model
 
     protected $guarded = ['id'];
 
-    public function search($term, $kriteria = null, $tipe = null)
+    public function search($term, $kriteria = null, $tipe = null, $paginate = 6)
     {
         $query = $this->where(function($query) use ($term) {
                     $query  ->where('nama', 'like', '%'.$term.'%')
@@ -29,10 +29,8 @@ class Dokumen extends Model
     
         $query->orderBy('created_at', 'desc');
     
-        $results = $query->paginate(6)->withQueryString();
-
-        // $results->appends(['result' => $term, 'kriteria' => $kriteria, 'tipe' => $tipe]);
-        // $results->appends(request()->input());
+        $results['count'] = $query->count();
+        $results['data'] = $query->paginate($paginate)->withQueryString();
 
         return $results;
     }
