@@ -12,13 +12,13 @@
     <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/dokumen-daftar" method="get">
       <div class="input-group mb-3">
         <input type="hidden" name="kriteria" value="{{ request()->input('kriteria') }}">
-        <select class="form-select p-1 bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
+        <select class="form-select p-1 bg-success text-light " name="tipe" id="" style="width: 60px;">
           <option value="" selected>Tipe</option>
           <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
           <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
           <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
         </select>
-        <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
+        <input type="text" class="form-control " name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
         <div class="input-group-append">
           <button class="btn btn-success shadow" id="button-addon2"><i class="bi bi-search"></i></button>
         </div>
