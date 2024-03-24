@@ -69,8 +69,8 @@
         
         
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-         <button class="btn btn-common" type="submit">Submit</button>
+      <div class="col-lg-2 col-md-6 col-sm-12 my-2">
+         <button class="btn btn-common text-end" type="submit">Submit</button>
       </div>
     </form>
  
