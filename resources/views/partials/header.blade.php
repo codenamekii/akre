@@ -23,13 +23,13 @@
             </li>
           @endif
           <li class="nav-item">
-            <a class="nav-link" href="visualisasi">
+            <a class="nav-link" href="/visualisasi">
               Visualisasi Data
             </a>
           </li>
           @if (Auth::user()->is_admin)
             <li class="nav-item {{ Request::is('admin*') ? 'active' : '' }}">
-              <a class="nav-link" href="/admin/dokumen">
+              <a class="nav-link" href="/admin">
                 Admin
               </a>
             </li>

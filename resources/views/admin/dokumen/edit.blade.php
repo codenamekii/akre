@@ -40,18 +40,18 @@
         <input type="file" name="file" id="file" {{ $dokumen->tipe == 'URL' ? 'disabled' : '' }}>
       </div>
       @if ($dokumen->tipe != 'URL')
-        <a href="{{ url('storage/'.$dokumen->path) }}" target="_blank">{{ $dokumen->nama }}</a>
+        <a href="{{ url('storage/'.$dokumen->path) }}" target="_blank">{{ basename($dokumen->path) }}</a>
       @endif
       @if ($errors->has('file'))
         <p class="error">{{ $errors->first('file') }}</p>
       @endif
       <div id="url-container">
         <label for="url">URL</label>
-        <input type="text" name="url" id="url" value="{{ $dokumen->path }}" {{ $dokumen->tipe != 'URL' ? 'disabled' : '' }}>
+        <input type="text" name="url" id="url" value="{{ $dokumen->tipe == 'URL' ? $dokumen->path : '' }}" {{ $dokumen->tipe != 'URL' ? 'disabled' : '' }}>
       </div>
       @if ($dokumen->tipe == 'URL')
-      <a href="{{ $dokumen->path }}" target="_blank">{{ $dokumen->nama }}</a>
-    @endif
+        <a href="{{ $dokumen->path }}" target="_blank">{{ $dokumen->nama }}</a>
+      @endif
       @if ($errors->has('url'))
         <p class="error">{{ $errors->first('url') }}</p>
       @endif
