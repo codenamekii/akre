@@ -48,8 +48,10 @@
                     @endswitch
                   </span>
                   <div class="text">
-                      <h4>{{ $dokumen->nama }}</h4>
-                      <p>{{ $dokumen->catatan }}</p>
+                    <h4>{{ $dokumen->nama }}</h4>
+                    <p class="text-secondary">Subjudul</p>
+                    <p>{{ $dokumen->catatan }}</p>
+                    <p class="text-end" style="position: absolute; top: 8px; right: 10px;">23 Maret 2024</p>
                   </div>
               </div>
           </a>

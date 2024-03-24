@@ -3,58 +3,72 @@
 @section('content')
 
 <section class="section-padding" style="margin-top: 12vh ;">
-  <div class="container">
-    <a href="{{ route('dokumen.create') }}" class="btn btn-primary">Buat Dokumen</a>
-    <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/admin/dokumen" method="get">
-      <div class="input-group mb-3">
-        <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 80px;">
-          <option value="" selected>Kriteria</option>
-          @for ($i = 1; $i <= 9; $i++)
-          <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
-          @endfor
-          <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Kondisi Eksternal</option>
-          <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
-          <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
-        </select>
-        <select class="form-select p2 bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
-          <option value="" selected>Tipe</option>
-          <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
-          <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
-          <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
-        </select>
-        <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
-        <div class="input-group-append">
-          <button class="btn btn-success shadow" id="button-addon2"><i class="bi bi-search"></i></button>
-        </div>
+  <div class="section-header text-center">
+    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Dokumen</h2>
+    <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+  </div>
+
+  <div class="container border rounded shadow p-4" style="width:90%;">
+    <div class="row justify-content-between pb-4">
+      <div class="col-lg-2 col-md-4 col-sm-12 mb-2 mb-md-0">
+        <a href="{{ route('dokumen.create') }}" class="btn btn-success btn-block"><i class="bi bi-plus"></i> Buat Dokumen</a>
       </div>
-    </form>
-    <table class="table">
-      <tr>
-        <th>#</th>
-        <th>Nama</th>
-        <th>Kriteria</th>
-        <th>Sub Kriteria</th>
-        <th>Tipe</th>
-        <th>Aksi</th>
-      </tr>
-      @foreach ($dokumens as $dokumen)
+      <div class="col-lg-4 col-md-8 col-sm-12">
+        <form class="wow fadeInRight" ata-wow-delay="0.3s" action="/admin/dokumen" method="get">
+          <div class="input-group">
+            <select class="form-select p-1 bg-success text-light" name="kriteria" id="" style="max-width: 80px;">
+              <option value="" selected>Kriteria</option>
+              @for ($i = 1; $i <= 9; $i++)
+              <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>Kriteria {{ $i }}</option>
+              @endfor
+              <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Kondisi Eksternal</option>
+              <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
+              <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
+            </select>
+            <select class="form-select p-1 bg-success text-light" name="tipe" id="" style="max-width: 80px;">
+              <option value="" selected>Tipe</option>
+              <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
+              <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
+              <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
+            </select>
+            <input type="text" class="form-control" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
+            <div class="input-group-append">
+              <button class="btn btn-success" id="button-addon2"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="col-12" style="overflow-x: auto">
+      <table class="table table-hover">
         <tr>
-          <td>{{ $dokumens->firstItem() + $loop->index }}</td>
-          <td><a href="{{ route('dokumen.show', $dokumen->id) }}">{{ $dokumen->nama }}</a></td>
-          <td>{{ $dokumen->kriteria }}</td>
-          <td>{{ $dokumen->sub_kriteria }}</td>
-          <td>{{ $dokumen->tipe }}</td>
-          <td>
-            <a href="{{ route('dokumen.edit', $dokumen->id) }}" class="btn btn-warning">Edit</a>
-            <form action="{{ route('dokumen.destroy', $dokumen->id) }}" method="post">
-              @csrf
-              @method('DELETE')
-              <button type="submit" class="btn btn-danger">Hapus</button>
-            </form>
-          </td>
+          <th>No</th>
+          <th>Nama</th>
+          <th>Kriteria</th>
+          <th>Sub Kriteria</th>
+          <th>Tipe</th>
+          <th>Aksi</th>
         </tr>
-      @endforeach
-    </table>
+        @foreach ($dokumens as $dokumen)
+          <tr>
+            <td>{{ $dokumens->firstItem() + $loop->index }}</td>
+            <td><a class="text-success" href="{{ route('dokumen.show', $dokumen->id) }}">{{ $dokumen->nama }}</a></td>
+            <td>{{ $dokumen->kriteria }}</td>
+            <td>{{ $dokumen->sub_kriteria }}</td>
+            <td>{{ $dokumen->tipe }}</td>
+            <td>
+              <a href="{{ route('dokumen.edit', $dokumen->id) }}" class="text-primary"><i class="bi bi-pencil-square"></i></a>
+              <form action="{{ route('dokumen.destroy', $dokumen->id) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="text-danger" style="background:none; border:none; padding:0;"><i class="bi bi-trash"></i></button>
+              </form>
+            </td>
+          </tr>
+        @endforeach
+      </table>
+    </div>
 
     {{ $dokumens->onEachSide(1)->links() }}
   </div>

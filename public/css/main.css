@@ -505,7 +505,7 @@ hr {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 12px;
   transition: all 0.2s linear;
 }
 
