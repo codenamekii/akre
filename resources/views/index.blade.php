@@ -7,34 +7,34 @@
     <div class="row">
       <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
         <div class="contents move-effect ">
-          <h2 class="head-title">Selamat Datang di Website Pusat Data Akreditasi</h2>
-          <p>Pusat Data Bukti Fisik Pendukung Akreditasi Universitas Islam Negeri Sumatera Utara Medan</p>
-          <div class="header-button">
+          <h2 class="head-title wow fadeInRight" ata-wow-delay="0.3s">Selamat Datang di Website Pusat Data Akreditasi</h2>
+          <p class=" wow fadeInRight" ata-wow-delay="0.3s">Pusat Data Bukti Fisik Pendukung Akreditasi Universitas Islam Negeri Sumatera Utara Medan</p>
+          <div class="header-button wow fadeInRight" ata-wow-delay="0.5s">
             <form class="d-inline" action="/dokumen-hasil" method="get">
               <div class="input-group mb-3">
-                <input type="text" class="form-control" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
-                <select name="kriteria" id="" style="width: 70px;">
+                <select class="form-select p-1 bg-success text-light " name="kriteria" id="" style="width: 80px;">
                   <option value="" selected>Kriteria</option>
                   @for ($i = 1; $i <= 9; $i++)
-                    <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
+                  <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
                   @endfor
                   <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Kondisi Eksternal</option>
                   <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
                   <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
                 </select>
-                <select name="tipe" id="" style="width: 70px;">
+                <select class="form-select p2  bg-success text-light " name="tipe" id="" style="width: 60px;">
                   <option value="" selected>Tipe</option>
                   <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
                   <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
                   <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
                 </select>
+                <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
                 <div class="input-group-append">
-                  <button class="btn btn-common" id="button-addon2">Cari</button>
+                  <button class="btn btn-success shadow" id="button-addon2"><i class="bi bi-search"></i></button>
                 </div>
               </div>
             </form>
           </div>
-          <div class="row">
+          <div class="row wow fadeInRight" ata-wow-delay="0.7s">
 
             <div class="col-lg-3 col-6">
               <div class="stats-item text-center ">
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-        <div class="intro-img">
+        <div class="intro-img wow fadeInRight" ata-wow-delay="0.8s">
           <img class="shape-one " src="https://html.creativegigstf.com/sinco/images/assets/ils_13_1.svg" alt="">
           <img class="img-fluid move-effect" src="https://html.creativegigstf.com/sinco/images/assets/ils_13.svg" alt="">
         </div>            
@@ -248,13 +248,13 @@
               <p>
                 Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio quis metus. Donec vulputate arcu quam. Morbi quis tincidunt ligula. Sed rutrum tincidunt pretium. Mauris auctor, purus a pulvinar fermentum, odio dui vehicula lorem, nec pharetra justo risus quis mi. Ut ac ex sagittis, viverra nisl vel, rhoncus odio. 
               </p>
-              <a href="/dokumen-daftar?kriteria=1" class="btn btn-common mt-3">Kunjungi </a>
+              <a href="https://uinsu.ac.id" class="btn btn-success mt-3">Kunjungi <i class="bi bi-chevron-double-right"></i></a>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
-        <img class="img-fluid" src="assets/img/about/img-1.png" alt="" >
+        <img class="img-fluid" src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin-dan-blu-png-2.png" alt="" >
       </div>
     </div>
   </div>
@@ -302,7 +302,7 @@
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="show-box wow fadeInUp" data-wow-delay="0.3s">
-          <img src="assets/img/feature/intro-mobile.png" alt="">
+          <img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/03/bu-rektor-baru-Copy.png" width="350px" alt="">
         </div>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">

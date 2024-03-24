@@ -11,6 +11,7 @@
     </div>
     <div class="row">
       <!-- Services item -->
+      
       @foreach ($dokumens as $dokumen)
       <div class="col-md-6 col-lg-6 col-xs-12 my-2">
         <a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/'.$dokumen->path) }}" class="box-link" target="_blank">
@@ -19,15 +20,15 @@
                   @switch($dokumen->tipe)
                       @case('URL')
                           <i class="bi bi-link-45deg text-primary"></i>
-                          <span class="d-block text-white bg-primary mt-1" style="font-size: 10px; border-radius: 20px">URL</span>
+                          <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">URL</span>
                           @break
                       @case('PDF')
                           <i class="bi bi-file-pdf-fill"></i>
                           <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">PDF</span>
                           @break
                       @case('Image')
-                          <i class="bi bi-image-fill text-secondary"></i>
-                          <span class="d-block text-white bg-secondary mt-1" style="font-size: 10px; border-radius: 20px">IMG</span>
+                          <i class="bi bi-image-fill text-success"></i>
+                          <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">IMG</span>
                           @break
                   @endswitch
                 </span>
@@ -40,6 +41,11 @@
       </div>
       @endforeach
       <!-- Services Section End -->
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <a href="/"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
+      </div>
     </div>
   </div>
 </section>

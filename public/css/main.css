@@ -6,6 +6,43 @@ html {
   background-image: radial-gradient(circle at 13% 47%, rgba(140, 140, 140, 0.03) 0%, rgba(140, 140, 140, 0.03) 25%, transparent 25%, transparent 100%), radial-gradient(circle at 28% 63%, rgba(143, 143, 143, 0.03) 0%, rgba(143, 143, 143, 0.03) 16%, transparent 16%, transparent 100%), radial-gradient(circle at 81% 56%, rgba(65, 65, 65, 0.03) 0%, rgba(65, 65, 65, 0.03) 12%, transparent 12%, transparent 100%), radial-gradient(circle at 26% 48%, rgba(60, 60, 60, 0.03) 0%, rgba(60, 60, 60, 0.03) 6%, transparent 6%, transparent 100%), radial-gradient(circle at 97% 17%, rgba(150, 150, 150, 0.03) 0%, rgba(150, 150, 150, 0.03) 56%, transparent 56%, transparent 100%), radial-gradient(circle at 50% 100%, rgba(25, 25, 25, 0.03) 0%, rgba(25, 25, 25, 0.03) 36%, transparent 36%, transparent 100%), radial-gradient(circle at 55% 52%, rgba(69, 69, 69, 0.03) 0%, rgb(255 255 255 / 3%) 6%, white 6%, transparent 100%), linear-gradient(265deg, rgb(255 255 255), rgb(255 255 255)) !important;
 }
 
+
+.form-select:active, .form-select:focus {
+  background-color: #fff;
+  color: #000; 
+  border-color: #28a745;
+}
+.form-select {
+  border-color: #28a745;
+}
+/* CSS untuk menambahkan border radius kiri pada select kriteria */
+select[name="kriteria"] {
+  border-radius: 5px 0 0 5px; /* Border radius kiri */
+}
+
+
+.form-select option {
+  background-color: #fff; 
+  padding:1rem;
+  color: #000;
+}
+
+.bg-success.text-light {
+  background-color: #28a745 !important; 
+  color: #fff !important;
+}
+
+.border-success {
+  border-color: #28a745 !important; 
+}
+.form-select option:hover {
+  background-color: #28a745; 
+  color: #fff; 
+}
+
+
+
+
 .stats-item {
   background-color: transparent;
   color:black;
@@ -185,7 +222,7 @@ a:not([href]):not([tabindex]) {
   background: rgba(61, 96, 244, 0.3);
 }
 
-.btn {
+.btni {
   font-size: 14px;
   padding: 10px 30px;
   cursor: pointer;
@@ -199,21 +236,21 @@ a:not([href]):not([tabindex]) {
   display: inline-block;
 }
 
-.btn:focus,
-.btn:active {
+.btni:focus,
+.btni:active {
   box-shadow: none;
   outline: none;
   color: #fff;
 }
 
-.btn-common {
+.btni-common {
   background-color: #0d8b05;
   position: relative;
   z-index: 1;
   text-transform: uppercase;
 }
 
-.btn-common:hover {
+.btni-common:hover {
   color: #0d8b05;
   background: transparent;
   border: 1px dotted #0d8b05;
@@ -223,7 +260,7 @@ a:not([href]):not([tabindex]) {
   -webkit-transition: all .2s ease-in-out;
 }
 
-.btn-border {
+.btni-border {
   color: #098107;
   background-color: transparent;
   border: 1px solid #098107;
@@ -231,31 +268,31 @@ a:not([href]):not([tabindex]) {
   text-transform: uppercase;
 }
 
-.btn-border:hover {
+.btni-border:hover {
   color: #fff;
   border-color: #098107;
   background-color: #098107;
 }
 
-.btn-border:focus {
+.btni-border:focus {
   color: #fff;
   border-color: #098107;
   background-color: #098107;
 }
 
-.btn-lg {
+.btni-lg {
   padding: 14px 33px;
   text-transform: uppercase;
   font-size: 16px;
 }
 
-.btn-rm {
+.btni-rm {
   padding: 7px 0px;
   color: #098107;
   text-transform: capitalize;
 }
 
-.btn-rm:hover {
+.btni-rm:hover {
   color: #098107;
 }
 
@@ -458,7 +495,7 @@ hr {
 
 #features .box-item .icon i,
 .box-item .icon i {
-  color: #098107;
+  color: #098107 !important;
   font-size: 30px;
   transition: all 0.2s linear;
 }
@@ -494,9 +531,10 @@ hr {
 #features .box-item:hover .text h4,
 #features .box-item:hover .text p,
 .box-item:hover .icon i,
+.box-item:hover .icon span,
 .box-item:hover .text h4,
 .box-item:hover .text p {
-  color: #ffffff; /* Warna teks dan ikon saat hover */
+  color: #ffffff !important; /* Warna teks dan ikon saat hover */
 }
 
 /* Services Item */

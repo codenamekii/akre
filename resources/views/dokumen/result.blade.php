@@ -3,26 +3,26 @@
 @section('content')
 <section class="" style="margin-top: 18vh">
   <div class="container">
-    <form class="d-inline" action="/dokumen-hasil" method="get">
+    <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/dokumen-hasil" method="get">
       <div class="input-group mb-3">
-        <input type="text" class="form-control" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
-        <select name="kriteria" id="" style="width: 85px;">
+        <select class="form-select p-1 bg-success text-light " name="kriteria" id="" style="width: 80px;">
           <option value="" selected>Kriteria</option>
           @for ($i = 1; $i <= 9; $i++)
-            <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
+          <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
           @endfor
           <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Kondisi Eksternal</option>
           <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
           <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
         </select>
-        <select name="tipe" id="" style="width: 65px;">
+        <select class="form-select p2  bg-success text-light " name="tipe" id="" style="width: 60px;">
           <option value="" selected>Tipe</option>
           <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
           <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
           <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
         </select>
+        <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
         <div class="input-group-append">
-          <button class="btn btn-common" id="button-addon2">Cari</button>
+          <button class="btn btn-success shadow" id="button-addon2"><i class="bi bi-search"></i></button>
         </div>
       </div>
     </form>
@@ -57,6 +57,12 @@
       @endforeach
     </div>
     {{ $dokumens->links() }}
+    <div class="row mt-5">
+      <div class="col-12">
+        <a href="/"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
+      </div>
+    </div>
   </div>
+  
 </section>
 @endsection

@@ -3,7 +3,7 @@
 @section('content')
 <section class="section-padding" style="margin-top: 12vh ;">
   <div class="section-header text-center">
-    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Tambah Dokumen Baru</h2>
+    <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Dokumen Baru</h2>
     <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
   </div>
   <div class="container border rounded" style="width:80%;">
@@ -69,8 +69,8 @@
             <p class="error text-danger">{{ $errors->first('url') }}</p>
           @endif
         </div>        
-        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-          <button class="btn btn-common" type="submit">Submit</button>
+        <div class="col-lg-2 col-md-6 col-sm-12 my-2">
+          <button class="btn btn-common " type="submit">Submit</button>
         </div>
       </div>
     </form>
