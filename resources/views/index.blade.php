@@ -302,7 +302,7 @@
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="show-box wow fadeInUp d-flex justify-content-center" data-wow-delay="0.3s">
-          <img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/03/bu-rektor-baru-Copy.png" width="350px" alt="">
+          <img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/03/bu-rektor-baru-Copy.png" width="450px" alt="">
         </div>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
