@@ -53,5 +53,7 @@
   <script src="{{ asset('js/waypoints.min.js') }}"></script>   
   <script src="{{ asset('js/main.js') }}"></script>
   <script src="{{ asset('js/custom-toast.js') }}"></script>
+  
+
 </body>
 </html>

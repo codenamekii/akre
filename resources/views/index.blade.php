@@ -2,6 +2,7 @@
 
 @section('content')
 <!-- Hero Area Start -->
+
 <div id="hero-area" class="hero-area-bg">
   <div class="container">      
     <div class="row">
@@ -35,31 +36,27 @@
             </form>
           </div>
           <div class="row wow fadeInRight" ata-wow-delay="0.7s">
-
             <div class="col-lg-3 col-6">
-              <div class="stats-item text-center ">
-                <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="0" class="purecounter">9</span>
+              <div class="stats-item text-center">
+                <span id="kriteriaCounter" class="purecounter">0</span>
                 <p>Kriteria</p>
               </div>
             </div><!-- End Stats Item -->
-        
             <div class="col-lg-3 col-6">
-              <div class="stats-item text-center ">
-                <span data-purecounter-start="0" data-purecounter-end="681" data-purecounter-duration="0" class="purecounter">{{ $dokumenCount }}</span>
+              <div class="stats-item text-center">
+                <span id="dokumenCounter" class="purecounter">0</span>
                 <p>Dokumen</p>
               </div>
             </div><!-- End Stats Item -->
-        
             <div class="col-lg-3 col-6">
-              <div class="stats-item text-center ">
-                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="0" class="purecounter">10</span>
+              <div class="stats-item text-center">
+                <span id="fakultasCounter" class="purecounter">0</span>
                 <p>Fakultas/PPs</p>
               </div>
             </div><!-- End Stats Item -->
-        
             <div class="col-lg-3 col-6">
-              <div class="stats-item text-center ">
-                <span data-purecounter-start="0" data-purecounter-end="54" data-purecounter-duration="0" class="purecounter">54</span>
+              <div class="stats-item text-center">
+                <span id="prodiCounter" class="purecounter">0</span>
                 <p>Prodi</p>
               </div>
             </div><!-- End Stats Item -->
@@ -87,7 +84,8 @@
     <div class="row">
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
+        <a href="/daftar-dokumen?kriteria=10" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="0.3s">
           <div class="icon">
             <i class="bi bi-globe2"></i>
           </div>
@@ -96,10 +94,12 @@
             <p>Donec tincidunt bibendum gravida. </p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="0.6s">
+        <a href="/daftar-dokumen?kriteria=11" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="0.6s">
           <div class="icon">
             <i class="bi bi-building-fill-gear"></i>
           </div>
@@ -108,10 +108,12 @@
             <p>Donec tincidunt bibendum gravida. </p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="0.9s">
+        <a href="/daftar-dokumen?kriteria=1" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="0.9s">
           <div class="icon">
             <i class="bi bi-flag"></i>
           </div>
@@ -120,10 +122,12 @@
             <p>Visi, Misi, Tujuan dan Startegi</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
+        <a href="/daftar-dokumen?kriteria=2" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.2s">
           <div class="icon">
             <i class="bi bi-people"></i>
           </div>
@@ -132,10 +136,12 @@
             <p>Tata Pamong, Tata Kelola, dan Kerja Sama</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
+        <a href="/daftar-dokumen?kriteria=3" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.5s">
           <div class="icon">
             <i class="bi bi-mortarboard"></i>
           </div>
@@ -144,10 +150,12 @@
             <p>Mahasisawa</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
+        <a href="/daftar-dokumen?kriteria=4" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.8s">
           <div class="icon">
             <i class="bi bi-person-standing"></i>
           </div>
@@ -156,10 +164,12 @@
             <p>Sumber Daya Manusia</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
+        <a href="/daftar-dokumen?kriteria=5" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.2s">
           <div class="icon">
             <i class="bi bi-gear-wide-connected"></i>
           </div>
@@ -168,10 +178,12 @@
             <p>Keuangan, Sarana dan Prasarana</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
+        <a href="/daftar-dokumen?kriteria=6" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.5s">
           <div class="icon">
             <i class="bi bi-book-half"></i>
           </div>
@@ -180,10 +192,12 @@
             <p>Pendidikan</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
+        <a href="/daftar-dokumen?kriteria=7" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.8s">
           <div class="icon">
             <i class="bi bi-journal"></i>
           </div>
@@ -192,10 +206,12 @@
             <p>Penelitian</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.2s">
+        <a href="/daftar-dokumen?kriteria=8" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.2s">
           <div class="icon">
             <i class="bi bi-heart-pulse-fill"></i>
           </div>
@@ -204,10 +220,12 @@
             <p>Pengabian Kepada Masyarakat</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.5s">
+        <a href="/daftar-dokumen?kriteria=9" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.5s">
           <div class="icon">
             <i class="bi bi-trophy"></i>
           </div>
@@ -216,10 +234,12 @@
             <p>Luaran dan Capaian Tridharma</p>
           </div>
         </div>
+        </a>
       </div>
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12">
-        <div class="services-item wow fadeInRight" data-wow-delay="1.8s">
+        <a href="/daftar-dokumen?kriteria=12" >
+        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.8s">
           <div class="icon">
             <i class="bi bi-graph-up-arrow"></i>
           </div>
@@ -227,6 +247,7 @@
             <h3><a href="/daftar-dokumen?kriteria=12">Analisi & Penetapan Program Pengembangan</a></h3>
           </div>
         </div>
+        </a>
       </div>
     </div>
   </div>
@@ -271,7 +292,7 @@
     <div class="row">
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="content-left">
-          <div class="box-item wow fadeInLeft" data-wow-delay="0.3s">
+          <div class="box-item wow bg-light fadeInLeft" data-wow-delay="0.3s">
             <span class="icon">
               <i class="lni-rocket"></i>
             </span>
@@ -340,7 +361,30 @@
   </div>
 </section>
 <!-- Features Section End -->   
-
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function animateValue(id, start, end, duration) {
+      if (start === end) return;
+      var range = end - start;
+      var current = start;
+      var increment = end > start ? 1 : -1;
+      var stepTime = Math.abs(Math.floor(duration / range));
+      var obj = document.getElementById(id);
+      var timer = setInterval(function() {
+        current += increment;
+        obj.innerText = current;
+        if (current === end) {
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+  
+    animateValue('kriteriaCounter', 0, 9, 2000);
+    animateValue('dokumenCounter', 0, {{ $dokumenCount }}, 2000);
+    animateValue('fakultasCounter', 0, 10, 2000);
+    animateValue('prodiCounter', 0, 54, 2000);
+  });
+  </script>
 @if (session()->has('success'))
 <script>
   // Call the createToast function after the document has finished loading
@@ -356,5 +400,7 @@
   });
 </script>
 @endif
+
+
 
 @endsection
