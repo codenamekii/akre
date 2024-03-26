@@ -8,19 +8,19 @@
   </div>
   <div class="container border rounded shadow" style="width:70%;">
     
-    <form action="/admin/dokumen/{{ $dokumen->id }}" method="POST" enctype="multipart/form-data">
+    <form action="/admin/dokumen/{{ $dokumen->id }}" method="POST" id="form" enctype="multipart/form-data">
       <div class="row justify-content-between align-items-center p-3">
         @method('PUT')
         @csrf
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <label for="nama" class=" text-dark">Nama</label>
+            <label for="nama" class=" text-dark h6">Nama</label>
             <input  class="form-control @error('nama') is-invalid @enderror" type="text" name="nama" id="nama" value="{{ old('nama', $dokumen->nama) }}" required>
             @if ($errors->has('nama'))
               <p class="error text-danger">{{ $errors->first('nama') }}</p>
             @endif
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <label for="kriteria"  class=" text-dark" >Kriteria</label> <br>
+            <label for="kriteria"  class=" text-dark h6" >Kriteria</label> <br>
             <select class="form-control @error('kriteria') is-invalid @enderror" name="kriteria" id="kriteria" required>
               @for ($i = 1; $i <= 9; $i++)
                 <option value="{{ $i }}" {{ old('kriteria', $dokumen->kriteria) == $i ? 'selected' : '' }}>{{ 'Kriteria '. $i }}</option>
@@ -34,37 +34,30 @@
             @endif
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <label for="sub_kriteria" class=" text-dark">Sub Kriteria</label>
+            <label for="sub_kriteria" class=" text-dark h6">Sub Kriteria</label>
             <input class="form-control @error('sub_kriteria') is-invalid @enderror" type="text" name="sub_kriteria" id="sub_kriteria" value="{{ old('sub_kriteria', $dokumen->sub_kriteria) }}">
             @if ($errors->has('sub_kriteria'))
               <p class="error text-danger">{{ $errors->first('sub_kriteria') }}</p>
             @endif
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <label for="catatan" class=" text-dark @error('catatan') is-invalid @enderror">Catatan</label>
-            <input class="form-control" type="text" name="catatan" id="catatan" value="{{ old('catatan', $dokumen->catatan) }}">
-            @if ($errors->has('catatan'))
-              <p class="error text-danger">{{ $errors->first('catatan') }}</p>
-            @endif
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <label class=" text-dark" for="tipe_dokumen">Tipe Dokumen</label><br>
-            <select class="form-control" name="tipe_dokumen" id="tipe_dokumen">
-              <option value="file" {{ old('tipe_dokumen', $dokumen->tipe) != 'URL' ? 'selected' : '' }}>File</option>
-              <option value="url" {{ old('tipe_dokumen', $dokumen->tipe) == 'URL' ? 'selected' : '' }}>URL</option>
-            </select>
+          <label class=" text-dark h6" for="tipe_dokumen">Tipe Dokumen</label><br>
+          <select class="form-control" name="tipe_dokumen" id="tipe_dokumen">
+            <option value="file" {{ old('tipe_dokumen', $dokumen->tipe) != 'URL' ? 'selected' : '' }}>File</option>
+            <option value="url" {{ old('tipe_dokumen', $dokumen->tipe) == 'URL' ? 'selected' : '' }}>URL</option>
+          </select>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
           <div class="mb-3">
-            <label  class=" text-dark" for="file">File</label>
+            <label  class=" text-dark h6" for="file">File</label>
             <input class="form-control @error('file') is-invalid @enderror" type="file" name="file" id="file" required>
           </div>                     
           @if ($errors->has('file'))
-            <p class="error text-danger">{{ $errors->first('file') }}</p>
+          <p class="error text-danger">{{ $errors->first('file') }}</p>
           @endif
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-          <label class=" text-dark" for="url">URL</label>
+          <label class=" text-dark h6" for="url">URL</label>
           <input class="form-control @error('url') is-invalid @enderror" type="text" name="url" id="url" value="{{ old('url') }}" disabled>
           @if ($errors->has('url'))
             <p class="error text-danger">{{ $errors->first('url') }}</p>
@@ -72,17 +65,24 @@
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
           <a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/' . $dokumen->path) }}" class="btn btn-link" target="_blank">
-              {!! $dokumen->tipe == 'URL' ? preg_replace('/(.{30})/', '$1<br>', $dokumen->path) : preg_replace('/(.{30})/', '$1<br>', basename($dokumen->path)) !!}
+            {!! $dokumen->tipe == 'URL' ? preg_replace('/(.{30})/', '$1<br>', $dokumen->path) : preg_replace('/(.{30})/', '$1<br>', basename($dokumen->path)) !!}
           </a>
         </div>
-      
-        <div class="col-lg-4 col-md-6 col-sm-12 my-2 d-flex justify-content-end">
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 my-2">
+            <label for="catatan" class=" text-dark h6 @error('catatan') is-invalid @enderror">Catatan</label>
+            <textarea class="form-control" name="catatan" id="catatan"  value="{{ old('catatan', $dokumen->catatan) }}" placeholder="Tambahkan Catatan Disini.." id="floatingTextarea"></textarea>
+            @if ($errors->has('catatan'))
+              <p class="error text-danger">{{ $errors->first('catatan') }}</p>
+            @endif
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 my-2 d-flex justify-content-between">
           <a href="/admin/dokumen"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
           <button class="btn btn-success mx-1 wow fadeInRight" type="submit">Submit</button>
         </div>
       </div>
     </form>
-
+    
   </div>
   <script>
     document.getElementById('tipe_dokumen').addEventListener('change', function() {

@@ -83,27 +83,29 @@
     </div>
     <div class="row">
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
-        <a href="/daftar-dokumen?kriteria=10" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="0.3s">
-          <div class="icon">
-            <i class="bi bi-globe2"></i>
+      <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=10'">
+        <div class="services-item wow fadeInRight border border" data-wow-delay="0.3s" >
+          <div class="bg-img" style="background-image: url('https://www.efim.org/sites/default/files/styles/page-x-large/public/images/working-groups.png?itok=s9u-asxk');">
+            <div class="icon bg-light">
+              <i class="bi bi-globe2"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3 pb-3">
             <h3><a href="/daftar-dokumen?kriteria=10">Kondisi Eksternal</a></h3>
             <p>Donec tincidunt bibendum gravida. </p>
           </div>
         </div>
-        </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=11'">
         <a href="/daftar-dokumen?kriteria=11" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="0.6s">
-          <div class="icon">
-            <i class="bi bi-building-fill-gear"></i>
+          <div class="services-item bg-light wow fadeInRight border" data-wow-delay="0.6s" >
+          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyus-Mi-mh0AQckuZ3VOS_tJGfQSt5O5uNMFaLA08bw&s');">
+            <div class="icon bg-light ">
+              <i class="bi bi-building-fill-gear"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=11">Profil Institusi</a></h3>
             <p>Donec tincidunt bibendum gravida. </p>
           </div>
@@ -111,13 +113,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=1'">
         <a href="/daftar-dokumen?kriteria=1" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="0.9s">
-          <div class="icon">
-            <i class="bi bi-flag"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="0.9s" >
+          <div class="bg-img" style="background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/business-mission-5642382-4706898.png?f=webp');">
+            <div class="icon bg-light ">
+              <i class="bi bi-flag"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=1">Kriteria 1</a></h3>
             <p>Visi, Misi, Tujuan dan Startegi</p>
           </div>
@@ -125,13 +129,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=2'">
         <a href="/daftar-dokumen?kriteria=2" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.2s">
-          <div class="icon">
-            <i class="bi bi-people"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s" >
+          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-NSPi_wbrBiL7bQfgUfIf-cbmCP4UGRAPLGskHPAwM3PJU8EEat5ZN9MSIUpbL4ajj78&usqp=CAU');">
+            <div class="icon bg-light ">
+              <i class="bi bi-people"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=2">Kriteria 2</a></h3>
             <p>Tata Pamong, Tata Kelola, dan Kerja Sama</p>
           </div>
@@ -139,13 +145,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=3'">
         <a href="/daftar-dokumen?kriteria=3" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.5s">
-          <div class="icon">
-            <i class="bi bi-mortarboard"></i>
+        <div class="services-item bg-light wow fadeInRight border" >
+          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsLrx7qmsKc56WctSv3CzpGesb_G40nADL5pRxVAx4DoPeHJS4I8moLpzlxrJcqkhZX_s&usqp=CAU');">
+            <div class="icon bg-light ">
+              <i class="bi bi-mortarboard"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=3">Kriteria 3</a></h3>
             <p>Mahasisawa</p>
           </div>
@@ -153,13 +161,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=4'">
         <a href="/daftar-dokumen?kriteria=4" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.8s">
-          <div class="icon">
-            <i class="bi bi-person-standing"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
+          <div class="bg-img" style="background-image: url('https://img.freepik.com/free-vector/recruit-agent-analyzing-candidates_74855-4565.jpg');">
+            <div class="icon bg-light ">
+              <i class="bi bi-person-standing"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=4">Kriteria 4</a></h3>
             <p>Sumber Daya Manusia</p>
           </div>
@@ -167,13 +177,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=5'">
         <a href="/daftar-dokumen?kriteria=5" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.2s">
-          <div class="icon">
-            <i class="bi bi-gear-wide-connected"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s">
+          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cvPaZkm4qJTRC3nyHBkLLn_biSUcz-oql1R27ARwcXMo9_Os6_iGMcsCLwWMD8fRTAg&usqp=CAU');">
+            <div class="icon bg-light ">
+              <i class="bi bi-gear-wide-connected"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=5">Kriteria 5</a></h3>
             <p>Keuangan, Sarana dan Prasarana</p>
           </div>
@@ -181,13 +193,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=6'">
         <a href="/daftar-dokumen?kriteria=6" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.5s">
-          <div class="icon">
-            <i class="bi bi-book-half"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s">
+          <div class="bg-img" style="background-image: url('https://tuliskan.id/wp-content/uploads/2019/10/Dampak-Globalisasi-di-Bidang-Pendidikan.jpg');">
+            <div class="icon bg-light ">
+              <i class="bi bi-book-half"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=6">Kriteria 6</a></h3>
             <p>Pendidikan</p>
           </div>
@@ -195,13 +209,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=7'">
         <a href="/daftar-dokumen?kriteria=7" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.8s">
-          <div class="icon">
-            <i class="bi bi-journal"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
+          <div class="bg-img" style="background-image: url('https://dinkes.kotabogor.go.id/assets-publik/img/illustration-penelitian.svg');">
+            <div class="icon bg-light ">
+              <i class="bi bi-journal"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=7">Kriteria 7</a></h3>
             <p>Penelitian</p>
           </div>
@@ -209,13 +225,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=8'">
         <a href="/daftar-dokumen?kriteria=8" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.2s">
-          <div class="icon">
-            <i class="bi bi-heart-pulse-fill"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s">
+          <div class="bg-img" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/006/901/813/small_2x/clothing-donation-concept-free-vector.jpg');">
+            <div class="icon bg-light ">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=8">Kriteria 8</a></h3>
             <p>Pengabian Kepada Masyarakat</p>
           </div>
@@ -223,13 +241,15 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=9'">
         <a href="/daftar-dokumen?kriteria=9" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.5s">
-          <div class="icon">
-            <i class="bi bi-trophy"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s">
+          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOXeAXZWqkoXSgbvTIUDfV7KMKS3Y8gOehxQ5aiBaYcQws5CLymDM1C-wiEWlroVkA3rg&usqp=CAU');">
+            <div class="icon bg-light ">
+              <i class="bi bi-trophy"></i>
+            </div>
           </div>
-          <div class="services-content">
+          <div class="services-content p-3">
             <h3><a href="/daftar-dokumen?kriteria=9">Kriteria 9</a></h3>
             <p>Luaran dan Capaian Tridharma</p>
           </div>
@@ -237,14 +257,17 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12">
+      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=12'">
         <a href="/daftar-dokumen?kriteria=12" >
-        <div class="services-item bg-light wow fadeInRight" data-wow-delay="1.8s">
-          <div class="icon">
-            <i class="bi bi-graph-up-arrow"></i>
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
+          <div class="bg-img" style="background-image: url('https://highlandexperience.co.id/wp-content/uploads/Team-Development-Program.png');">
+            <div class="icon bg-light ">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
           </div>
-          <div class="services-content">
-            <h3><a href="/daftar-dokumen?kriteria=12">Analisi & Penetapan Program Pengembangan</a></h3>
+          <div class="services-content p-3">
+            <h3><a href="/daftar-dokumen?kriteria=12">Analisi & Penetapan</a></h3>
+            <p>Program Pengembangan</p>
           </div>
         </div>
         </a>
@@ -292,9 +315,9 @@
     <div class="row">
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="content-left">
-          <div class="box-item wow bg-light fadeInLeft" data-wow-delay="0.3s">
-            <span class="icon">
-              <i class="lni-rocket"></i>
+          <div class="box-item wow fadeInLeft" data-wow-delay="0.6s">
+            <span class="icon  ">
+              <i class="lni-laptop-phone"></i>
             </span>
             <div class="text">
               <h4>Integrasi Ilmu (Wahdatul 'Ulum)</h4>
@@ -302,7 +325,7 @@
             </div>
           </div>
           <div class="box-item wow fadeInLeft" data-wow-delay="0.6s">
-            <span class="icon">
+            <span class="icon  ">
               <i class="lni-laptop-phone"></i>
             </span>
             <div class="text">
@@ -311,7 +334,7 @@
             </div>
           </div>
           <div class="box-item wow fadeInLeft" data-wow-delay="0.9s">
-            <span class="icon">
+            <span class="icon  ">
               <i class="lni-cog"></i>
             </span>
             <div class="text">
@@ -329,7 +352,7 @@
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="content-right">
           <div class="box-item wow fadeInRight" data-wow-delay="0.3s">
-            <span class="icon">
+            <span class="icon  ">
               <i class="lni-leaf"></i>
             </span>
             <div class="text">
@@ -338,7 +361,7 @@
             </div>
           </div>
           <div class="box-item wow fadeInRight" data-wow-delay="0.6s">
-            <span class="icon">
+            <span class="icon  ">
               <i class="lni-layers"></i>
             </span>
             <div class="text">
@@ -347,7 +370,7 @@
             </div>
           </div>
           <div class="box-item wow fadeInRight" data-wow-delay="0.9s">
-            <span class="icon">
+            <span class="icon  ">
               <i class="lni-leaf"></i>
             </span>
             <div class="text">

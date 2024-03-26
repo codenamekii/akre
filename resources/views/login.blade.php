@@ -49,7 +49,7 @@
       <div data-aos="fade-up" data-aos-duration="1300" class="pass-txt"><a href="index.php">Lupa Password?</a></div>
       <input data-aos="fade-up" data-aos-duration="1500" type="submit" value="Login">
     </form>
-    <div data-aos="fade-up" data-aos-duration="1600" class="sign-txt">Belum Memiliki Akun? <a href="register.php">Daftar Sekarang</a></div>
+   
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
