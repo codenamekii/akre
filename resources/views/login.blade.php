@@ -13,16 +13,8 @@
         <img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/Graduation.jpg" alt="">
         <div class="text">
           <span class="text-1">Selamat Datang <br> Di Website AIP-UINSU</span>
-          
         </div>
-      </div>
-      <div class="back">
-        <img class="backImg" src="" alt="">
-        <div class="text">
-          <span class="text-1">Complete miles of journey <br> with one step</span>
-          <span class="text-2">Let's get started</span>
-        </div>
-      </div>
+      </div>      
     </div>
     <div class="forms">
         <div class="form-content">
@@ -54,13 +46,11 @@
                 @enderror
                 <div class="button input-box">
                   <input type="submit" value="Login">
-                </div>
-                
+                </div>                
               </div>
-          </form>
-      </div>
-
-    </div>
+            </form>
+          </div>
+        </div>
     </div>
   </div>
 
