@@ -12,7 +12,7 @@
       <div class="front">
         <img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/Graduation.jpg" alt="">
         <div class="text">
-          <span class="text-1">Selamat Datang <br> Di Website AIP-UINSU</span>
+          <span class="text-1">Selamat Datang <br> Di Website AIPT-UINSU</span>
         </div>
       </div>      
     </div>
