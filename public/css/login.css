@@ -90,7 +90,7 @@ body::after {
 }
 .container .cover .text{
   position: absolute;
-  padding-top:25vh;
+  padding-top:100px;
   z-index: 130;
   height: 100%;
   width: 100%;
