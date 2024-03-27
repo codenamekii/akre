@@ -49,7 +49,7 @@
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
           <div class="mb-3">
             <label  class=" text-dark h6" for="file">File</label>
-            <input class="form-file @error('file') is-invalid @enderror" type="file" name="file" id="file" required>
+            <input class="form @error('file') is-invalid @enderror" type="file" name="file" id="file" required>
           </div>                     
           @if ($errors->has('file'))
             <p class="error text-danger">{{ $errors->first('file') }}</p>
@@ -69,9 +69,9 @@
             <p class="error text-danger">{{ $errors->first('catatan') }}</p>
           @endif
         </div>
-        <div class="col-lg-12 col-md-12 col-sm-12 m-2 d-flex justify-content-between">
+        <div class="col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between">
           <a href="/admin/dokumen"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
-          <button class="btn btn-success mx-1 wow fadeInRight" type="submit">Submit</button>
+          <button class="btn btn-success mx-1 wow fadeInRight" type="submit"><i class="bi bi-check-lg"></i> Submit</button>
         </div>
       </div>
     </form>

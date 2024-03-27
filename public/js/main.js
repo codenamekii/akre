@@ -113,3 +113,18 @@
 
 }(jQuery));
 
+document.addEventListener('DOMContentLoaded', function() {
+  var previousText = 'Sebelumnya';
+  var nextText = 'Selanjutnya';
+  
+  var previousElement = document.querySelector('.pagination .page-item.disabled .page-link');
+  var nextElement = document.querySelector('.pagination .page-item:not(.disabled) .page-link');
+  
+  if (previousElement.textContent.trim() === 'pagination.previous') {
+      previousElement.textContent = previousText;
+  }
+  
+  if (nextElement.textContent.trim() === 'pagination.next') {
+      nextElement.textContent = nextText;
+  }
+});

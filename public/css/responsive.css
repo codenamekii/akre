@@ -119,7 +119,8 @@
     margin-top: 0;
   }
   .navbar-brand img {
-    margin: 5px 0;
+    width:16.5vh;
+    margin: 0px 0;
   }
   .top-nav-collapse .navbar-brand img {
     margin-top: 10px;
@@ -139,11 +140,11 @@
     font-size: 14px;
   }
   #hero-area {
-    padding: 120px 0 80px;
+    padding: 140px 0 80px;
   }
-  #hero-area .contents .btn {
+  /* #hero-area .contents .btn {
     margin: 5px 10px 10px 0px;
-  }
+  } */
   .text-wrapper {
     padding: 60px 15px;
   }

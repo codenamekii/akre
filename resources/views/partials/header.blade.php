@@ -9,7 +9,7 @@
         <i class="lni-menu"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix mb-3">
+        <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
           <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
             <a class="nav-link" href="/">
               Beranda

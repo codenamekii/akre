@@ -13,7 +13,7 @@
           <div class="header-button wow fadeInRight" ata-wow-delay="0.5s">
             <form class="d-inline" action="/daftar-dokumen" method="get">
               <div class="input-group mb-3">
-                <select class="form-select p-1 bg-success text-light " name="kriteria" id="" style="width: 80px;">
+                <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 80px;">
                   <option value="" selected>Kriteria</option>
                   @for ($i = 1; $i <= 9; $i++)
                   <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
@@ -22,7 +22,7 @@
                   <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
                   <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
                 </select>
-                <select class="form-select p2 bg-success text-light " name="tipe" id="" style="width: 60px;">
+                <select class="form-select p2 bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
                   <option value="" selected>Tipe</option>
                   <option value="URL" {{ request()->input('tipe') == 'URL' ? 'selected' : '' }}>URL</option>
                   <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
@@ -91,8 +91,8 @@
             </div>
           </div>
           <div class="services-content p-3 pb-3">
-            <h3><a href="/daftar-dokumen?kriteria=10">Kondisi Eksternal</a></h3>
-            <p>Donec tincidunt bibendum gravida. </p>
+            <h3><a href="/daftar-dokumen?kriteria=10">Kondisi </a></h3>
+            <p>Eksternal</p>
           </div>
         </div>
       </div>
@@ -106,8 +106,8 @@
             </div>
           </div>
           <div class="services-content p-3">
-            <h3><a href="/daftar-dokumen?kriteria=11">Profil Institusi</a></h3>
-            <p>Donec tincidunt bibendum gravida. </p>
+            <h3><a href="/daftar-dokumen?kriteria=11">Profil </a></h3>
+            <p>Institusi</p>
           </div>
         </div>
         </a>
@@ -129,7 +129,7 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=2'">
+      <div class="col-md-6 col-lg-4 col-xs-12"  onclick="window.location.href = '/daftar-dokumen?kriteria=2'">
         <a href="/daftar-dokumen?kriteria=2" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s" >
           <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-NSPi_wbrBiL7bQfgUfIf-cbmCP4UGRAPLGskHPAwM3PJU8EEat5ZN9MSIUpbL4ajj78&usqp=CAU');">
@@ -145,9 +145,9 @@
         </a>
       </div>
       <!-- Services item -->
-      <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=3'">
-        <a href="/daftar-dokumen?kriteria=3" >
-        <div class="services-item bg-light wow fadeInRight border" >
+      <div class="col-md-6 col-lg-4 col-xs-12"  onclick="window.location.href = '/daftar-dokumen?kriteria=3'">
+      <a href="/daftar-dokumen?kriteria=3" >
+        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s" >
           <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsLrx7qmsKc56WctSv3CzpGesb_G40nADL5pRxVAx4DoPeHJS4I8moLpzlxrJcqkhZX_s&usqp=CAU');">
             <div class="icon bg-light ">
               <i class="bi bi-mortarboard"></i>
@@ -404,8 +404,8 @@
   
     animateValue('kriteriaCounter', 0, 9, 2000);
     animateValue('dokumenCounter', 0, {{ $dokumenCount }}, 2000);
-    animateValue('fakultasCounter', 0, 10, 2000);
-    animateValue('prodiCounter', 0, 54, 2000);
+    animateValue('fakultasCounter', 0, 9, 2000);
+    animateValue('prodiCounter', 0, 63, 2000);
   });
   </script>
 @if (session()->has('success'))

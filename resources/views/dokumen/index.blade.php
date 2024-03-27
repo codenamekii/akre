@@ -9,7 +9,7 @@
       <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
       <span class="text-secondary wow fadeInDown" data-wow-delay="0.3s">{{ $dokumenCount }} Dokumen</span>
     </div>
-    <form class="row justify-content-center wow fadeInRight" ata-wow-delay="0.3s" action="/daftar-dokumen" method="get">
+    <form class="row justify-content-center wow fadeInRight mx-2" ata-wow-delay="0.3s" action="/daftar-dokumen" method="get">
       <div class="input-group mb-3">
         <select class="form-select p-1 bg-success text-light shadow" name="kriteria" id="" style="width: 90px;">
           <option value="" selected>Kriteria</option>

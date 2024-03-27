@@ -12,7 +12,7 @@
     <div class="row justify-content-between pb-4">
       <div class="col-lg-4 col-md-6 col-sm-12 mb-2 mb-md-0">
         <a href="/admin"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
-        <a href="{{ route('dokumen.create') }}" class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-plus-lg"></i> Tambah Dokumen</a>
+        <a href="{{ route('dokumen.create') }}" class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-plus-lg"></i> Tambah</a>
       </div>
       <div class="col-lg-4 col-md-8 col-sm-12">
         <form class="wow fadeInRight" ata-wow-delay="0.3s" action="/admin/dokumen" method="get">
