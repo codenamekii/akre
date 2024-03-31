@@ -40,15 +40,15 @@
               @switch($dokumen->tipe)
               @case('URL')
               <i class="bi bi-link-45deg text-primary"></i>
-              <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">URL</span>
+              <span class="d-block text-primary bg-success mt-1" style="font-size: 10px; border-radius: 20px">URL</span>
               @break
               @case('PDF')
-              <i class="bi bi-file-pdf-fill"></i>
-              <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">PDF</span>
+              <i class="bi bi-file-pdf-fill text-danger"></i>
+              <span class="d-block text-danger bg-success mt-1" style="font-size: 10px; border-radius: 20px">PDF</span>
               @break
               @case('Image')
-              <i class="bi bi-image-fill text-success"></i>
-              <span class="d-block text-white bg-success mt-1" style="font-size: 10px; border-radius: 20px">IMG</span>
+              <i class="bi bi-image-fill text-secondary"></i>
+              <span class="d-block text-secondary bg-success mt-1" style="font-size: 10px; border-radius: 20px">IMG</span>
               @break
               @endswitch
             </span>

@@ -31,6 +31,8 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
+   
+
 </head>
 <body>
   <ul class="notifications" style="z-index: 999"></ul>
@@ -53,6 +55,7 @@
   <script src="{{ asset('js/waypoints.min.js') }}"></script>   
   <script src="{{ asset('js/main.js') }}"></script>
   <script src="{{ asset('js/custom-toast.js') }}"></script>
+
   
 
 </body>
