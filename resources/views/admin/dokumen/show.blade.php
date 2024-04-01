@@ -2,22 +2,31 @@
 @extends('layouts.main')
 
 @section('content')
+
 <section class="section-padding" style="margin-top: 12vh;">
   <div class="section-header text-center">
     <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Lihat Dokumen</h2>
     <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
   </div>
-  <div class="container " style="width:70%;">
+  <div class="row justify-content-center p-3" >
 
-    <div class="card shadow">
-      <div class="card-header " style="background-color: rgb(235, 234, 234)">
-        <span class="h5 text-success " style="font-weight: 300;"> {{ $dokumen->nama }}</span>
-        <span class="h5 text-success float-right">Kriteria {{ $dokumen->kriteria }} | <span class="h5 text-success"> {{ $dokumen->tipe }}</span></span>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title"><span class="h4 text-dark"> {{ $dokumen->sub_kriteria }}</span></h5>
-        <p class="card-text mb-3"><span class="h5 text-dark"> {{ $dokumen->catatan }}</span></p>        
-        <a href="{{ $dokumen->path }}" class="h5 text-success">{{ $dokumen->path }}</a>
+    <div class="col-md-8 col-lg-6 my-2 ">
+      <div class="box-link">
+        <div class="box-item border wow fadeInRight" data-wow-delay="0.3s">
+          <div class="text">
+            <h4 class="pe-4" style="font-size:1.2rem; ">{{ $dokumen->nama }}</h4>
+            <p class="text-secondary pb-3">
+              {{ __(($dokumen->kriteria > 9 ? ['Kondisi Eksternal', 'Profil Institusi', 'Analisis & Penetapan Program Pengembangan'][$dokumen->kriteria-10] : 'Kriteria '.$dokumen->kriteria)) }}
+            </p>
+            <p style="font-size:1.3rem; "> {{ $dokumen->sub_kriteria }}</p>
+            <p>{{ $dokumen->catatan }}</p>
+            <p> <a id="a" href="{{ $dokumen->path }}" class="text-success">{{ $dokumen->path }}</a></p>
+            <span class="d-flex justify-content-between">
+              <p >{{ \Carbon\Carbon::parse($dokumen->updated_at)->translatedFormat('d F Y') }}</p>
+              <p>Kriteria {{ $dokumen->kriteria }} | <span > {{ $dokumen->tipe }}</span></p>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
 

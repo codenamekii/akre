@@ -532,7 +532,9 @@ hr {
 #features .box-item:hover .icon i,
 #features .box-item:hover .text h4,
 #features .box-item:hover .text p,
+#features .box-item:hover .text a,
 .box-item:hover .icon i,
+.box-item:hover .text a,
 .box-item:hover .icon span,
 .box-item:hover .text h4,
 .box-item:hover .text p {
