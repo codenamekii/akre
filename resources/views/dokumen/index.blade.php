@@ -7,7 +7,7 @@
     <div class="section-header">
       <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">{{ strtoupper($h2) }}</h2>
       <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
-      <span class="text-secondary wow fadeInDown" data-wow-delay="0.3s">{{ $dokumenCount }} Dokumen</span>
+      <span class="text-secondary wow fadeInDown" data-wow-delay="0.3s">{{ $dokumens->total() }} Dokumen</span>
     </div>
     <form class="row justify-content-center wow fadeInRight mx-2" ata-wow-delay="0.3s" action="/daftar-dokumen" method="get">
       <div class="input-group mb-3">

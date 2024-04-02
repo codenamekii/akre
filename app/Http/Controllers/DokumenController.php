@@ -39,8 +39,7 @@ class DokumenController extends Controller
         return view('dokumen.index', [
             'title' => 'Daftar Dokumen',
             'h2' => $h2,
-            'dokumens' => $dokumens['data'],
-            'dokumenCount' => $dokumens['count'],
+            'dokumens' => $dokumens,
         ]);
     }
     
