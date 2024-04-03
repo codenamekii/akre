@@ -70,8 +70,8 @@
       </div>
       <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
         <div class="intro-img wow fadeInRight" ata-wow-delay="0.8s">
-          <img class="shape-one " src="https://html.creativegigstf.com/sinco/images/assets/ils_13_1.svg" alt="">
-          <img class="img-fluid move-effect" src="https://html.creativegigstf.com/sinco/images/assets/ils_13.svg" alt="">
+          <img class="shape-one " src="/img/hero/hero-1.1.svg" alt="">
+          <img class="img-fluid move-effect" src="/img/hero/hero-1.svg" alt="">
         </div>            
       </div>
     </div>
@@ -90,7 +90,7 @@
       <!-- Services item -->
       <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=10'">
         <div class="services-item wow fadeInRight border border" data-wow-delay="0.3s" >
-          <div class="bg-img" style="background-image: url('https://www.efim.org/sites/default/files/styles/page-x-large/public/images/working-groups.png?itok=s9u-asxk');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kondisi.png');">
             <div class="icon bg-light">
               <i class="bi bi-globe2"></i>
             </div>
@@ -105,7 +105,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=11'">
         <a href="/daftar-dokumen?kriteria=11" >
           <div class="services-item bg-light wow fadeInRight border" data-wow-delay="0.6s" >
-          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyus-Mi-mh0AQckuZ3VOS_tJGfQSt5O5uNMFaLA08bw&s');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/profil.jpg');">
             <div class="icon bg-light ">
               <i class="bi bi-building-fill-gear"></i>
             </div>
@@ -121,7 +121,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=1'">
         <a href="/daftar-dokumen?kriteria=1" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="0.9s" >
-          <div class="bg-img" style="background-image: url('https://cdni.iconscout.com/illustration/premium/thumb/business-mission-5642382-4706898.png?f=webp');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-1.webp');">
             <div class="icon bg-light ">
               <i class="bi bi-flag"></i>
             </div>
@@ -137,7 +137,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12"  onclick="window.location.href = '/daftar-dokumen?kriteria=2'">
         <a href="/daftar-dokumen?kriteria=2" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s" >
-          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-NSPi_wbrBiL7bQfgUfIf-cbmCP4UGRAPLGskHPAwM3PJU8EEat5ZN9MSIUpbL4ajj78&usqp=CAU');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-2.jpg');">
             <div class="icon bg-light ">
               <i class="bi bi-people"></i>
             </div>
@@ -153,7 +153,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12"  onclick="window.location.href = '/daftar-dokumen?kriteria=3'">
       <a href="/daftar-dokumen?kriteria=3" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s" >
-          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsLrx7qmsKc56WctSv3CzpGesb_G40nADL5pRxVAx4DoPeHJS4I8moLpzlxrJcqkhZX_s&usqp=CAU');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-3.jpg');">
             <div class="icon bg-light ">
               <i class="bi bi-mortarboard"></i>
             </div>
@@ -169,7 +169,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=4'">
         <a href="/daftar-dokumen?kriteria=4" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
-          <div class="bg-img" style="background-image: url('https://img.freepik.com/free-vector/recruit-agent-analyzing-candidates_74855-4565.jpg');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-4.avif');">
             <div class="icon bg-light ">
               <i class="bi bi-person-standing"></i>
             </div>
@@ -185,7 +185,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=5'">
         <a href="/daftar-dokumen?kriteria=5" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s">
-          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9cvPaZkm4qJTRC3nyHBkLLn_biSUcz-oql1R27ARwcXMo9_Os6_iGMcsCLwWMD8fRTAg&usqp=CAU');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-5.png');">
             <div class="icon bg-light ">
               <i class="bi bi-gear-wide-connected"></i>
             </div>
@@ -201,7 +201,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=6'">
         <a href="/daftar-dokumen?kriteria=6" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s">
-          <div class="bg-img" style="background-image: url('https://tuliskan.id/wp-content/uploads/2019/10/Dampak-Globalisasi-di-Bidang-Pendidikan.jpg');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-6.jpg');">
             <div class="icon bg-light ">
               <i class="bi bi-book-half"></i>
             </div>
@@ -217,7 +217,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=7'">
         <a href="/daftar-dokumen?kriteria=7" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
-          <div class="bg-img" style="background-image: url('https://dinkes.kotabogor.go.id/assets-publik/img/illustration-penelitian.svg');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-7.svg');">
             <div class="icon bg-light ">
               <i class="bi bi-journal"></i>
             </div>
@@ -233,7 +233,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=8'">
         <a href="/daftar-dokumen?kriteria=8" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s">
-          <div class="bg-img" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/006/901/813/small_2x/clothing-donation-concept-free-vector.jpg');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-8.jpg');">
             <div class="icon bg-light ">
               <i class="bi bi-heart-pulse-fill"></i>
             </div>
@@ -249,7 +249,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=9'">
         <a href="/daftar-dokumen?kriteria=9" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s">
-          <div class="bg-img" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOXeAXZWqkoXSgbvTIUDfV7KMKS3Y8gOehxQ5aiBaYcQws5CLymDM1C-wiEWlroVkA3rg&usqp=CAU');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-9.jpg');">
             <div class="icon bg-light ">
               <i class="bi bi-trophy"></i>
             </div>
@@ -265,7 +265,7 @@
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=12'">
         <a href="/daftar-dokumen?kriteria=12" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
-          <div class="bg-img" style="background-image: url('https://highlandexperience.co.id/wp-content/uploads/Team-Development-Program.png');">
+          <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-10.png');">
             <div class="icon bg-light ">
               <i class="bi bi-graph-up-arrow"></i>
             </div>
@@ -505,7 +505,7 @@
         </div>
       </div>
       <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight " data-wow-delay="0.3s">
-        <img class="img-fluid" src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin-dan-blu-png-2.png" alt="" >
+        <img class="img-fluid" src="/img/logo.png" alt="" >
       </div>
     </div>
   </div>
@@ -553,7 +553,7 @@
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
         <div class="show-box wow fadeInUp d-flex justify-content-center" data-wow-delay="0.3s">
-          <img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/03/bu-rektor-baru-Copy.png" width="450px" alt="">
+          <img src="/img/hero/rektor.png" width="450px" alt="">
         </div>
       </div>
       <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
