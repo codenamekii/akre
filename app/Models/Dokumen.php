@@ -29,8 +29,7 @@ class Dokumen extends Model
     
         $query->orderBy('created_at', 'desc');
     
-        $results['count'] = $query->count();
-        $results['data'] = $query->paginate($paginate)->withQueryString();
+        $results = $query->paginate($paginate)->withQueryString();
 
         return $results;
     }
