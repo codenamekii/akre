@@ -56,8 +56,7 @@ class DokumenController extends Controller
 
         return view('admin.dokumen.index', [
             'title' => 'Admin Daftar Dokumen',
-            'dokumens' => $dokumens['data'],
-            'dokumenCount' => $dokumens['count'],
+            'dokumens' => $dokumens,
         ]);
     }
 
