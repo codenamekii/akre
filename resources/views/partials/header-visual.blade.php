@@ -22,7 +22,7 @@
                   <i class='bx bxs-chevron-right arrow more-arrow'></i>
                 </span>
                 <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">S1</a></li>
+                  <li><a href="/visualisasi/calon-mahasiswa/s1">S1</a></li>
                   <li><a href="#">S2</a></li>
                   <li><a href="#">S3</a></li>
                   <li><a href="#">Profesi</a></li>

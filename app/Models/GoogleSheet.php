@@ -22,7 +22,7 @@ class GoogleSheet extends Model
     $spreadsheetId = env('SPREADSHEET_ID');
     $locator = $sheet.'!'.$range;
 
-    $params = array('alt' => 'json');
+    // $params = array('alt' => 'json');
 
     $response = $sheets->spreadsheets_values->get($spreadsheetId, $locator);
     $values = $response->getValues();
@@ -34,7 +34,38 @@ class GoogleSheet extends Model
       $result[] = array_combine($keys, $value);
     }
 
-
     return json_encode($result);
+  }
+
+  /**
+   * Tabulator untuk memecah data dengan batas 'break' di spreadsheet
+   */
+  private function complexTabulator($values){
+    $tables = [];
+    $headerRow = null;
+    
+    foreach ($values as $row) {
+      if ($row[0] === 'break') {
+      $headerRow = null;
+        continue;
+      }
+  
+      if (empty($row) || $headerRow === $row) {
+        continue;
+      }
+  
+      if ($headerRow === null) {
+        $headerRow = $row;
+        continue;
+      }
+  
+      $rowData = [];
+      foreach ($headerRow as $index => $key) {
+        $rowData[$key] = isset($row[$index]) ? $row[$index] : null;
+      }
+      $tables[] = $rowData;
+    }
+
+    return $tables;
   }
 }

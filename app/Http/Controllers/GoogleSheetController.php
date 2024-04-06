@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class GoogleSheetController extends Controller
 {
-    public function index(){
-        return (new GoogleSheet)->fetchSheet('calonMhs', 'A:D');
+    public function index($sheet, $range){
+        return (new GoogleSheet)->fetchSheet($sheet, $range);
     }
 }

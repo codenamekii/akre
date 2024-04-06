@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DokumenController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\VisualisasiController;
 
 Route::middleware(['guest', 'no-cache'])->group(function () {
     Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -18,6 +19,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/daftar-dokumen', [DokumenController::class, 'getDokumen']);
 
     Route::get('/visualisasi', fn()=> view('visualisasi.index'));
+
+    Route::get('/visualisasi/calon-mahasiswa/{status}', [VisualisasiController::class, 'getCalonMhs']);
 });
 
 Route::middleware(['auth', 'is-admin'])->group(function () {

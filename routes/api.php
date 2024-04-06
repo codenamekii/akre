@@ -8,4 +8,4 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/visualisasi', [GoogleSheetController::class, 'index']);
+Route::get('/visualisasi/{sheet}/{range}', [GoogleSheetController::class, 'index']);
