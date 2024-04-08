@@ -20,7 +20,20 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/visualisasi', fn()=> view('visualisasi.index'));
 
-    Route::get('/visualisasi/calon-mahasiswa/{status}', [VisualisasiController::class, 'getCalonMhs']);
+    Route::get('/visualisasi/mahasiswa/calon-mahasiswa/{status}', [VisualisasiController::class, 'getCalonMhs']);
+    Route::get('/visualisasi/mahasiswa/mahasiswa-baru/{status}', [VisualisasiController::class, 'getMhsBaru']);
+    Route::get('/visualisasi/mahasiswa/mahasiswa-aktif/{status}', [VisualisasiController::class, 'getMhsAktif']);
+    Route::get('/visualisasi/mahasiswa/mahasiswa-lulusan/{status}', [VisualisasiController::class, 'getMhsLulusan']);
+    Route::get('/visualisasi/mahasiswa/rasio-kelulusan/{status}', [VisualisasiController::class, 'getRasioLulus']);
+
+    Route::get('/visualisasi/mahasiswa/mahasiswa-tugas-akhir', function () {
+        return view('visualisasi.mahasiswa.mahasiswa-tugas-akhir');
+    });
+    
+    Route::get('/visualisasi/mahasiswa/mahasiswa-asing', function () {
+        return view('visualisasi.mahasiswa.mahasiswa-asing');
+    });   
+    
 });
 
 Route::middleware(['auth', 'is-admin'])->group(function () {

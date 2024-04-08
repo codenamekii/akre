@@ -7,79 +7,80 @@
       <div class="logo"><a href="/"><img width="130vh" src="/img/logo.png"  alt=""></a></div>
       <div class="nav-links">
         <div class="sidebar-logo">
-          <span class="logo-name">CodingLab</span>
+          <span class="logo-name">AIPT</span>
           <i class='bx bx-x' ></i>
         </div>
         <ul class="links">
           <li><a href="/">Beranda</a></li>
           <li>
             <a href="#">Mahasiswa</a>
-            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow'></i>
             <ul class="htmlCss-sub-menu sub-menu">
-              <li class="more">
-                <span>
-                  <a href="#">Calon Mahasisawa</a>
-                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="/visualisasi/calon-mahasiswa/s1">S1</a></li>
-                  <li><a href="#">S2</a></li>
-                  <li><a href="#">S3</a></li>
-                  <li><a href="#">Profesi</a></li>
-                </ul>
-              </li>
-              <li class="more">
-                <span>
-                  <a href="#">Mahasisawa Baru</a>
-                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">S1</a></li>
-                  <li><a href="#">S2</a></li>
-                  <li><a href="#">S3</a></li>
-                  <li><a href="#">Profesi</a></li>
-                </ul>
-              </li>
-              <li class="more">
-                <span>
-                  <a href="#">Mahasisawa Aktif</a>
-                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">S1</a></li>
-                  <li><a href="#">S2</a></li>
-                  <li><a href="#">S3</a></li>
-                  <li><a href="#">Profesi</a></li>
-                </ul>
-              </li>
-              <li class="more">
-                <span>
-                  <a href="#">Mahasisawa Lulusan</a>
-                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">S1</a></li>
-                  <li><a href="#">S2</a></li>
-                  <li><a href="#">S3</a></li>
-                  <li><a href="#">Profesi</a></li>
-                </ul>
-              </li>
-              <li class="more">
-                <span>
-                  <a href="#">Rasio Kelulusan</a>
-                  <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                </span>
-                <ul class="more-sub-menu sub-menu">
-                  <li><a href="#">S1</a></li>
-                  <li><a href="#">S2</a></li>
-                  <li><a href="#">S3</a></li>
-                  <li><a href="#">Profesi</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Mahasiswa Tugas Akhir</a></li>
-              <li><a href="#">Mahasiswa Asing</a></li>
+                <li class="more">
+                    <span>
+                        <a href="#">Calon Mahasiswa</a>
+                        <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                    </span>
+                    <ul class="more-sub-menu sub-menu">
+                        <li><a href="/visualisasi/mahasiswa/calon-mahasiswa/S1">S1</a></li>
+                        <li><a href="/visualisasi/mahasiswa/calon-mahasiswa/S2">S2</a></li>
+                        <li><a href="/visualisasi/mahasiswa/calon-mahasiswa/S3">S3</a></li>
+                        <li><a href="/visualisasi/mahasiswa/calon-mahasiswa/Profesi">Profesi</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <span>
+                        <a href="#">Mahasiswa Baru</a>
+                        <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                    </span>
+                    <ul class="more-sub-menu sub-menu">
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-baru/S1">S1</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-baru/S2">S2</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-baru/S3">S3</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-baru/Profesi">Profesi</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <span>
+                        <a href="#">Mahasiswa Aktif</a>
+                        <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                    </span>
+                    <ul class="more-sub-menu sub-menu">
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-aktif/S1">S1</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-aktif/S2">S2</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-aktif/S3">S3</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-aktif/Profesi">Profesi</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <span>
+                        <a href="#">Mahasiswa Lulusan</a>
+                        <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                    </span>
+                    <ul class="more-sub-menu sub-menu">
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-lulusan/S1">S1</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-lulusan/S2">S2</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-lulusan/S3">S3</a></li>
+                        <li><a href="/visualisasi/mahasiswa/mahasiswa-lulusan/Profesi">Profesi</a></li>
+                    </ul>
+                </li>
+                <li class="more">
+                    <span>
+                        <a href="#">Rasio Kelulusan</a>
+                        <i class='bx bxs-chevron-right arrow more-arrow'></i>
+                    </span>
+                    <ul class="more-sub-menu sub-menu">
+                        <li><a href="/visualisasi/mahasiswa/rasio-kelulusan/S1">S1</a></li>
+                        <li><a href="/visualisasi/mahasiswa/rasio-kelulusan/S2">S2</a></li>
+                        <li><a href="/visualisasi/mahasiswa/rasio-kelulusan/S3">S3</a></li>
+                        <li><a href="/visualisasi/mahasiswa/rasio-kelulusan/Profesi">Profesi</a></li>
+                    </ul>
+                </li>
+                <li><a href="/visualisasi/mahasiswa/mahasiswa-tugas-akhir">Mahasiswa Tugas Akhir</a></li>
+                <li><a href="/visualisasi/mahasiswa/mahasiswa-asing">Mahasiswa Asing</a></li>
             </ul>
-          </li>
+        </li>
+        
 
           <li>
             <a href="#">SDM</a>

@@ -1017,12 +1017,12 @@ hr {
   opacity: 1;
 }
 
-/* ==========================================================================
-   Pricing Table Style
-   ========================================================================== */
-#pricing {
-  text-align: center;
+.text{
+  min-width: 86%;
 }
+/* #pricing {
+  text-align: center;
+} */
 
 #pricing .title {
   padding-top: 20px;
