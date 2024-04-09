@@ -2,10 +2,10 @@
 @section('content')
     <div id="hero-area" class="hero-area-bg">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-2">
+            <div class="row justify-content-start">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hero-area text-center">
-                        <h1 class="wow fadeInUp" data-wow-delay="0.3s">Data Akreditasi Program Studi</h1>
+                        <h1 class="wow fadeInUp" data-wow-delay="0.3s">Data Mahasiswa Tugas Akhir</h1>
                     </div>
                 </div>
 
@@ -14,13 +14,8 @@
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Predikat</th>
-                                <th scope="col">S1</th>
-                                <th scope="col">S2</th>
-                                <th scope="col">S3</th>
-                                <th scope="col">Profesi</th>
-                                <th scope="col">Jumlah</th>
-                            </tr>
+                                <th scope="col">Fakultas</th>
+                                <th scope="col">Jumlah Mahasiswa Tugas Akhir</th>
                         </thead>
                         <tbody id="dataTableBody">
 
@@ -28,10 +23,9 @@
                     </table>
                 </div>
 
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp" data-wow-delay="0.3s">
-                    <canvas id="chart-1" height="200vh"></canvas>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInUp " data-wow-delay="0.3s">
+                    <canvas class="border" id="chart-1" height="300vh"></canvas>
                 </div>
-
 
             </div>
 
@@ -43,52 +37,45 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script>
         $(document).ready(function() {
-            var status = window.location.pathname.split('/').pop();
-            var apiUrl = 'http://127.0.0.1:8000/api/visualisasi/lainnya/D8:I14';
+            var apiUrl = 'http://127.0.0.1:8000/api/visualisasi/lainnya/M2:N12';
             $.ajax({
                 url: apiUrl,
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
-         
                     $('#dataTableBody').empty();
                     $.each(data, function(index, entry) {
                         var row = $('<tr>');
                         row.append('<th scope="row">' + (index + 1) + '</th>');
-                        row.append('<td>' + entry['Predikat'] + '</td>');
-                        row.append('<td>' + entry['S1'] + '</td>');
-                        row.append('<td>' + entry['S2'] + '</td>');
-                        row.append('<td>' + entry['S3'] + '</td>');
-                        row.append('<td>' + entry['Profesi'] + '</td>');
-                        row.append('<td>' + entry['Jumlah'] + '</td>');
+                        row.append('<td>' + entry['Fakultas'] + '</td>');
+                        row.append('<td>' + entry['Jumlah Mahasiswa Tugas Akhir'] + '</td>');
                         $('#dataTableBody').append(row);
                     });
 
-                    const labels = data.slice(0, -1).map(entry => entry.Predikat);
-                    const dataset1 = {
-                        label: 'Akreditasi Program Studi',
-                        data: data.slice(0, -1).map(entry => entry['Jumlah']),
-                        backgroundColor: 'rgb(11 169 9 / 38%)',
-                        borderColor: 'rgb(11 169 9)',
+                    const labels = data.slice(0, -1).map(entry => entry.Fakultas);
+                    const dataset = {
+                        label: 'Jumlah Mahasiswa Tugas Akhir Tahun 2022',
+                        data: data.slice(0, -1).map(entry => entry['Jumlah Mahasiswa Tugas Akhir']),
+                        backgroundColor: 'rgba(11, 169, 9, 0.2)',
+                        borderColor: 'rgba(11, 169, 9, 0.2)',
                         borderWidth: 1
                     };
-
-
-                    renderChart('chart-1', 'bar', labels, [dataset1]);
+                    renderChart2('chart-1', labels, dataset);
                 },
                 error: function(xhr, status, error) {
                     console.error('Error fetching data:', error);
                 }
             });
 
-            function renderChart(canvasId, type, labels, datasets) {
+            function renderChart2(canvasId, labels, dataset) {
                 const config = {
-                    type: type,
+                    type: 'bar',
                     data: {
-                        labels: labels,
-                        datasets: datasets
+                        labels,
+                        datasets: [dataset]
                     },
                     options: {
+                        indexAxis: 'y',
                         scales: {
                             y: {
                                 beginAtZero: true

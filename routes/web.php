@@ -32,6 +32,14 @@ Route::middleware(['auth'])->group(function () {
     
     Route::get('/visualisasi/mahasiswa/mahasiswa-asing', function () {
         return view('visualisasi.mahasiswa.mahasiswa-asing');
+    });  
+
+    Route::get('/visualisasi/sdm/tendik', function () {
+        return view('visualisasi.sdm.tendik');
+    });  
+
+    Route::get('/visualisasi/akreditasi', function () {
+        return view('visualisasi.akreditasi');
     });   
     
 });

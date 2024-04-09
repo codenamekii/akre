@@ -5,7 +5,7 @@
             <div class="row justify-content-start">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hero-area text-center">
-                        <h1 class="wow fadeInUp" data-wow-delay="0.3s">Mahasiswa Baru {{ $status }}</h1>
+                        <h1 class="wow fadeInUp" data-wow-delay="0.3s">Data Mahasiswa Baru {{ $status }}</h1>
                     </div>
                 </div>
 
@@ -26,10 +26,10 @@
                     </table>
                 </div>
 
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp " data-wow-delay="0.3s">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInUp " data-wow-delay="0.3s">
                     <canvas id="chart-1"></canvas>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp " data-wow-delay="0.3s">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow fadeInUp " data-wow-delay="0.3s">
                     <canvas id="chart-2"></canvas>
                 </div>
                 <div class="col-lg-12 my-4 col-md-12 col-sm-12 col-xs-12  wow fadeInUp my-2 " data-wow-delay="0.3s">

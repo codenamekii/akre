@@ -98,11 +98,10 @@
                   <li><a href="#">Per Status Sertifikasi</a></li>
                 </ul>
               </li>
-              <li><a href="#">Tendik</a></li>
+              <li><a href="/visualisasi/sdm/tendik">Tendik</a></li>
             </ul>
           </li>
-          <li><a href="#">Akreditasi</a></li>
-          <li><a href="#">Pusat Data Akreditasi</a></li>
+          <li><a href="/visualisasi/akreditasi">Akreditasi</a></li>
           @if (Auth::user()->is_admin)
             <li><a href="/admin">Admin</a></li>
           @endif
