@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hero-area text-center pb-3">
-                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Dosen Berdasarkan Homebase {{ $status }}</span>
+                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Dosen Berdasarkan Homebase </span>
                     </div>
                 </div>
 

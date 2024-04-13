@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hero-area text-center pb-3">
-                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Tenaga Kependidikan {{ $status }}</span>
+                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Tenaga Kependidikan </span>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp" data-wow-delay="0.3s">
