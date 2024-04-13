@@ -34,7 +34,7 @@
             </select>
             <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
             <div class="input-group-append">
-              <button class="btn btn-success" id="button-addon2"><i class="bi bi-search"></i></button>
+              <button class="btn btn-search" id="button-addon2"><i class="bi bi-search"></i></button>
             </div>
           </div>
         </form>
