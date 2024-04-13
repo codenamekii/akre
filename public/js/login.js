@@ -50,19 +50,19 @@ AOS.init();
 //   }
 // }
 
-const imageUrls = [
-  'https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/2-11.jpg',
-  'https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/Graduation.jpg',
-  'https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/IMG_2051.jpg',
-  'https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin.png'
-];
+// const imageUrls = [
+//   'https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/2-11.jpg',
+//   'https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/Graduation.jpg',
+//   'https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/IMG_2051.jpg',
+//   'https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin.png'
+// ];
 
-let currentIndex = 0;
+// let currentIndex = 0;
 
-function changeBackground() {
-  document.body.style.backgroundImage = `url('${imageUrls[currentIndex]}')`;
-  currentIndex = (currentIndex + 1) % imageUrls.length;
-}
+// function changeBackground() {
+//   document.body.style.backgroundImage = `url('${imageUrls[currentIndex]}')`;
+//   currentIndex = (currentIndex + 1) % imageUrls.length;
+// }
 
 // Menunggu gambar pertama dimuat sebelum mengatur interval
 const firstImage = new Image();

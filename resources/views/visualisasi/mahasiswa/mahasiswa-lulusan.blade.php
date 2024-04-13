@@ -1,11 +1,11 @@
 @extends('layouts.visual')
 @section('content')
-    <div id="hero-area" class="hero-area-bg">
+    <div id="hero-area" class="hero-area-bg" style="padding-top:130px ">
         <div class="container">
-            <div class="row justify-content-start">
+            <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="hero-area text-center">
-                        <h1 class="wow fadeInUp" data-wow-delay="0.3s">Data Mahasiswa Lulusan {{ $status }}</h1>
+                    <div class="hero-area text-center pb-3">
+                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Mahasiswa Lulusan {{ $status }}</span>
                     </div>
                 </div>
 
@@ -73,8 +73,9 @@
                         row.append('<td>' + entry['Tahun'] + '</td>');
                         row.append('<td>' + entry['Jumlah Lulusan'] + '</td>');
                         row.append('<td>' + entry['Rata-Rata IPK Lulusan'] +
-                        '</td>');
-                        row.append('<td>' + entry['Rata-Rata Masa Studi Lulusan (Tahun)'] + '</td>');
+                            '</td>');
+                        row.append('<td>' + entry['Rata-Rata Masa Studi Lulusan (Tahun)'] +
+                            '</td>');
                         $('#dataTableBody').append(row);
                     });
 
@@ -94,7 +95,7 @@
                         borderColor: 'rgb(11, 69, 169)',
                         borderWidth: 1,
                         tension: 0.4
-                    };   
+                    };
                     const dataset3 = {
                         label: 'Rata-Rata Masa Studi Lulusan (Tahun)',
                         data: data.map(entry => entry['Rata-Rata Masa Studi Lulusan (Tahun)']),
@@ -102,7 +103,7 @@
                         borderColor: 'rgb(11, 69, 169)',
                         borderWidth: 1,
                         tension: 0.4
-                    };                    
+                    };
 
                     renderChart('chart-1', 'line', labels, [dataset1]);
                     renderChart('chart-2', 'line', labels, [dataset2]);

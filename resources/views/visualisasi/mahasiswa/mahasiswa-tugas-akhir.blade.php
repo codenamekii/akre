@@ -1,11 +1,11 @@
 @extends('layouts.visual')
 @section('content')
-    <div id="hero-area" class="hero-area-bg">
+    <div id="hero-area" class="hero-area-bg" style="padding-top:130px ">
         <div class="container">
-            <div class="row justify-content-start">
+            <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="hero-area text-center">
-                        <h1 class="wow fadeInUp" data-wow-delay="0.3s">Data Mahasiswa Tugas Akhir</h1>
+                    <div class="hero-area text-center pb-3">
+                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Mahasiswa Tugas Akhir {{ $status }}</span>
                     </div>
                 </div>
 

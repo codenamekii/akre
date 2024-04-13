@@ -34,6 +34,22 @@ Route::middleware(['auth'])->group(function () {
         return view('visualisasi.mahasiswa.mahasiswa-asing');
     });  
 
+    Route::get('/visualisasi/sdm/dosen/per-homebase', function () {
+        return view('visualisasi.sdm.dosen.dosen-perHomebase');
+    });  
+    Route::get('/visualisasi/sdm/dosen/per-jabatan', function () {
+        return view('visualisasi.sdm.dosen.dosen-perJabatan');
+    });  
+    Route::get('/visualisasi/sdm/dosen/per-pendidikan', function () {
+        return view('visualisasi.sdm.dosen.dosen-perPendidikan');
+    });  
+    Route::get('/visualisasi/sdm/dosen/per-sertifikasi', function () {
+        return view('visualisasi.sdm.dosen.dosen-perSertifikasi');
+    });     
+    Route::get('/visualisasi/sdm/dosen/per-tidak-tetap', function () {
+        return view('visualisasi.sdm.dosen.dosen-perTidakTetap');
+    });  
+
     Route::get('/visualisasi/sdm/tendik', function () {
         return view('visualisasi.sdm.tendik');
     });  

@@ -8,7 +8,7 @@
 <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<div id="hero-area" class="hero-area-bg">
+<div id="hero-area" class="hero-area-bg" >
   <div class="container">      
     <div class="row">
       <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
@@ -33,9 +33,9 @@
                   <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
                   <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
                 </select>
-                <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
+                <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.." value="{{ old('result', request()->input('result')) }}">
                 <div class="input-group-append">
-                  <button class="btn btn-success shadow" id="button-addon2"><i class="bi bi-search"></i></button>
+                  <button class="btn btn-search shadow" id="button-addon2"><i class="bi bi-search"></i></button>
                 </div>
               </div>
             </form>
@@ -70,8 +70,10 @@
       </div>
       <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
         <div class="intro-img wow fadeInRight" ata-wow-delay="0.8s">
-          <img class="shape-one " src="/img/hero/hero-1.1.svg" alt="">
-          <img class="img-fluid move-effect" src="/img/hero/hero-1.svg" alt="">
+          <div class="hero-figure-box hero-figure-box-09 move-effect" ></div>
+          <div class="hero-figure-box hero-figure-box-07 move-effect" ></div>
+          <div class="hero-figure-box hero-figure-box-08 " data-wow-delay=".5s" data-rotation="-22deg" style="transform: rotate(-22deg) scale(1); opacity: 1;"></div>
+          <img class="img-fluid move-effect" src="/img/bg/akreditasi.svg" alt="">
         </div>            
       </div>
     </div>
@@ -271,7 +273,7 @@
             </div>
           </div>
           <div class="services-content p-3">
-            <h3><a href="/daftar-dokumen?kriteria=12">Analisi & Penetapan</a></h3>
+            <h3><a href="/daftar-dokumen?kriteria=12">Analisis & Penetapan</a></h3>
             <p>Program Pengembangan</p>
           </div>
         </div>

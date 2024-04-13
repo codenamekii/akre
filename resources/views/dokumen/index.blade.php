@@ -26,9 +26,9 @@
           <option value="PDF" {{ request()->input('tipe') == 'PDF' ? 'selected' : '' }}>PDF</option>
           <option value="Image" {{ request()->input('tipe') == 'Image' ? 'selected' : '' }}>Image</option>
         </select>
-        <input type="text" class="form-control " name="result" placeholder="Cari Dokumen.." aria-label="Recipient's username" aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
+        <input type="text" class="form-control shadow" name="result" placeholder="Cari Dokumen.."  aria-describedby="button-addon2" value="{{ old('result', request()->input('result')) }}">
         <div class="input-group-append">
-          <button class="btn btn-success shadow" id="button-addon2"><i class="bi bi-search"></i></button>
+          <button class="btn btn-search shadow" id="button-addon2"><i class="bi bi-search"></i></button>
         </div>
       </div>
     </form>
@@ -69,7 +69,9 @@
       @endforeach
       <!-- End Services item -->
     </div>
-    {{ $dokumens->onEachSide(1)->links() }}
+    <div id="pagenation">
+      {{ $dokumens->onEachSide(1)->links() }}
+    </div>
     <div class="row mt-5">
       <div class="col-12">
         <a href="/"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>

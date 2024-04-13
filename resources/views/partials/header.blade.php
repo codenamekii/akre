@@ -1,43 +1,69 @@
+<div class="loader-container" id="loader-container">
+    <div class="loader"></div>
+    <div class="text-loader">AIPT-UINSU</div>
+</div>
+
+
 <header id="header-wrap">
-  <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
-    <div class="container">
-      <a href="/" class="navbar-brand"><img src="/img/logo.png" alt=""></a>       
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="lni-menu"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
-          <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-            <a class="nav-link" href="/">
-              Beranda
-            </a>
-          </li>
-            <li class="nav-item {{ Request::is('daftar-dokumen*') ? 'active' : '' }}">
-              <a class="nav-link" href="/daftar-dokumen">
-                Laporan
-              </a>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/visualisasi">
-              Visualisasi Data
-            </a>
-          </li>
-          @if (Auth::user()->is_admin)
-            <li class="nav-item {{ Request::is('admin*') ? 'active' : '' }}">
-              <a class="nav-link" href="/admin">
-                Admin
-              </a>
-            </li>
-          @endif
-          <li class="nav-item">
-            <a class="nav-link" href="/logout">
-              Logout
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar End -->
+    <!-- Navbar Start -->
+    <nav class="nav">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="/img/logo.png" alt="">
+                </a>
+            </div>
+            <i class="bx bx-menu menu-icon"></i>
+            <div class="nav-links">
+
+                <ul class="links">
+                    <li><a class="link" href="/">Beranda</a></li>
+                    <li><a class="link" href="/daftar-dokumen">Laporan</a></li>
+                    <li><a class="link" href="/visualisasi">Visualisasi Data</a></li>
+
+                    @if (Auth::user()->is_admin)
+                        <li><a class="link" href="/admin">Admin</a></li>
+                    @endif
+                    <li><a class="link" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
 </header>
-<!-- Header Area wrapper End -->
+
+
+<script>
+    const menuIcon = document.querySelector(".bx-menu");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".links li");
+
+    menuIcon.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+        links.forEach(link => link.nextElementSibling.style.display = navLinks.classList.contains("active") ?
+            "block" : "none");
+    });
+
+    window.addEventListener("scroll", function() {
+        var header_navbar = document.querySelector(".navbar");
+        var sticky = header_navbar.offsetTop;
+
+        if (window.pageYOffset > sticky) {
+            header_navbar.classList.add("sticky");
+        } else {
+            header_navbar.classList.remove("sticky");
+        }
+    });
+
+    window.addEventListener("DOMContentLoaded", function() {
+        const loaderContainer = document.getElementById("loader-container");
+        loaderContainer.classList.add("show");
+    });
+
+    window.addEventListener("load", function() {
+        const loaderContainer = document.getElementById("loader-container");
+        loaderContainer.classList.remove("show");
+        loaderContainer.style.display = "none";
+    });
+</script>

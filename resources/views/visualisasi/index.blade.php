@@ -2,15 +2,15 @@
 
 @section('content')
 <!-- Hero Area Start -->
-<div id="hero-area" class="hero-area-bg">
+<div id="hero-area" class="hero-area-bg" style="padding-bottom: 0;">
   <div class="container">      
     <div class="row">
       <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
         <div class="contents move-effect ">
-          <h2 class="head-title">Selamat Datang di Website Pusat Data Akreditasi</h2>
-          <p>Pusat Data Bukti Fisik Pendukung Akreditasi Universitas Islam Negeri Sumatera Utara Medan</p>
+          <h2 class="head-title"><span>Informasi dan Visualisasi Data Akreditasi</span></h2>
+          <p>Pusat Data Calon Mahasiswa, Data Mahasiswa, Data Lulusan dan Sumber Daya Manusia</p>
           <div class="header-button">
-            <button class="btn btn-common">Kunjungi</button>
+            <button class="btn btn-common">Ekslplorasi</button>
           </div>
           <div class="row">
 

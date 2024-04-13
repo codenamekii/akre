@@ -1,11 +1,11 @@
 @extends('layouts.visual')
 @section('content')
-    <div id="hero-area" class="hero-area-bg">
+    <div id="hero-area" class="hero-area-bg" style="padding-top:130px ">
         <div class="container">
-            <div class="row justify-content-start">
+            <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="hero-area text-center">
-                        <h1 class="wow fadeInUp" data-wow-delay="0.3s">Data Mahasiswa Asing</h1>
+                    <div class="hero-area text-center pb-3">
+                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Mahasiswa Asing {{ $status }}</span>
                     </div>
                 </div>
 
@@ -28,7 +28,8 @@
                 success: function(data) {
                     $.each(data, function(index, entry) {
                         let tableDiv = $('<div>');
-                        tableDiv.addClass('col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp');
+                        tableDiv.addClass(
+                            'col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp');
                         tableDiv.attr('data-wow-delay', '0.3s');
                         tableDiv.attr('id', 'table-' + index);
 
@@ -64,7 +65,8 @@
                         $('#container').append(tableDiv);
 
                         let chartDiv = $('<div>');
-                        chartDiv.addClass('col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-4 wow fadeInUp');
+                        chartDiv.addClass(
+                            'col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-4 wow fadeInUp');
                         chartDiv.attr('data-wow-delay', '0.3s');
                         chartDiv.attr('id', 'chart-' + index);
 
@@ -80,10 +82,14 @@
                         let myChart = new Chart(ctx, {
                             type: 'bar',
                             data: {
-                                labels: Object.keys(entry).filter(key => key !== 'Tahun' && key !== 'Total'),
+                                labels: Object.keys(entry).filter(key => key !==
+                                    'Tahun' && key !== 'Total'),
                                 datasets: [{
-                                    label: 'Jumlah Mahasiswa Asing Tahun ' + entry['Tahun'],
-                                    data: Object.values(entry).filter(value => value !== entry['Tahun'] && value !== entry['Total']),
+                                    label: 'Jumlah Mahasiswa Asing Tahun ' +
+                                        entry['Tahun'],
+                                    data: Object.values(entry).filter(value =>
+                                        value !== entry['Tahun'] &&
+                                        value !== entry['Total']),
                                     backgroundColor: 'rgba(11, 169, 9, 0.2)',
                                     borderColor: 'rgba(11, 169, 9, 0.2)',
                                     borderWidth: 1

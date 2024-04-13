@@ -5,22 +5,18 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hero-area text-center pb-3">
-                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Akreditasi Program Studi {{ $status }}</span>
+                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Dosen Berdasarkan Sertifikasi {{ $status }}</span>
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-12 col-sm-11 col-xs-11 p-2 wow fadeInUp" id="overflow" data-wow-delay="0.3s">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp" data-wow-delay="0.3s">
                     <table class="table table-striped table-hover border">
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Predikat</th>
-                                <th scope="col">S1</th>
-                                <th scope="col">S2</th>
-                                <th scope="col">S3</th>
-                                <th scope="col">Profesi</th>
-                                <th scope="col">Jumlah</th>
-                            </tr>
+                                <th scope="col">Fakultas</th>
+                                <th scope="col">Jumlah Dosen</th>
+                                <th scope="col">Jumlah Dosen Bersertifikat</th>
                         </thead>
                         <tbody id="dataTableBody">
 
@@ -28,10 +24,9 @@
                     </table>
                 </div>
 
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp" data-wow-delay="0.3s">
-                    <canvas id="chart-1" height="200vh"></canvas>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-2 wow fadeInUp" data-wow-delay="0.3s">
+                    <canvas id="chart-1"></canvas>
                 </div>
-
 
             </div>
 
@@ -44,7 +39,7 @@
     <script>
         $(document).ready(function() {
             var status = window.location.pathname.split('/').pop();
-            var apiUrl = 'http://127.0.0.1:8000/api/visualisasi/lainnya/D8:I14';
+            var apiUrl = 'http://127.0.0.1:8000/api/visualisasi/dosen/A15:C25';
             $.ajax({
                 url: apiUrl,
                 method: 'GET',
@@ -52,29 +47,34 @@
                 success: function(data) {
 
                     $('#dataTableBody').empty();
-                    $.each(data, function(index, entry) {
+                    data.forEach(function(entry, index) {
                         var row = $('<tr>');
                         row.append('<th scope="row">' + (index + 1) + '</th>');
-                        row.append('<td>' + entry['Predikat'] + '</td>');
-                        row.append('<td>' + entry['S1'] + '</td>');
-                        row.append('<td>' + entry['S2'] + '</td>');
-                        row.append('<td>' + entry['S3'] + '</td>');
-                        row.append('<td>' + entry['Profesi'] + '</td>');
-                        row.append('<td>' + entry['Jumlah'] + '</td>');
+                        row.append('<td>' + entry['Fakultas'] + '</td>');
+                        row.append('<td>' + entry['Jumlah Dosen'] + '</td>');
+                        row.append('<td>' + entry['Jumlah Dosen Bersertifikat'] + '</td>');
                         $('#dataTableBody').append(row);
                     });
 
-                    const labels = data.slice(0, -1).map(entry => entry.Predikat);
-                    const dataset1 = {
-                        label: 'Akreditasi Program Studi',
-                        data: data.slice(0, -1).map(entry => entry['Jumlah']),
-                        backgroundColor: 'rgb(11 169 9 / 38%)',
+                    const labels = ["FDK", "FEBI", "FSH", "FTK", "FUSI", "FST", "FIS", "FKM",
+                        "Pascasarjana"
+                    ];
+                    const dataset2 = {
+                        label: 'Jumlah Dosen',
+                        data: data.slice(0, -1).map(entry => entry['Jumlah Dosen']),
+                        backgroundColor: 'rgb(11 169 9 / 48%)',
+                        borderColor: 'rgb(11 169 9)',
+                        borderWidth: 1
+                    };
+                    const dataset3 = {
+                        label: 'Jumlah Dosen Bersertifikat',
+                        data: data.slice(0, -1).map(entry => entry['Jumlah Dosen Bersertifikat']),
+                        backgroundColor: 'rgb(7 129 22 / 28%)',
                         borderColor: 'rgb(11 169 9)',
                         borderWidth: 1
                     };
 
-
-                    renderChart('chart-1', 'bar', labels, [dataset1]);
+                    renderChart('chart-1', 'bar', labels, [dataset2, dataset3]);
                 },
                 error: function(xhr, status, error) {
                     console.error('Error fetching data:', error);
