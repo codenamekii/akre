@@ -16,7 +16,7 @@ class GoogleSheet extends Model
   {
     try {
       $client = new GoogleClient();
-      $client->setAuthConfig('..\storage\app\uinsu-aipt-visualisasi-data-9b9dab81d2c0.json');
+      $client->setAuthConfig('../storage/app/uinsu-aipt-visualisasi-data-9b9dab81d2c0.json');
       $client->addScope(Sheets::SPREADSHEETS_READONLY);
       $sheets = new Sheets($client);
 

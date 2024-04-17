@@ -150,7 +150,7 @@
         setTimeout(function() {
             loaderContainer.classList.remove("show");
             loaderContainer.style.display = "none";
-        }, 3000);
+        }, 2000);
     });
 
     window.addEventListener("load", function() {

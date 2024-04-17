@@ -18,7 +18,7 @@
 
                 <ul class="links">
                     <li><a class="link" href="/">Beranda</a></li>
-                    <li><a class="link" href="/daftar-dokumen">Laporan</a></li>
+                    <li><a class="link" href="/daftar-dokumen">Dokumen</a></li>
                     <li><a class="link" href="/visualisasi">Visualisasi Data</a></li>
 
                     @if (Auth::user()->is_admin)

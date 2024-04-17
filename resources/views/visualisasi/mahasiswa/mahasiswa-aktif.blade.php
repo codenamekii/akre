@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hero-area text-center pb-3">
-                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Mahasiswa Aktif {{ $status }}</span>
+                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Mahasiswa Aktif {{ $jenjang }}</span>
                     </div>
                 </div>
 
@@ -16,7 +16,7 @@
                                 <th scope="col">No</th>
                                 <th scope="col">Tahun</th>
                                 <th scope="col">Jumlah Mahasiswa Aktif</th>
-                                @if ($status == 'S1')
+                                @if ($jenjang == 'S1')
                                     <th scope="col">Jumlah Mahasiswa Aktif (Transfer)</th>
                                 @endif
                             </tr>
@@ -39,8 +39,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script>
         $(document).ready(function() {
-            var status = window.location.pathname.split('/').pop();
-            var apiUrl = '';
+            var status = "{{ $jenjang }}"
+
             if (status === 'S1') {
                 apiUrl = 'http://127.0.0.1:8000/api/visualisasi/mhsAktif/A2:C7';
             } else if (status === 'S2') {

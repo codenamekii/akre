@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hero-area text-center pb-3">
-                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Rasio Kelulusan {{ $status }}</span>
+                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Rasio Kelulusan {{ $jenjang }}</span>
                     </div>
                 </div>
 
@@ -51,14 +51,15 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script>
         $(document).ready(function() {
-            var status = window.location.pathname.split('/').pop();
-            if (status === 'S1') {
+            var status = "{{ $jenjang }}"
+
+            if (status=== 'S1') {
                 apiUrl = 'http://127.0.0.1:8000/api/visualisasi/rasioLulus/A2:I9';
-            } else if (status === 'S2') {
+            } else if (status=== 'S2') {
                 apiUrl = 'http://127.0.0.1:8000/api/visualisasi/rasioLulus/K2:P6';
-            } else if (status === 'S3') {
+            } else if (status=== 'S3') {
                 apiUrl = 'http://127.0.0.1:8000/api/visualisasi/rasioLulus/A12:I19';
-            } else if (status === 'Profesi') {
+            } else if (status=== 'Profesi') {
                 apiUrl = 'http://127.0.0.1:8000/api/visualisasi/rasioLulus/K12:S19';
             } else {
                 console.error('Status tidak valid');
