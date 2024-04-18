@@ -17,6 +17,7 @@
 
                 <ul class="links">
                     <li><a class="link" href="/">Beranda</a></li>
+                    <li><a class="link" href="/visualisasi">Visualisasi Data</a></li>
                     <li>
                         <a class="link" href="#">Mahasiswa</a>
                         <i class='bx bxs-chevron-down htmlcss-arrow arrow'></i>

@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="hero-area text-center pb-3">
-                        <span class="wow fadeInUp h2 text-dark" data-wow-delay="0.3s">Data Dosen Berdasarkan Sertifikasi </span>
+                        <span class="wow fadeInUp h4 text-dark" data-wow-delay="0.3s">Data Dosen Berdasarkan Sertifikasi </span>
                     </div>
                 </div>
 
@@ -28,6 +28,11 @@
                     <canvas id="chart-1"></canvas>
                 </div>
 
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                  <a href="/visualisasi"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
+                </div>
             </div>
 
         </div>

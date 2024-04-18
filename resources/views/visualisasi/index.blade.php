@@ -1,58 +1,174 @@
 @extends('layouts.visual')
-
 @section('content')
-<!-- Hero Area Start -->
-<div id="hero-area" class="hero-area-bg" style="padding-bottom: 0;">
-  <div class="container">      
-    <div class="row">
-      <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-        <div class="contents move-effect ">
-          <h2 class="head-title"><span>Informasi dan Visualisasi Data Akreditasi</span></h2>
-          <p>Pusat Data Calon Mahasiswa, Data Mahasiswa, Data Lulusan dan Sumber Daya Manusia</p>
-          <div class="header-button">
-            <button class="btn btn-common">Ekslplorasi</button>
-          </div>
-          <div class="row">
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/lindy-uikit.css" />
+    <link rel="stylesheet" href="/css/tiny-slider.css" />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-            <div class="col-lg-3 col-6">
-              <div class="stats-item text-center ">
-                <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="0" class="purecounter">9</span>
-                <p>Kriteria</p>
-              </div>
-            </div><!-- End Stats Item -->
-        
-            <div class="col-lg-3 col-6">
-              <div class="stats-item text-center ">
-                <span data-purecounter-start="0" data-purecounter-end="681" data-purecounter-duration="0" class="purecounter">681</span>
-                <p>Dokumen</p>
-              </div>
-            </div><!-- End Stats Item -->
-        
-            <div class="col-lg-3 col-6">
-              <div class="stats-item text-center ">
-                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="0" class="purecounter">10</span>
-                <p>Fakultas/PPs</p>
-              </div>
-            </div><!-- End Stats Item -->
-        
-            <div class="col-lg-3 col-6">
-              <div class="stats-item text-center ">
-                <span data-purecounter-start="0" data-purecounter-end="54" data-purecounter-duration="0" class="purecounter">54</span>
-                <p>Prodi</p>
-              </div>
-            </div><!-- End Stats Item -->
-        
-          </div>
-
+    <section id="pricing" class="pricing-section pricing-style-4 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="section-title mb-60">
+                        <h3 class="mb-15 wow fadeInUp" data-wow-delay=".2s">Visualisasi Data Akreditasi</h3>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">Informasi dan Visualisasi Pusat Data Calon Mahasiswa,
+                            Data Mahasiswa, Data Lulusan dan Sumber Daya Manusia</p>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-6">
+                    <div class="pricing-active-wrapper wow fadeInUp" data-wow-delay=".4s">
+                        <div class="pricing-active">
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Calon Mahasiswa</h4>
+                                    <h3><i class="bi bi-gear"></i></h3>
+                                    <div class="dropdown">
+                                        <button class="button radius-30 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Kunjungi <i
+                                            class="lni lni-angle-double-right"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item" href="/visualisasi/mahasiswa/calon-mahasiswa/S1">S1</a></li>
+                                          <li><a class="dropdown-item" href="/visualisasi/mahasiswa/calon-mahasiswa/S2">S2</a></li>
+                                          <li><a class="dropdown-item" href="/visualisasi/mahasiswa/calon-mahasiswa/S3">S3</a></li>
+                                          <li><a class="dropdown-item" href="/visualisasi/mahasiswa/calon-mahasiswa/Profesi">Profesi</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Mahasiswa Baru</h4>
+                                    <h3><i class="bi bi-person-bounding-box"></i></h3>
+                                    <div class="dropdown">
+                                        <button class="button radius-30 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Kunjungi <i
+                                            class="lni lni-angle-double-right"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-baru/S1">S1</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-baru/S2">S2</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-baru/S3">S3</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-baru/Profesi">Profesi</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Mahasiswa Aktif</h4>
+                                    <h3><i class="bi bi-person-standing"></i></h3>
+                                    <div class="dropdown">
+                                        <button class="button radius-30 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Kunjungi <i
+                                            class="lni lni-angle-double-right"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-aktif/S1">S1</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-aktif/S2">S2</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-aktif/S3">S3</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-aktif/Profesi">Profesi</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Mahasiswa Lulusan</h4>
+                                    <h3><i class="bi bi-person-circle"></i></h3>
+                                    <div class="dropdown">
+                                        <button class="button radius-30 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Kunjungi <i
+                                            class="lni lni-angle-double-right"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-lulusan/S1">S1</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-lulusan/S2">S2</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-lulusan/S3">S3</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-lulusan/Profesi">Profesi</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Rasio Kelulusan</h4>
+                                    <h3><i class="bi bi-check2-all"></i></h3>
+                                    <div class="dropdown">
+                                        <button class="button radius-30 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Kunjungi <i
+                                            class="lni lni-angle-double-right"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/rasio-kelulusan/S1">S1</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/rasio-kelulusan/S2">S2</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/rasio-kelulusan/S3">S3</a></li>
+                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/rasio-kelulusan/Profesi">Profesi</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Mahasiswa Tugas Akhir</h4>
+                                    <h3><i class="bi bi-mortarboard-fill"></i></h3>
+                                    <a href="/visualisasi/mahasiswa/mahasiswa-tugas-akhir" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Mahasiswa Asing</h4>
+                                    <h3><i class="bi bi-journals"></i></h3>
+                                    <a href="/visualisasi/mahasiswa/mahasiswa-asing" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-          <div class="intro-img move-effect ">
-              <canvas id="pie-chart"></canvas>
-          </div>                        
-      </div>
-      
-  </div> 
-</div>
-<!-- Hero Area End -->
+    </section>
+
+    <script src="/js/glightbox.min.js"></script>
+    <script src="/js/tiny-slider.js"></script>
+    <script>
+        (function() {
+            tns({
+                container: '.pricing-active',
+                autoplay: false,
+                mouseDrag: true,
+                gutter: 0,
+                nav: false,
+                controls: true,
+                controlsText: [
+                    '<i class="lni lni-chevron-left prev"></i>',
+                    '<i class="lni lni-chevron-right prev"></i>',
+                ],
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    992: {
+                        items: 1.2,
+                    },
+                    1200: {
+                        items: 2,
+                    }
+                }
+            });
+
+
+        })();
+
+
+    </script>
 @endsection

@@ -14,6 +14,7 @@
     <!-- Owl carousel -->
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}">
+
     
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('css/nivo-lightbox.css') }}">
@@ -23,6 +24,12 @@
 
     <!-- Visual Style -->
     <link rel="stylesheet" href="{{ asset('css/visual.css') }}">
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="{{ asset('css/tiny-slider.css') }}">
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="{{ asset('css/lindy-uikit.css') }}">
 
     <!-- Responsive Style -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
@@ -39,7 +46,6 @@
   @include('partials.footer')
 
   <script src="{{ asset('js/jquery-min.js') }}"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="{{ asset('js/popper.min.js') }}"></script>
   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
@@ -50,6 +56,9 @@
   <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>      
   <script src="{{ asset('js/waypoints.min.js') }}"></script>   
   <script src="{{ asset('js/main.js') }}"></script>
+  <script src="{{ asset('js/custom-toast.js') }}"></script>
+  <script src="{{ asset('js/tiny-slider.js') }}"></script>
+  
   <script src="{{ asset('js/visual.js') }}"></script>
 </body>
 </html>
