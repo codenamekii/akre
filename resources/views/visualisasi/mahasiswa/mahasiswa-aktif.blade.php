@@ -70,7 +70,7 @@
                         row.append('<th scope="row">' + (index + 1) + '</th>');
                         row.append('<td>' + entry['Tahun'] + '</td>');
                         row.append('<td>' + entry['Jumlah Mahasiswa Aktif'] + '</td>');
-                        @if ($status == 'S1')
+                        @if (status == 'S1')
                             if (entry['Jumlah Mahasiswa Aktif (Transfer)']) {
                                 row.append('<td>' + entry['Jumlah Mahasiswa Aktif (Transfer)'] +
                                     '</td>');
