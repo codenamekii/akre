@@ -13,7 +13,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-12">
-                  <a href="/visualisasi"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
+                    <a href="/visualisasi"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
                 </div>
             </div>
 
@@ -25,7 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script>
         $(document).ready(function() {
-            let apiUrl = 'http://127.0.0.1:8000/api/visualisasi/lainnya/A2:K5';
+            let apiUrl = '/api/visualisasi/lainnya/A2:K5';
             $.ajax({
                 url: apiUrl,
                 method: 'GET',

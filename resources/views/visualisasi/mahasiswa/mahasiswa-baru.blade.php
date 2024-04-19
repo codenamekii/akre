@@ -51,7 +51,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-12">
-                  <a href="/visualisasi"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
+                    <a href="/visualisasi"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
                 </div>
             </div>
 
@@ -66,13 +66,13 @@
             var status = "{{ $jenjang }}"
 
             if (status === 'S1') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/MhsBaru/A2:M7';
+                apiUrl = '/api/visualisasi/MhsBaru/A2:M7';
             } else if (status === 'S2') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/MhsBaru/O2:AA7';
+                apiUrl = '/api/visualisasi/MhsBaru/O2:AA7';
             } else if (status === 'S3') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/MhsBaru/A10:M15';
+                apiUrl = '/api/visualisasi/MhsBaru/A10:M15';
             } else if (status === 'Profesi') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/MhsBaru/O10:AA15';
+                apiUrl = '/api/visualisasi/MhsBaru/O10:AA15';
             } else {
                 console.error('Status tidak valid');
                 return;

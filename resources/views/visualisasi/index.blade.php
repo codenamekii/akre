@@ -127,7 +127,6 @@
                                             class="lni lni-angle-double-right"></i></a>
                                 </div>
                             </div>
-                           
                         </div>
                     </div>
                 </div>

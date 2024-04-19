@@ -48,13 +48,13 @@
             var status = "{{ $jenjang }}"
 
             if (status === 'S1') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/mhsAktif/A2:C7';
+                apiUrl = '/api/visualisasi/mhsAktif/A2:C7';
             } else if (status === 'S2') {
-                apiUrl = ' http://127.0.0.1:8000/api/visualisasi/mhsAktif/E2:F7';
+                apiUrl = ' /api/visualisasi/mhsAktif/E2:F7';
             } else if (status === 'S3') {
-                apiUrl = ' http://127.0.0.1:8000/api/visualisasi/mhsAktif/A10:B15';
+                apiUrl = ' /api/visualisasi/mhsAktif/A10:B15';
             } else if (status === 'Profesi') {
-                apiUrl = ' http://127.0.0.1:8000/api/visualisasi/mhsAktif/D10:E15';
+                apiUrl = ' /api/visualisasi/mhsAktif/D10:E15';
             } else {
                 console.error('Status tidak valid');
                 return;

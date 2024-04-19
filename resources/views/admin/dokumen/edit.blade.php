@@ -50,7 +50,7 @@
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
           <div class="mb-3">
             <label  class=" text-dark h6" for="file">File</label>
-            <input class="form-control @error('file') is-invalid @enderror" type="file" name="file" id="file" required>
+            <input class="form-control @error('file') is-invalid @enderror" type="file" name="file" id="file" {{ $dokumen->tipe == 'URL' ? 'disabled' : '' }}>
           </div>                     
           @if ($errors->has('file'))
           <p class="error text-danger">{{ $errors->first('file') }}</p>
@@ -58,20 +58,20 @@
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
           <label class=" text-dark h6" for="url">URL</label>
-          <input class="form-control @error('url') is-invalid @enderror" type="text" name="url" id="url" value="{{ old('url') }}" disabled>
+          <input class="form-control @error('url') is-invalid @enderror" type="text" name="url" id="url" value="{{ $dokumen->tipe == 'URL' ? old('url', $dokumen->path) : '' }}" {{ $dokumen->tipe != 'URL' ? 'disabled' : '' }}>
           @if ($errors->has('url'))
             <p class="error text-danger">{{ $errors->first('url') }}</p>
           @endif
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
           <a href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : url('storage/' . $dokumen->path) }}" class="btn btn-link" target="_blank">
-            {!! $dokumen->tipe == 'URL' ? preg_replace('/(.{30})/', '$1<br>', $dokumen->path) : preg_replace('/(.{30})/', '$1<br>', basename($dokumen->path)) !!}
+            {{-- {!! $dokumen->tipe == 'URL' ? preg_replace('/(.{30})/', '$1<br>', $dokumen->path) : preg_replace('/(.{30})/', '$1<br>', basename($dokumen->path)) !!} --}}
+            {{ $dokumen->tipe == 'URL' ? $dokumen->path : basename($dokumen->path) }}
           </a>
         </div>
-        
         <div class="col-lg-12 col-md-12 col-sm-12 my-2">
             <label for="catatan" class=" text-dark h6 @error('catatan') is-invalid @enderror">Catatan</label>
-            <textarea class="form-control" name="catatan" id="catatan"  value="{{ old('catatan', $dokumen->catatan) }}" placeholder="{{ old('catatan', $dokumen->catatan) }}" id="floatingTextarea"></textarea>
+            <textarea class="form-control" name="catatan" id="catatan" id="floatingTextarea">{{ old('catatan', $dokumen->catatan) }}</textarea>
             @if ($errors->has('catatan'))
               <p class="error text-danger">{{ $errors->first('catatan') }}</p>
             @endif
@@ -91,13 +91,13 @@
       const urlInput = document.getElementById('url');
       
       if (value == 'file') {
-        fileInput.required = true;
-        urlInput.required = false;
+        // fileInput.required = true;
+        // urlInput.required = false;
         fileInput.disabled = false;
         urlInput.disabled = true;
       } else {
-        fileInput.required = false;
-        urlInput.required = true;
+        // fileInput.required = false;
+        // urlInput.required = true;
         fileInput.disabled = true;
         urlInput.disabled = false;
       }

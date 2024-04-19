@@ -35,7 +35,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-12">
-                  <a href="/visualisasi"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
+                    <a href="/visualisasi"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@
     <script>
         $(document).ready(function() {
             var status = window.location.pathname.split('/').pop();
-            var apiUrl = 'http://127.0.0.1:8000/api/visualisasi/lainnya/D8:I14';
+            var apiUrl = '/api/visualisasi/lainnya/D8:I14';
             $.ajax({
                 url: apiUrl,
                 method: 'GET',

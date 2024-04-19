@@ -52,13 +52,13 @@
             var status = "{{ $jenjang }}"
 
             if (status === 'S1') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/calonMhs/A2:D7';
+                apiUrl = '/api/visualisasi/calonMhs/A2:D7';
             } else if (status === 'S2') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/calonMhs/F2:I7';
+                apiUrl = '/api/visualisasi/calonMhs/F2:I7';
             } else if (status === 'S3') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/calonMhs/A10:D15';
+                apiUrl = '/api/visualisasi/calonMhs/A10:D15';
             } else if (status === 'Profesi') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/calonMhs/F10:I15';
+                apiUrl = '/api/visualisasi/calonMhs/F10:I15';
             } else {
                 console.error('Status tidak valid');
                 return;

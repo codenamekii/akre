@@ -44,7 +44,7 @@
     <script>
         $(document).ready(function() {
             var status = window.location.pathname.split('/').pop();
-            var apiUrl = 'http://127.0.0.1:8000/api/visualisasi/dosen/A15:C25';
+            var apiUrl = '/api/visualisasi/dosen/A15:C25';
             $.ajax({
                 url: apiUrl,
                 method: 'GET',

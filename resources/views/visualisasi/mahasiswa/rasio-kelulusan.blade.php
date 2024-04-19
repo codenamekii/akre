@@ -59,13 +59,13 @@
             var status = "{{ $jenjang }}"
 
             if (status=== 'S1') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/rasioLulus/A2:I9';
+                apiUrl = '/api/visualisasi/rasioLulus/A2:I9';
             } else if (status=== 'S2') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/rasioLulus/K2:P6';
+                apiUrl = '/api/visualisasi/rasioLulus/K2:P6';
             } else if (status=== 'S3') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/rasioLulus/A12:I19';
+                apiUrl = '/api/visualisasi/rasioLulus/A12:I19';
             } else if (status=== 'Profesi') {
-                apiUrl = 'http://127.0.0.1:8000/api/visualisasi/rasioLulus/K12:S19';
+                apiUrl = '/api/visualisasi/rasioLulus/K12:S19';
             } else {
                 console.error('Status tidak valid');
                 return;
