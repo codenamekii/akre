@@ -80,7 +80,7 @@ class DokumenController extends Controller
             'kriteria' => 'required|numeric|between:1,12',
             'sub_kriteria' => 'max:255',
             'catatan' => 'max:255',
-            'file' => 'required_without_all:url|mimes:pdf,png,jpg,jpeg|max:2048',
+            'file' => 'required_without_all:url|mimes:pdf,png,jpg,jpeg|max:25600',
             'url' => 'required_without_all:file|url|max:255',
         ], [
             'required' => ':attribute wajib diisi!',
@@ -156,7 +156,7 @@ class DokumenController extends Controller
             'kriteria' => 'required|numeric|between:1,12',
             'sub_kriteria' => 'max:255',
             'catatan' => 'max:255',
-            'file' => 'nullable|mimes:pdf,png,jpg,jpeg|max:2048|prohibits:url',
+            'file' => 'nullable|mimes:pdf,png,jpg,jpeg|max:25600|prohibits:url',
             'url' => 'nullable|url|max:255|prohibits:file',
         ], [
             'required' => ':attribute wajib diisi!',

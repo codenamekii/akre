@@ -64,7 +64,7 @@
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 my-2">
           <label for="catatan" class=" text-dark h6 @error('catatan') is-invalid @enderror">Catatan</label>
-          <textarea class="form-control" name="catatan" id="catatan" value="{{ old('catatan') }}" placeholder="Tambahkan Catatan Disini.." id="floatingTextarea"></textarea>
+          <textarea class="form-control" name="catatan" id="catatan" placeholder="Tambahkan Catatan Disini.." id="floatingTextarea">{{ old('catatan') }}</textarea>
           @if ($errors->has('catatan'))
             <p class="error text-danger">{{ $errors->first('catatan') }}</p>
           @endif
