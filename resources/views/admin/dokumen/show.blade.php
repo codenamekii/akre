@@ -20,7 +20,7 @@
             </p>
             <p style="font-size:1.3rem; "> {{ $dokumen->sub_kriteria }}</p>
             <p>{{ $dokumen->catatan }}</p>
-            <p> <a id="a" href="{{ '/storage/'.$dokumen->path }}" class="text-success">{{ $dokumen->path }}</a></p>
+            <p> <a id="a" href="{{ $dokumen->tipe == 'URL' ? $dokumen->path : '/storage/'.$dokumen->path }}" class="text-success">{{ $dokumen->tipe == 'URL' ? $dokumen->path : basename($dokumen->path) }}</a></p>
             <span class="d-flex justify-content-between">
               <p >{{ \Carbon\Carbon::parse($dokumen->updated_at)->translatedFormat('d F Y') }}</p>
               <p>Kriteria {{ $dokumen->kriteria }} | <span > {{ $dokumen->tipe }}</span></p>
@@ -29,9 +29,7 @@
         </div>
       </div>
     </div>
-
-
-  
+  </div>
 </section>
 
 
