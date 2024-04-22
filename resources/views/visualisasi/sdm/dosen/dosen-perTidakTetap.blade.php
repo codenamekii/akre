@@ -47,7 +47,8 @@
             </div>
             <div class="row mt-5">
                 <div class="col-12">
-                    <a href="/visualisasi"  class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i class="bi bi-chevron-double-left"></i> Kembali</a>
+                    <a href="/visualisasi" class="btn btn-success wow fadeInRight" ata-wow-delay="0.3s"><i
+                            class="bi bi-chevron-double-left"></i> Kembali</a>
                 </div>
             </div>
 
@@ -67,75 +68,75 @@
                 success: function(data) {
                     $('#dataTableBody').empty();
 
-                    $.each(data, function(index, entry) {
-                        var row = $('<tr>');
-                        row.append('<th scope="row">' + (index + 1) + '</th>');
-                        row.append('<td>' + entry['Jabatan Akademik'] + '</td>');
-                        row.append('<td>' + entry['Doktor'] + '</td>');
-                        row.append('<td>' + entry['Magister'] + '</td>');
-                        row.append('<td>' + entry['Profesi'] + '</td>');
-
-
-                        $('#dataTableBody').append(row);
-                    });
-                    $.each(data, function(index, entry) {
-                        var row = $('<tr>');
-                        row.append('<th scope="row">' + (index + 1) + '</th>');
-                        row.append('<td>' + entry['Fakultas'] + '</td>');
-                        row.append('<td>' + entry['Jumlah Dosen'] + '</td>');
-
-
-                        $('#dataTableBody2').append(row);
+                    data.forEach(function(entry, index) {
+                        if (entry['Jabatan Akademik'] !== '' && entry['Jabatan Akademik'] !==
+                            'Total') {
+                            var row = $('<tr>');
+                            row.append('<th scope="row">' + (index + 1) + '</th>');
+                            row.append('<td>' + entry['Jabatan Akademik'] + '</td>');
+                            row.append('<td>' + entry['Doktor'] + '</td>');
+                            row.append('<td>' + entry['Magister'] + '</td>');
+                            row.append('<td>' + entry['Profesi'] + '</td>');
+                            $('#dataTableBody').append(row);
+                        }
                     });
 
-                    const labels = data.slice(0, -1).map(entry => entry['Jabatan Akademik']);
-                    const chartData = {
-                        labels: labels,
-                        datasets: [{
-                            label: 'Jumlah',
-                            data: data.slice(0, -1).map(entry => entry['Doktor']),
-                            backgroundColor: [
-                                'rgb(255, 99, 132)',
-                                'rgb(54, 162, 235)',
-                                'rgb(255, 205, 86)',
-                                'rgb(75, 192, 192)',
-                                'rgb(153, 102, 255)'
-                            ],
-                        }]
-                    };
-                    const chartData2 = {
-                        labels: labels,
-                        datasets: [{
-                            label: 'Jumlah',
-                            data: data.slice(0, -1).map(entry => entry['Magister']),
-                            backgroundColor: [
-                                'rgb(255, 99, 132)',
-                                'rgb(54, 162, 235)',
-                                'rgb(255, 205, 86)',
-                                'rgb(75, 192, 192)',
-                                'rgb(153, 102, 255)'
-                            ],
-                        }]
-                    };
-                    renderChart('chart-1', chartData);
+                    data.forEach(function(entry, index) {
+                        if (entry['Fakultas'] !== '' && entry['Fakultas'] !== 'Total') {
+                            var row = $('<tr>');
+                            row.append('<th scope="row">' + (index + 1) + '</th>');
+                            row.append('<td>' + entry['Fakultas'] + '</td>');
+                            row.append('<td>' + entry['Jumlah Dosen'] + '</td>');
+                            $('#dataTableBody2').append(row);
+                        }
+                    });
+
+                    var chartData1 = processDataForChart(data, 'Doktor');
+                    var chartData2 = processDataForChart(data, 'Magister');
+
+                    renderChart('chart-1', chartData1);
                     renderChart('chart-2', chartData2);
-
                 },
                 error: function(xhr, status, error) {
                     console.error('Error fetching data:', error);
                 }
             });
 
-            function renderChart(canvasId, dataset) {
+            function processDataForChart(data, attribute) {
+                var labels = [];
+                var chartData = [];
+                data.forEach(function(entry) {
+                    if (entry['Jabatan Akademik'] !== '' && entry['Jabatan Akademik'] !== 'Total') {
+                        labels.push(entry['Jabatan Akademik']);
+                        chartData.push(entry[attribute]);
+                    }
+                });
+                return {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Jumlah',
+                        data: chartData,
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(154, 62, 135)',
+                            'rgb(255, 205, 86)',
+                            'rgb(75, 192, 192)',
+                            'rgb(153, 102, 255)'
+                        ],
+                    }]
+                };
+            }
+
+            function renderChart(canvasId, data) {
                 const config = {
                     type: 'pie',
-                    data: dataset,
+                    data: data,
                     options: {
                         plugins: {
                             datalabels: {
                                 formatter: (value, ctx) => {
                                     const total = ctx.chart.data.datasets[0].data.reduce((a, b) => a + b,
-                                        0);
+                                    0);
                                     const percentage = (value * 100 / total).toFixed(2) + '%';
                                     return percentage;
                                 },

@@ -127,6 +127,70 @@
                                             class="lni lni-angle-double-right"></i></a>
                                 </div>
                             </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Dosen Berdasarkan Homebase</h4>
+                                    <h3><i class="bi bi-journals"></i></h3>
+                                    <a href="/visualisasi/sdm/dosen/per-homebase" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Dosen Berdasarkan Jabatan Akademik  </h4>
+                                    <h3><i class="bi bi-journals"></i></h3>
+                                    <a href="/visualisasi/sdm/dosen/per-jabatan" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Dosen Berdasarkan Pendidikan Akhir  </h4>
+                                    <h3><i class="bi bi-journals"></i></h3>
+                                    <a href="/visualisasi/sdm/dosen/per-pendidikan" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Dosen Berdasarkan Status Sertifikasi </h4>
+                                    <h3><i class="bi bi-journals"></i></h3>
+                                    <a href="/visualisasi/sdm/dosen/per-sertifikasi" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Dosen Tidak tetap  </h4>
+                                    <h3><i class="bi bi-journals"></i></h3>
+                                    <a href="/visualisasi/sdm/dosen/per-tidak-tetap" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                                
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Tenaga Kependidikan </h4>
+                                    <h3><i class="bi bi-journals"></i></h3>
+                                    <a href="/visualisasi/sdm/tendik" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="single-pricing-wrapper">
+                                <div class="single-pricing">
+                                    <h4>Akreditsi Prodi</h4>
+                                    <h3><i class="bi bi-journals"></i></h3>
+                                    <a href="/visualisasi/akreditasi" target="_blank"
+                                        class="button radius-30 mt-2">Kunjungi <i
+                                            class="lni lni-angle-double-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
