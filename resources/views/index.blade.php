@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-<!-- Hero Area Start -->
 <link rel="stylesheet" href="/css/main.css" />	
 <link rel="stylesheet" href="/css/lindy-uikit.css"/>
 <link rel="stylesheet" href="/css/tiny-slider.css" />
@@ -46,25 +45,25 @@
                 <span id="kriteriaCounter" class="purecounter">0</span>
                 <p>Kriteria</p>
               </div>
-            </div><!-- End Stats Item -->
+            </div>
             <div class="col-lg-3 col-6">
               <div class="stats-item text-center">
                 <span id="dokumenCounter" class="purecounter">0</span>
                 <p>Dokumen</p>
               </div>
-            </div><!-- End Stats Item -->
+            </div>
             <div class="col-lg-3 col-6">
               <div class="stats-item text-center">
                 <span id="fakultasCounter" class="purecounter">0</span>
                 <p>Fakultas/PPs</p>
               </div>
-            </div><!-- End Stats Item -->
+            </div>
             <div class="col-lg-3 col-6">
               <div class="stats-item text-center">
                 <span id="prodiCounter" class="purecounter">0</span>
                 <p>Prodi</p>
               </div>
-            </div><!-- End Stats Item -->
+            </div>
           </div>
         </div>
       </div>
@@ -79,9 +78,9 @@
     </div>
   </div> 
 </div>
-<!-- Hero Area End -->
 
-<!-- Services Section Start -->
+
+
 <section id="services" class="section-padding">
   <div class="container">
     <div class="section-header text-center">
@@ -89,7 +88,7 @@
       <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
     </div>
     <div class="row">
-      <!-- Services item -->
+
       <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=10'">
         <div class="services-item wow fadeInRight border border" data-wow-delay="0.3s" >
           <div class="bg-img" style="background-image: url('/img/kriteria/kondisi.png');">
@@ -103,7 +102,7 @@
           </div>
         </div>
       </div>
-      <!-- Services item -->
+
       <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=11'">
         <a href="/daftar-dokumen?kriteria=11" >
           <div class="services-item bg-light wow fadeInRight border" data-wow-delay="0.6s" >
@@ -119,7 +118,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+
       <div class="col-md-6 col-lg-4 col-xs-12" onclick="window.location.href = '/daftar-dokumen?kriteria=1'">
         <a href="/daftar-dokumen?kriteria=1" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="0.9s" >
@@ -135,7 +134,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+
       <div class="col-md-6 col-lg-4 col-xs-12"  onclick="window.location.href = '/daftar-dokumen?kriteria=2'">
         <a href="/daftar-dokumen?kriteria=2" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s" >
@@ -151,7 +150,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+     
       <div class="col-md-6 col-lg-4 col-xs-12"  onclick="window.location.href = '/daftar-dokumen?kriteria=3'">
       <a href="/daftar-dokumen?kriteria=3" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s" >
@@ -167,7 +166,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+     
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=4'">
         <a href="/daftar-dokumen?kriteria=4" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
@@ -183,7 +182,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+     
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=5'">
         <a href="/daftar-dokumen?kriteria=5" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s">
@@ -199,7 +198,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+     
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=6'">
         <a href="/daftar-dokumen?kriteria=6" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s">
@@ -215,7 +214,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+     
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=7'">
         <a href="/daftar-dokumen?kriteria=7" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
@@ -231,7 +230,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+     
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=8'">
         <a href="/daftar-dokumen?kriteria=8" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.2s">
@@ -247,7 +246,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+     
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=9'">
         <a href="/daftar-dokumen?kriteria=9" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s">
@@ -263,7 +262,7 @@
         </div>
         </a>
       </div>
-      <!-- Services item -->
+     
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=12'">
         <a href="/daftar-dokumen?kriteria=12" >
         <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.8s">
@@ -282,7 +281,61 @@
     </div>
   </div>
 </section>
-<!-- Services Section End -->
+
+<div class="about-area section-padding bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12 info">
+        <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
+          <div>
+            <div class="site-heading">
+              <p class="mb-3">Profil Tentang</p>
+              <h2 class="h5" style="font-size: 2rem !important;">Data Akreditasi Mei 2024</h2>
+            </div>
+
+            <div class="content " style="overflow-x: auto; max-width: 100vw;">
+                 <div >
+                    <table id="data-table" class="table table-hover border">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Fakultas</th>
+                                <th scope="col">Program Studi</th>
+                                <th scope="col">Strata</th>
+                                <th scope="col">No. SK Akreditasi</th>
+                                <th scope="col">Tahun SK</th>
+                                <th scope="col">Nilai</th>
+                                <th scope="col">Peringkat</th>
+                                <th scope="col">Tanggal Daluarsa</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            
+                <nav aria-label="Page navigation example" style="position: relative !important">
+                    <ul id="pagination" class="pagination">
+                        <li class="page-item" id="prev-page">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item" id="next-page">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <section id="pricing" class="pricing-section pricing-style-4 bg-light">
   <div class="container">
@@ -597,6 +650,85 @@
 
 <script src="/js/glightbox.min.js"></script>
 <script src="/js/tiny-slider.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    var jsonData;
+    var currentPage = 1;
+    var itemsPerPage = 10;
+
+    $.getJSON('dataAkreditasi.json', function(data) {
+        jsonData = data;
+        displayData();
+    });
+
+    function displayData() {
+        var startIndex = (currentPage - 1) * itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+        var paginatedData = jsonData.S1.slice(startIndex, endIndex);
+
+        var tbody = $('#data-table tbody');
+        tbody.empty();
+        $.each(paginatedData, function(index, item) {
+            var row = $('<tr>');
+            row.append($('<th scope="row">').text(item["No."]));
+            row.append($('<td>').text(item.Fakultas));
+            row.append($('<td>').text(item.Prodi));
+            row.append($('<td>').text(item.Strata));
+            row.append($('<td>').text(item["No. SK Akreditasi"]));
+            row.append($('<td>').text(item["Tahun SK"]));
+            row.append($('<td>').text(item.Nilai));
+            row.append($('<td>').text(item.Peringkat));
+            row.append($('<td>').text(item["Tanggal Daluarsa"]));
+            tbody.append(row);
+        });
+
+        // Update pagination
+        updatePagination();
+    }
+
+    function updatePagination() {
+        var totalPages = Math.ceil(jsonData.S1.length / itemsPerPage);
+        var pagination = $('#pagination');
+        pagination.empty();
+
+        // Previous Page Button
+        pagination.append($('<li class="page-item" id="prev-page">')
+            .append($('<a class="page-link" href="#" aria-label="Previous">')
+                .append($('<span aria-hidden="true">&laquo;</span>'))
+                .click(function() {
+                    event.preventDefault();
+                    if (currentPage > 1) {
+                        currentPage--;
+                        displayData();
+                    }
+                })));
+
+        // Page Numbers
+        for (var i = 1; i <= totalPages; i++) {
+            pagination.append($('<li class="page-item">')
+                .append($('<a class="page-link" href="#">').text(i))
+                .click(function() {
+                    event.preventDefault();
+                    currentPage = parseInt($(this).text());
+                    displayData();
+                }));
+        }
+
+        // Next Page Button
+        pagination.append($('<li class="page-item" id="next-page">')
+            .append($('<a class="page-link" href="#" aria-label="Next">')
+                .append($('<span aria-hidden="true">&raquo;</span>'))
+                .click(function() {
+                    event.preventDefault();
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        displayData();
+                    }
+                })));
+    }
+});
+</script>
 <script>
   (function() {
       tns({
