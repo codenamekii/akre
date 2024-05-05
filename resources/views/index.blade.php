@@ -289,7 +289,6 @@
         <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
           <div>
             <div class="site-heading">
-              <p class="mb-3">Profil Tentang</p>
               <h2 class="h5" style="font-size: 2rem !important;">Data Akreditasi Mei 2024</h2>
             </div>
 
