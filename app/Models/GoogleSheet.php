@@ -32,6 +32,7 @@ class GoogleSheet extends Model
       $result = [];
 
       foreach ($values as $value) {
+        if(!$value) continue;
         $result[] = array_combine($keys, $value);
       }
 
