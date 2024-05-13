@@ -249,7 +249,7 @@
      
       <div class="col-md-6 col-lg-4 col-xs-12" data-wow-delay="1.5s" onclick="window.location.href = '/daftar-dokumen?kriteria=9'">
         <a href="/daftar-dokumen?kriteria=9" >
-        <div class="services-item bg-light wow fadeInRight border" data-wow-delay="1.5s">
+        <div class="services-item bg-light border wow fadeInRight " data-wow-delay="1.5s">
           <div class="bg-img" style="background-image: url('/img/kriteria/kriteria-9.jpg');">
             <div class="icon bg-light ">
               <i class="bi bi-trophy"></i>
@@ -295,7 +295,7 @@
             <div class="content " style="overflow-x: auto; max-width: 100vw;">
                  <div >
                     <table id="data-table" class="table table-hover border">
-                        <thead>
+                        <thead class="wow fadeInRight " data-wow-delay=".5s">
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Fakultas</th>
@@ -308,7 +308,7 @@
                                 <th scope="col">Tanggal Daluarsa</th>
                             </tr>
                         </thead>
-                        <tbody></tbody>
+                        <tbody class="wow fadeInRight " data-wow-delay=".8s"></tbody>
                     </table>
                 </div>
             
