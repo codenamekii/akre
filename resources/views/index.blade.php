@@ -289,11 +289,11 @@
         <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
           <div>
             <div class="site-heading">
-              <h2 class="h5" style="font-size: 2rem !important;">Data Akreditasi Mei 2024</h2>
+              <h2 class="h5" style="font-size: 2rem !important;">Data Program Studi Utama UIN Sumatera Utara Medan</h2>
             </div>
 
             <div class="content " style="overflow-x: auto; max-width: 100vw;">
-                 <div >
+                <div>
                     <table id="data-table" class="table table-hover border">
                         <thead class="wow fadeInRight " data-wow-delay=".5s">
                             <tr>

@@ -5,10 +5,11 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
+    <title>Masuk | AIPT - UINSU</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+  </head>
 <body>
   <div class="container">
     <div class="cover">
