@@ -6,12 +6,12 @@ use App\Http\Controllers\DokumenController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\VisualisasiController;
 
-Route::middleware(['guest', 'no-cache'])->group(function () {
+Route::middleware(['guest', 'no-cache', 'security-header'])->group(function () {
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'authenticate']);
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'security-header'])->group(function () {
     Route::get('/logout', [LoginController::class, 'deauthenticate']);
     Route::get('/', [LandingController::class, 'index'])->name('dashboard')->middleware('no-cache');
     Route::get('/daftar-dokumen', [DokumenController::class, 'getDokumen']);
@@ -44,7 +44,7 @@ Route::middleware(['auth'])->group(function () {
     
 });
 
-Route::middleware(['auth', 'is-admin'])->group(function () {
+Route::middleware(['auth', 'is-admin', 'security-header'])->group(function () {
     Route::view('/admin', 'admin.index');
     Route::resource('/admin/dokumen', DokumenController::class);
 });

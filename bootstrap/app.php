@@ -3,6 +3,7 @@
 use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\NoCache;
 use Illuminate\Foundation\Application;
+use App\Http\Middleware\SecurityHeader;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
@@ -17,6 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'no-cache' => NoCache::class,
             'is-admin' => IsAdmin::class,
+            'security-header' => SecurityHeader::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
