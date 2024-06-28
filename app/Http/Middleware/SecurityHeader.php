@@ -13,20 +13,27 @@ class SecurityHeader
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
+    private $unwantedHeaderList = [
+        'X-Powered-By',
+        'Server',
+        'ETag'
+    ];
+
     public function handle(Request $request, Closure $next): Response
     {
+        $this->removeUnwantedHeaders($this->unwantedHeaderList);
         $response = $next($request);
-
-        $response->headers->set('X-Frame-Options', 'DENY');
-        $response->headers->set('X-Content-Type-Options', 'nosniff');
-        $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
-        $response->headers->set('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'");
         $response->headers->set('Referrer-Policy', 'no-referrer');
-        $response->headers->set('Permissions-Policy', 'geolocation=(), microphone=()');
-        $response->headers->set('Cross-Origin-Embedder-Policy', 'require-corp');
-        $response->headers->set('Cross-Origin-Resource-Policy', 'same-origin');
-        $response->headers->set('Cross-Origin-Opener-Policy', 'same-origin');
-
+        $response->headers->set('X-Content-Type-Options', 'nosniff');
+        $response->headers->set('X-XSS-Protection', '1; mode=block');
+        $response->headers->set('X-Frame-Options', 'DENY');
+        $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
         return $response;
+    }
+
+    private function removeUnwantedHeaders($headerList)
+    {
+        foreach ($headerList as $header)
+            header_remove($header);
     }
 }

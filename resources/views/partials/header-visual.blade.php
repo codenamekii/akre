@@ -109,10 +109,13 @@
                         </ul>
                     </li>
                     <li><a class="link" href="/visualisasi/akreditasi">Akreditasi</a></li>
-                    @if (Auth::user()->is_admin)
-                        <li><a class="link" href="/admin">Admin</a></li>
-                    @endif
-                    <li><a class="link" href="/logout">Logout</a></li>
+                    @auth
+                        @if (Auth::user()->is_admin)
+                            <li><a class="link" href="/admin">Admin</a></li>
+                        @else
+                            <li><a class="link" href="/logout">Logout</a></li>
+                        @endif
+                    @endauth
                 </ul>
             </div>
 
