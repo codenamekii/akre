@@ -26,7 +26,7 @@
               @endfor
               <option value="10" {{ old('kriteria') == 10 ? 'selected' : '' }}>Kondisi Eksternal</option>
               <option value="11" {{ old('kriteria') == 11 ? 'selected' : '' }}>Profil Institusi</option>
-              <option value="12" {{ old('kriteria') == 12 ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
+              <option value="12" {{ old('kriteria') == 12 ? 'selected' : '' }}>Gugus Jaminan Mutu</option>
             </select>
             @if ($errors->has('kriteria'))
               <p class="error text-danger">{{ $errors->first('kriteria') }}</p>

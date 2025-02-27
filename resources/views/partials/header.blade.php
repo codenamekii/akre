@@ -1,6 +1,6 @@
 <div class="loader-container" id="loader-container">
     <div class="loader"></div>
-    <div class="text-loader">AIPT-UINSU</div>
+    <div class="text-loader">FT-UIM</div>
 </div>
 
 
@@ -10,7 +10,7 @@
         <div class="navbar">
             <div class="logo">
                 <a href="#">
-                    <img src="/img/logo.png" alt="">
+                    <img src="/img/logo teknik.png" alt="" width="50px" height="50px">
                 </a>
             </div>
             <i class="bx bx-menu menu-icon"></i>

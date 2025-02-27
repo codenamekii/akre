@@ -18,7 +18,7 @@
           @endfor
           <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Kondisi Eksternal</option>
           <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
-          <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
+          <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Gugus Jaminan Mutu</option>
         </select>
         <select class="form-select p2  bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
           <option value="" selected>Tipe</option>

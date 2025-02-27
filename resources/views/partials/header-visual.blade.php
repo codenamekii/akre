@@ -1,6 +1,6 @@
 <div class="loader-container" id="loader-container">
     <div class="loader"></div>
-    <div class="text-loader">AIPT-UINSU</div>
+    <div class="text-loader">FT-UIM</div>
 </div>
 
 <header id="header-wrap">
@@ -9,7 +9,7 @@
         <div class="navbar">
             <div class="logo">
                 <a href="#">
-                    <img src="/img/logo.png" alt="">
+                    <img src="/img/logo teknik.png" alt="" width="50px" height="50px">
                 </a>
             </div>
             <i class="bx bx-menu menu-icon"></i>
@@ -29,9 +29,6 @@
                                 </span>
                                 <ul class="more-sub-menu sub-menu">
                                     <li><a href="/visualisasi/mahasiswa/calon-mahasiswa/S1">S1</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/calon-mahasiswa/S2">S2</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/calon-mahasiswa/S3">S3</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/calon-mahasiswa/Profesi">Profesi</a></li>
                                 </ul>
                             </li>
                             <li class="more">
@@ -41,9 +38,6 @@
                                 </span>
                                 <ul class="more-sub-menu sub-menu">
                                     <li><a href="/visualisasi/mahasiswa/mahasiswa-baru/S1">S1</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-baru/S2">S2</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-baru/S3">S3</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-baru/Profesi">Profesi</a></li>
                                 </ul>
                             </li>
                             <li class="more">
@@ -53,9 +47,6 @@
                                 </span>
                                 <ul class="more-sub-menu sub-menu">
                                     <li><a href="/visualisasi/mahasiswa/mahasiswa-aktif/S1">S1</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-aktif/S2">S2</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-aktif/S3">S3</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-aktif/Profesi">Profesi</a></li>
                                 </ul>
                             </li>
                             <li class="more">
@@ -65,9 +56,6 @@
                                 </span>
                                 <ul class="more-sub-menu sub-menu">
                                     <li><a href="/visualisasi/mahasiswa/mahasiswa-lulusan/S1">S1</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-lulusan/S2">S2</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-lulusan/S3">S3</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/mahasiswa-lulusan/Profesi">Profesi</a></li>
                                 </ul>
                             </li>
                             <li class="more">
@@ -77,9 +65,6 @@
                                 </span>
                                 <ul class="more-sub-menu sub-menu">
                                     <li><a href="/visualisasi/mahasiswa/rasio-kelulusan/S1">S1</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/rasio-kelulusan/S2">S2</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/rasio-kelulusan/S3">S3</a></li>
-                                    <li><a href="/visualisasi/mahasiswa/rasio-kelulusan/Profesi">Profesi</a></li>
                                 </ul>
                             </li>
                             <li><a href="/visualisasi/mahasiswa/mahasiswa-tugas-akhir">Mahasiswa Tugas Akhir</a></li>

@@ -13,7 +13,7 @@
       <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
         <div class="contents move-effect ">
           <h2 class="head-title wow fadeInRight" ata-wow-delay="0.3s">Selamat Datang di Website Pusat Data Akreditasi</h2>
-          <p class=" wow fadeInRight" ata-wow-delay="0.3s">Pusat Data Bukti Fisik Pendukung Akreditasi Universitas Islam Negeri Sumatera Utara Medan</p>
+          <p class=" wow fadeInRight" ata-wow-delay="0.3s">Pusat Data Bukti Pendukung Akreditasi Fakultas Teknik Universitas Islam Makassar</p>
           <div class="header-button wow fadeInRight" ata-wow-delay="0.5s">
             <form class="d-inline" action="/daftar-dokumen" method="get">
               <div class="input-group mb-3">
@@ -23,8 +23,8 @@
                   <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
                   @endfor
                   <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Kondisi Eksternal</option>
-                  <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
-                  <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Analisis & Penetapan Program Pengembangan</option>
+                  <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Fakultas</option>
+                  <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Rencana Strategis</option>
                 </select>
                 <select class="form-select p2 bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
                   <option value="" selected>Tipe</option>
@@ -50,12 +50,6 @@
               <div class="stats-item text-center">
                 <span id="dokumenCounter" class="purecounter">0</span>
                 <p>Dokumen</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-6">
-              <div class="stats-item text-center">
-                <span id="fakultasCounter" class="purecounter">0</span>
-                <p>Fakultas/PPs</p>
               </div>
             </div>
             <div class="col-lg-3 col-6">
@@ -272,8 +266,8 @@
             </div>
           </div>
           <div class="services-content p-3">
-            <h3><a href="/daftar-dokumen?kriteria=12">Analisis & Penetapan</a></h3>
-            <p>Program Pengembangan</p>
+            <h3><a href="/daftar-dokumen?kriteria=12">Rencana Strategis</a></h3>
+            <p>Gugus Jaminan Mutu</p>
           </div>
         </div>
         </a>
@@ -289,49 +283,48 @@
         <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
           <div>
             <div class="site-heading">
-              <h2 class="h5" style="font-size: 2rem !important;">Data Program Studi Utama UIN Sumatera Utara Medan</h2>
+              <h2 class="h5" style="font-size: 2rem !important; text-align: center;">
+                Data Program Studi Fakultas Teknik
+              </h2>
             </div>
 
-            <div class="content " style="overflow-x: auto; max-width: 100vw;">
-                <div>
-                    <table id="data-table" class="table table-hover border">
-                        <thead class="wow fadeInRight " data-wow-delay=".5s">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Fakultas</th>
-                                <th scope="col">Program Studi</th>
-                                <th scope="col">Strata</th>
-                                <th scope="col">No. SK Akreditasi</th>
-                                <th scope="col">Tahun SK</th>
-                                <th scope="col">Nilai</th>
-                                <th scope="col">Peringkat</th>
-                                <th scope="col">Tanggal Daluarsa</th>
-                            </tr>
-                        </thead>
-                        <tbody class="wow fadeInRight " data-wow-delay=".8s"></tbody>
-                    </table>
-                </div>
-            
-                <nav aria-label="Page navigation example" style="position: relative !important">
-                    <ul id="pagination" class="pagination">
-                        <li class="page-item" id="prev-page">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item" id="next-page">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <div class="content" style="overflow-x: auto; max-width: 100vw;">
+              <div>
+                <table id="data-table" class="table table-hover border">
+                  <thead class="wow fadeInRight" data-wow-delay=".5s">
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Link</th>
+                      <th scope="col">Program Studi</th>
+                      <th scope="col">Strata</th>
+                      <th scope="col">No. SK Akreditasi</th>
+                      <th scope="col">Tahun SK</th>
+                      <th scope="col">Peringkat</th>
+                      <th scope="col">Tanggal Kadaluarsa</th>
+                    </tr>
+                  </thead>
+                  <tbody class="wow fadeInRight" data-wow-delay=".8s"></tbody>
+                </table>
+              </div>
 
+              <nav aria-label="Page navigation example" style="position: relative !important">
+                <ul id="pagination" class="pagination">
+                  <li class="page-item" id="prev-page">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item" id="next-page">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -341,8 +334,8 @@
     <div class="row align-items-center">
     <div class="col-xl-5 col-lg-6">
       <div class="section-title mb-60">
-      <h3 class="mb-15 wow fadeInUp" data-wow-delay=".2s">Aplikasi Layanan</h3>
-      <p class="wow fadeInUp" data-wow-delay=".4s">UIN Sumatera Utara Memiliki Banyak Layanan Aplikasi Dalam Mengelola dan Memanajemen Sistem Yang Ada Dikampus</p>
+      <h3 class="mb-15 wow fadeInUp" data-wow-delay=".2s">Layanan Digital</h3>
+      <p class="wow fadeInUp" data-wow-delay=".4s">Fakultas Teknik Universitas Islam Makassar Memiliki Beberapa Layanan Aplikasi Dalam Mengelola Sistem Yang Ada Dikampus</p>
       </div>
     </div>
     <div class="col-xl-7 col-lg-6">
@@ -350,133 +343,44 @@
       <div class="pricing-active">
         <div class="single-pricing-wrapper">
         <div class="single-pricing">
-          <h4>Portal SIA</h4>
+          <h4>Smart Campus</h4>
           <h3><i class="bi bi-gear"></i></h3>
-          <p>Menangani Sistem Informasi Akademik Dosen dan Mahasiswa UIN Sumatera Utara</p>
-          <a href="https://portalsia.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i> </a>
+          <p>Sistem Informasi Akademik Dosen dan Mahasiswa Fakultas Teknik</p>
+          <a href="https://simuim.uim-makassar.ac.id/siakad/" target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i> </a>
         </div>
         </div>
         <div class="single-pricing-wrapper">
         <div class="single-pricing">
-          <h4>SI-PMB</h4>
-          <h3><i class="bi bi-person-bounding-box"></i></h3>
-          <p>Menangani Sistem Informasi Penerimaan Mahasiswa Baru UIN Sumatera Utara</p>
-          <a href="https://sipmb.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div>
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>SI-MABA</h4>
+          <h4>SI-LAB</h4>
           <h3><i class="bi bi-person-standing"></i></h3>
-          <p>Menangani Sistem Informasi Daftar Ulang Mahasiswa Baru UIN Sumatera Utara</p>
-          <a href="https://maba.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+          <p>Menangani Sistem Informasi Daftar Laboratorium</p>
+          <a href="https://ft.uim-makassar.ac.id/index.php/services/job-placement/" target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
         </div>
         </div>
         <div class="single-pricing-wrapper">
         <div class="single-pricing">
-          <h4>SI-SELMA</h4>
+          <h4>LMS-FT UIM</h4>
           <h3><i class="bi bi-person-circle"></i></h3>
-          <p>Menangani Sistem Informasi Surat Elektronik Mahasiswa UIN Sumatera Utara</p>
-          <a href="https:// .uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+          <p>Learning Management System Fakultas Teknik Universitas Islam Makassar</p>
+          <a href="https://ft.uim-makassar.ac.id/index.php/services/lms-uim/" target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
         </div>
         </div>
         <div class="single-pricing-wrapper">
         <div class="single-pricing">
-          <h4>SI-LIANA</h4>
+          <h4>Perpustakaan</h4>
           <h3><i class="bi bi-check2-all"></i></h3>
-          <p>Menangani Tentang Sistem Informasi Kuliah Kerja Nyata di UIN Sumatera Utara</p>
-          <a href="https://siselma.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+          <p>Sistem Informasi Perpustakaan Online Fakultas Teknik</p>
+          <a href="https://ft.uim-makassar.ac.id/index.php/services/lms-uim/" target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
         </div>
         </div>
         <div class="single-pricing-wrapper">
         <div class="single-pricing">
-          <h4>E-LEARNING</h4>
+          <h4>SIMPEG</h4>
           <h3><i class="bi bi-mortarboard-fill"></i></h3>
-          <p>Menangani Tentang Sistem Informasi Pembelajaran Online di UIN Sumatera Utara</p>
-          <a href="https://elearning.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+          <p>Sistem Informasi Jurnal Ilmiah Fakultas Teknik Universitas Islam Makassar</p>
+          <a href="https://ft.uim-makassar.ac.id/index.php/services/simpeg/" target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
         </div>
         </div> 	
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>SI-JURNAL</h4>
-          <h3><i class="bi bi-journals"></i></h3>
-          <p>Menangani Tentang Sistem Informasi Jurnal Universitas Islam Negeri Sumatera Utara</p>
-          <a href="https://sijurnal.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>SI-LIBRARY</h4>
-          <h3><i class="bi bi-book-half"></i></h3>
-          <p>Menangani Website Perpustakaan Universitas Islam Negeri Sumatera Utara</p>
-          <a href="https://silibrary.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>REPOSITORY</h4>
-          <h3><i class="bi bi-bookmarks-fill"></i></h3>
-          <p>Menangani Sistem Informasi Repositori Universitas Islam Negeri Sumatera Utara</p>
-          <a href="https://repository.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>SI-PUSAKA</h4>
-          <h3><i class="bi bi-chat-square-dots-fill"></i></h3>
-          <p>Menangani Sistem Informasi Pengajuan Surat Bebas Pustaka UIN Sumatera Utara</p>
-          <a href="https://sipusaka.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>SI-RASIDA</h4>
-          <h3><i class="bi bi-mortarboard"></i></h3>
-          <p>Menangani Sistem Informasi Pendaftaran Sidang dan Wisuda di UINSU</p>
-          <a href="https://sirasida.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>SI-KIP</h4>
-          <h3><i class="bi bi-person-vcard-fill"></i></h3>
-          <p>Menangani Sistem Informasi Penjaringan Beasiswa KIP UIN Sumatera Utara</p>
-          <a href="https://kip.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>UMM</h4>
-          <h3><i class="bi bi-pencil-square"></i></h3>
-          <p>Menangani Sistem Informasi Ujian Masuk Mandiri Online UIN Sumatera Utara</p>
-          <a href="https://umm.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>SI-DAHLIA</h4>
-          <h3><i class="bi bi-info-circle-fill"></i></h3>
-          <p>Menangani Sistem Informasi Daftar Hadir Kuliah di UIN Sumatera Utara</p>
-          <a href="https://.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>SI-RALINE</h4>
-          <h3><i class="bi bi-person-check"></i></h3>
-          <p>Menangani Sistem Informasi Presensi Online di Kampus UIN Sumatera Utara</p>
-          <a href="https://siraline.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-        <div class="single-pricing-wrapper">
-        <div class="single-pricing">
-          <h4>LKP</h4>
-          <h3><i class="bi bi-person-fill-gear"></i></h3>
-          <p>Menangani Sistem Informasi Laporan Kinerja di Kampus UIN Sumatera Utara</p>
-          <a href="https://lkp.uinsu.ac.id " target="_blank" class="button radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
-        </div>
-        </div> 
-
       </div>
       </div>
     </div>
@@ -489,8 +393,8 @@
     <div class="row justify-content-center">
       <div class="col-xxl-6 col-xl-9 col-lg-12 col-md-12">
         <div class="section-title text-center mb-50 wow fadeInUp" data-wow-delay=".5s">
-          <h3>Virtual Tour </h3>
-          <p>UIN Sumatera Utara Menyediakan Sarana Virtual Tour Bagi Para Pengunjung Yang Ingin Mengunjungi Setiap Kampus UINSU Secara Virtual</p>
+          <h3>Sarana dan Prasarana</h3>
+          <p>Fakultas Teknik Universitas Islam Makassar Menyediakan Beberapa Sarana dan Prasarana Penunjang Akademik</p>
         </div>
       </div>
     </div>
@@ -502,8 +406,8 @@
             <i class="lni lni-map-marker"></i>
           </div>
           <div class="content wow fadeInUp" data-wow-delay=".5s">
-            <h3>Kampus I UINSU</h3>								
-            <p>Berlokasikan di Jl. Sutomo Ujung Kota Medan, Sumatera Utara</p>
+            <h3>Laboratorium Teknik Informatika</h3>								
+            <p>Laboratorium Komputer yang digunakan oleh Teknik Informatika</p>
             <a href="https://sutomo.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
           </div>
         </div>
@@ -514,8 +418,32 @@
             <i class="lni lni-map-marker"></i>
           </div>
           <div class="content wow fadeInUp" data-wow-delay=".5s">
-            <h3>Kampus II UINSU</h3>
-            <p>Berlokasikan di Jl. William Iskandar Ps. V, Kab Deli Serdang, Sumatera Utara</p>
+            <h3>Laboratorium Teknik Elektro</h3>
+            <p>Laboratorium Komputer yang digunakan oleh Teknik Elektro</p>
+            <a href="https://pancing.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+          <div class="icon color-2">
+            <i class="lni lni-map-marker"></i>
+          </div>
+          <div class="content wow fadeInUp" data-wow-delay=".5s">
+            <h3>Laboratorium Teknik Mesin</h3>
+            <p>Laboratorium Komputer yang digunakan oleh Teknik Mesin</p>
+            <a href="https://pancing.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-md-6">
+        <div class="single-service">
+          <div class="icon color-2">
+            <i class="lni lni-map-marker"></i>
+          </div>
+          <div class="content wow fadeInUp" data-wow-delay=".5s">
+            <h3>Laboratorium Teknik Industri</h3>
+            <p>Laboratorium Komputer yang digunakan oleh Teknik Industri</p>
             <a href="https://pancing.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
           </div>
         </div>
@@ -526,8 +454,8 @@
             <i class="lni lni-map-marker"></i>
           </div>
           <div class="content wow fadeInUp" data-wow-delay=".5s">
-            <h3>Kampus IV UINSU</h3>
-            <p>Berlokasikan di Jl. Lap. Golf No.120, Kab Deli Serdang, Sumatera Utara </p>
+            <h3>Laboratorium Teknik Sipil</h3>
+            <p>Laboratorium Komputer yang digunakan oleh Teknik Sipil</p>
             <a href="https://tuntungan.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
           </div>
         </div>
@@ -546,20 +474,22 @@
         <div class="about-wrapper wow fadeInLeft" data-wow-delay="0.3s">
           <div>
             <div class="site-heading">
-              <p class="mb-3">Profil Tentang</p>
-              <h2 class="section-title">Universitas Islam Negeri Sumatera Utara Medan</h2>
+              <p class="mb-3">Sambutan Dekan</p>
+              <h2 class="section-title">Fakultas Teknik <br> Universitas Islam Makassar</h2>
             </div>
             <div class="content">
-              <p>
-                UIN Sumatera Utara Medan, yang sering dikenal dengan singkatan UINSU, adalah sebuah lembaga pendidikan tinggi Islam yang berlokasi di Medan, Sumatera Utara. Keberadaan UINSU adalah suatu kebanggaan bagi kami semua, dan hal ini tercermin dalam berbagai aspek kehidupan kampus ini.UIN Sumatera Utara Medan memiliki 8 Fakultas dan 1 Program Pascasarjana. UINSU adalah kampus islam yang memiliki moto “Smart Islamic University”
+              <p style="text-align: justify">
+                Puji syukur kita panjatkan ke hadirat Allah Subhanahu Wa Ta’ala, karena dengan rahmat dan karunia-Nya, Fakultas Teknik Universitas Islam Makassar terus berkembang dan berinovasi dalam memberikan pelayanan terbaik kepada mahasiswa, dosen, serta masyarakat.
+
+                Dalam era digital ini, website telah menjadi wajah institusi pendidikan yang mampu menghubungkan kita dengan dunia luar secara efektif. Oleh karena itu, kami dengan bangga mempersembahkan kepada Anda website resmi Fakultas Teknik UIM Al-Gazali yang telah kami perbaharui dan perkenalkan kepada seluruh stakeholder kami.
               </p>
-              <a href="https://uinsu.ac.id" class="btn btn-success mt-3">Kunjungi <i class="bi bi-chevron-double-right"></i></a>
+              <a href="https://ft.uim-makassar.ac.id/" class="btn btn-success mt-3">Kunjungi <i class="bi bi-chevron-double-right"></i></a>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12 col-xs-12 wow fadeInRight " data-wow-delay="0.3s">
-        <img class="img-fluid" src="/img/logo.png" alt="" >
+        <img class="img-fluid" src="/img/dekan.png" alt="" >
       </div>
     </div>
   </div>
@@ -567,7 +497,7 @@
 <!-- About Section End -->
 
 <!-- Features Section Start -->
-<section id="features" class="section-padding">
+{{-- <section id="features" class="section-padding">
   <div class="container">
     <div class="section-header text-center">          
       <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Visi & Misi</h2>
@@ -643,7 +573,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> --}}
 
 
 
@@ -667,20 +597,41 @@ $(document).ready(function() {
         var paginatedData = jsonData.S1.slice(startIndex, endIndex);
 
         var tbody = $('#data-table tbody');
-        tbody.empty();
-        $.each(paginatedData, function(index, item) {
-            var row = $('<tr>');
-            row.append($('<th scope="row">').text(item["No."]));
-            row.append($('<td>').text(item.Fakultas));
-            row.append($('<td>').text(item.Prodi));
-            row.append($('<td>').text(item.Strata));
-            row.append($('<td>').text(item["No. SK Akreditasi"]));
-            row.append($('<td>').text(item["Tahun SK"]));
-            row.append($('<td>').text(item.Nilai));
-            row.append($('<td>').text(item.Peringkat));
-            row.append($('<td>').text(item["Tanggal Daluarsa"]));
-            tbody.append(row);
-        });
+tbody.empty();
+$.each(paginatedData, function(index, item) {
+    var row = $('<tr>');
+    
+    // Kolom No.
+    row.append($('<td>').text(item["No."])); 
+    
+    // Kolom Link dengan hyperlink
+    var link = $('<a>').attr('href', item.Link).attr('target', '_blank').text("Link");
+    row.append($('<td>').append(link));
+    
+    // Kolom Program Studi
+    row.append($('<td>').text(item.Prodi)); 
+    
+    // Kolom Strata
+    row.append($('<td>').text(item.Strata));
+    
+    // Kolom No. SK Akreditasi
+    row.append($('<td>').text(item["No. SK Akreditasi"]));
+    
+    // Kolom Tahun SK
+    row.append($('<td>').text(item["Tahun SK"]));
+    
+    // Kolom Peringkat
+    row.append($('<td>').text(item.Peringkat));
+    
+    // Kolom Tanggal Kadaluarsa
+    row.append($('<td>').text(item["Tanggal Kadaluarsa"]));
+    
+    tbody.append(row);
+});
+
+
+console.log("Tabel setelah update:", tbody.html());
+
 
         // Update pagination
         updatePagination();
@@ -779,8 +730,7 @@ $(document).ready(function() {
   
     animateValue('kriteriaCounter', 0, 9, 2000);
     animateValue('dokumenCounter', 0, {{ $dokumenCount }}, 2000);
-    animateValue('fakultasCounter', 0, 9, 2000);
-    animateValue('prodiCounter', 0, 63, 2000);
+    animateValue('prodiCounter', 0, 5, 2000);
   });
   </script>
 @if (session()->has('success'))

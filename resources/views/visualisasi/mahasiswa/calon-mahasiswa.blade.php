@@ -48,86 +48,89 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script>
-        $(document).ready(function() {
-            var status = "{{ $jenjang }}"
+      $(document).ready(function() {
+        var sheetId = "1h89dxFF7Kl22RGmz-92pDvuzsyi9lpUiQJV0zOFLA4s";
+        var sheetUrl = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv`;
 
-            if (status === 'S1') {
-                apiUrl = '/api/visualisasi/calonMhs/A2:D7';
-            } else if (status === 'S2') {
-                apiUrl = '/api/visualisasi/calonMhs/F2:I7';
-            } else if (status === 'S3') {
-                apiUrl = '/api/visualisasi/calonMhs/A10:D15';
-            } else if (status === 'Profesi') {
-                apiUrl = '/api/visualisasi/calonMhs/F10:I15';
-            } else {
-                console.error('Status tidak valid');
-                return;
-            }
-            $.ajax({
-                url: apiUrl,
-                method: 'GET',
-                dataType: 'json',
-                success: function(data) {
+        console.log("Fetching data from:", sheetUrl);
 
-                    $('#dataTableBody').empty();
-                    $.each(data, function(index, entry) {
-                        var row = $('<tr>');
-                        row.append('<th scope="row">' + (index + 1) + '</th>');
-                        row.append('<td>' + entry.Tahun + '</td>');
-                        row.append('<td>' + entry['Daya Tampung'] + '</td>');
-                        row.append('<td>' + entry.Pendaftar + '</td>');
-                        row.append('<td>' + entry['Lulus Seleksi'] + '</td>');
-                        $('#dataTableBody').append(row);
-                    });
+        $.ajax({
+            url: sheetUrl,
+            method: 'GET',
+            dataType: 'text',
+            success: function(response) {
+                console.log("CSV Response:", response);
 
-                    const labels = data.map(entry => entry.Tahun);
-                    const dataset1 = {
-                        label: 'Jumlah Pendaftar',
-                        data: data.map(entry => entry.Pendaftar),
-                        backgroundColor: 'rgb(11 169 9 / 38%)',
-                        borderColor: 'rgb(11 169 9)',
-                        borderWidth: 1
-                    };
-                    const dataset2 = {
-                        label: 'Daya Tampung',
-                        data: data.map(entry => entry['Daya Tampung']),
-                        backgroundColor: 'rgb(11 169 9 / 48%)',
-                        borderColor: 'rgb(11 169 9)',
-                        borderWidth: 1
-                    };
-                    const dataset3 = {
-                        label: 'Lulus Seleksi',
-                        data: data.map(entry => entry['Lulus Seleksi']),
-                        backgroundColor: 'rgb(7 129 22 / 28%)',
-                        borderColor: 'rgb(11 169 9)',
-                        borderWidth: 1
-                    };
+                let rows = response.split("\n").map(row => row.split(",").map(cell => cell.replace(/["]/g, '').trim()));
 
-                    renderChart('chart-1', 'bar', labels, [dataset1]);
-                    renderChart('chart-2', 'bar', labels, [dataset2, dataset3]);
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error fetching data:', error);
+                if (rows.length < 6) {
+                    console.error("Data tidak mencukupi.");
+                    return;
                 }
-            });
 
-            function renderChart(canvasId, type, labels, datasets) {
-                const config = {
-                    type: type,
-                    data: {
-                        labels: labels,
-                        datasets: datasets
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
+                // Hapus baris pertama (header)
+                let cleanedData = rows.slice(1, 6).map(row => ({
+                    tahun: row[0],            // Tahun
+                    dayaTampung: parseInt(row[1]),  // Daya Tampung
+                    pendaftar: parseInt(row[2]),    // Pendaftar
+                    lulusSeleksi: parseInt(row[3])  // Lulus Seleksi
+                }));
+
+                console.log("Cleaned Data:", cleanedData);
+
+                // Kosongkan tabel sebelum memasukkan data baru
+                $('#dataTableBody').empty();
+
+                // Tambahkan data ke dalam tabel
+                $.each(cleanedData, function(index, entry) {
+                    var row = $('<tr>');
+                    row.append('<th scope="row">' + (index + 1) + '</th>');
+                    row.append('<td>' + entry.tahun + '</td>'); 
+                    row.append('<td>' + entry.dayaTampung + '</td>'); 
+                    row.append('<td>' + entry.pendaftar + '</td>'); 
+                    row.append('<td>' + entry.lulusSeleksi + '</td>'); 
+                    $('#dataTableBody').append(row);
+                });
+
+                // Siapkan data untuk chart
+                const labels = cleanedData.map(entry => entry.tahun);
+                const dataset1 = {
+                    label: 'Jumlah Pendaftar',
+                    data: cleanedData.map(entry => entry.pendaftar),
+                    backgroundColor: 'rgba(11, 169, 9, 0.38)',
+                    borderColor: 'rgb(11, 169, 9)',
+                    borderWidth: 1
                 };
-                var myChart = new Chart(document.getElementById(canvasId), config);
+                const dataset2 = {
+                    label: 'Daya Tampung',
+                    data: cleanedData.map(entry => entry.dayaTampung),
+                    backgroundColor: 'rgba(11, 169, 9, 0.48)',
+                    borderColor: 'rgb(11, 169, 9)',
+                    borderWidth: 1
+                };
+                const dataset3 = {
+                    label: 'Lulus Seleksi',
+                    data: cleanedData.map(entry => entry.lulusSeleksi),
+                    backgroundColor: 'rgba(7, 129, 22, 0.28)',
+                    borderColor: 'rgb(11, 169, 9)',
+                    borderWidth: 1
+                };
+
+                renderChart('chart-1', 'bar', labels, [dataset1]);
+                renderChart('chart-2', 'bar', labels, [dataset2, dataset3]);
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
             }
         });
+
+        function renderChart(canvasId, type, labels, datasets) {
+            new Chart(document.getElementById(canvasId), {
+                type: type,
+                data: { labels: labels, datasets: datasets },
+                options: { scales: { y: { beginAtZero: true } } }
+            });
+        }
+    });
     </script>
 @endsection

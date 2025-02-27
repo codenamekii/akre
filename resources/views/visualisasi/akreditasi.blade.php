@@ -16,9 +16,6 @@
                                 <th scope="col">No</th>
                                 <th scope="col">Predikat</th>
                                 <th scope="col">S1</th>
-                                <th scope="col">S2</th>
-                                <th scope="col">S3</th>
-                                <th scope="col">Profesi</th>
                                 <th scope="col">Jumlah</th>
                             </tr>
                         </thead>
@@ -61,9 +58,6 @@
                         row.append('<th scope="row">' + (index + 1) + '</th>');
                         row.append('<td>' + entry['Predikat'] + '</td>');
                         row.append('<td>' + entry['S1'] + '</td>');
-                        row.append('<td>' + entry['S2'] + '</td>');
-                        row.append('<td>' + entry['S3'] + '</td>');
-                        row.append('<td>' + entry['Profesi'] + '</td>');
                         row.append('<td>' + entry['Jumlah'] + '</td>');
                         $('#dataTableBody').append(row);
                     });

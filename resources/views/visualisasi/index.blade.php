@@ -30,9 +30,6 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                           <li><a class="dropdown-item" href="/visualisasi/mahasiswa/calon-mahasiswa/S1">S1</a></li>
-                                          <li><a class="dropdown-item" href="/visualisasi/mahasiswa/calon-mahasiswa/S2">S2</a></li>
-                                          <li><a class="dropdown-item" href="/visualisasi/mahasiswa/calon-mahasiswa/S3">S3</a></li>
-                                          <li><a class="dropdown-item" href="/visualisasi/mahasiswa/calon-mahasiswa/Profesi">Profesi</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -48,9 +45,6 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-baru/S1">S1</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-baru/S2">S2</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-baru/S3">S3</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-baru/Profesi">Profesi</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -66,9 +60,6 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-aktif/S1">S1</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-aktif/S2">S2</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-aktif/S3">S3</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-aktif/Profesi">Profesi</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -84,9 +75,6 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-lulusan/S1">S1</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-lulusan/S2">S2</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-lulusan/S3">S3</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/mahasiswa-lulusan/Profesi">Profesi</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -102,9 +90,6 @@
                                         </button>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="/visualisasi/mahasiswa/rasio-kelulusan/S1">S1</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/rasio-kelulusan/S2">S2</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/rasio-kelulusan/S3">S3</a></li>
-                                            <li><a class="dropdown-item" href="/visualisasi/mahasiswa/rasio-kelulusan/Profesi">Profesi</a></li>
                                         </ul>
                                     </div>
                                 </div>

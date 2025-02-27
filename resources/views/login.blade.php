@@ -18,7 +18,7 @@
         
         <div class="text" data-aos="fade-up" data-aos-duration="800">
           <div class="carousel">
-            <span class="text-1">Selamat Datang <br> Di Website AIPT UIN Sumatera Utara</span>
+            <span class="text-1">Selamat Datang <br> Di Website Bank Data Akreditasi</span>
             <span class="text-1" style="display: none;">Terima Kasih <br> Telah Menggunakan Layanan Kami</span>
             <!-- Add additional text items here -->
           </div>
