@@ -408,7 +408,7 @@
           <div class="content wow fadeInUp" data-wow-delay=".5s">
             <h3>Laboratorium Teknik Informatika</h3>								
             <p>Laboratorium Komputer yang digunakan oleh Teknik Informatika</p>
-            <a href="https://sutomo.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+            <a href="https://ft.uim-makassar.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
           </div>
         </div>
       </div>
@@ -420,7 +420,7 @@
           <div class="content wow fadeInUp" data-wow-delay=".5s">
             <h3>Laboratorium Teknik Elektro</h3>
             <p>Laboratorium Komputer yang digunakan oleh Teknik Elektro</p>
-            <a href="https://pancing.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+            <a href="https://ft.uim-makassar.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
           </div>
         </div>
       </div>
@@ -432,7 +432,7 @@
           <div class="content wow fadeInUp" data-wow-delay=".5s">
             <h3>Laboratorium Teknik Mesin</h3>
             <p>Laboratorium Komputer yang digunakan oleh Teknik Mesin</p>
-            <a href="https://pancing.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+            <a href="https://ft.uim-makassar.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
           </div>
         </div>
       </div>
@@ -444,7 +444,7 @@
           <div class="content wow fadeInUp" data-wow-delay=".5s">
             <h3>Laboratorium Teknik Industri</h3>
             <p>Laboratorium Komputer yang digunakan oleh Teknik Industri</p>
-            <a href="https://pancing.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+            <a href="https://ft.uim-makassar.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
           </div>
         </div>
       </div>
@@ -456,7 +456,7 @@
           <div class="content wow fadeInUp" data-wow-delay=".5s">
             <h3>Laboratorium Teknik Sipil</h3>
             <p>Laboratorium Komputer yang digunakan oleh Teknik Sipil</p>
-            <a href="https://tuntungan.uinsu.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
+            <a href="https://ft.uim-makassar.ac.id/" class="button-sm radius-30 mt-2">Kunjungi <i class="lni lni-angle-double-right"></i></a>
           </div>
         </div>
       </div>

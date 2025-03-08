@@ -20,21 +20,21 @@
         <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
           <h3 class="footer-titel">Layanan</h3>
           <ul class="footer-link">
-            <li><a href="/daftar-dokumen">simuim</a></li>
-            <li><a href="/visualisasi">Website Resmi</a></li>
+            <li><a href="https://simuim.uim-makassar.ac.id/siakad/">simuim</a></li>
+            <li><a href="https://ft.uim-makassar.ac.id/">Website Resmi</a></li>
             <li><a href="/daftar-dokumen">Dokumen</a></li>
-            <li><a href="https://uinsu.ac.id">Visi & Misi</a></li>           
-            <li><a href="https://uinsu.ac.id">Layanan Akademik</a></li>           
+            <li><a href="https://ft.uim-makassar.ac.id/">Visi & Misi</a></li>           
+            <li><a href="https://ft.uim-makassar.ac.id/">Layanan Akademik</a></li>           
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
           <h3 class="footer-titel">Informasi</h3>
           <ul class="footer-link">
-            <li><a href="https://uinsu.ac.id">Berita</a></li>
-            <li><a href="https://uinsu.ac.id">Pengumuman</a></li>
-            <li><a href="https://uinsu.ac.id">Survey Online</a></li>
-            <li><a href="https://uinsu.ac.id">Tracer Studi</a></li>
-            <li><a href="https://uinsu.ac.id">Struktur Organisasi FT-UIM</a></li>
+            <li><a href="https://ft.uim-makassar.ac.id/">Berita</a></li>
+            <li><a href="https://ft.uim-makassar.ac.id/">Pengumuman</a></li>
+            <li><a href="https://ft.uim-makassar.ac.id/">Survey Online</a></li>
+            <li><a href="https://ft.uim-makassar.ac.id/">Tracer Studi</a></li>
+            <li><a href="https://ft.uim-makassar.ac.id/">Struktur Organisasi FT-UIM</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
@@ -59,7 +59,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="copyright-content">
-            <p>Copyright © 2024 <a rel="nofollow" href="#">Taufiqurrahman</a> All Right Reserved</p>
+            <p>Copyright © 2024 <a rel="nofollow" href="https://kiifiki.netlify.app/">Taufiqurrahman</a> All Right Reserved</p>
           </div>
         </div>
       </div>

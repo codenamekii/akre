@@ -1,7 +1,7 @@
-<p align="center"><a href="https://uinsu.ac.id" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Logo-UIN-SU-Medan-PNG-1.png" width="300" alt="UINSU Logo"></a></p>
+<p align="center"><a href="https://ft.uim-makassar.ac.id/" target="_blank"><img src="https://id.wikipedia.org/wiki/Universitas_Islam_Makassar#/media/Berkas:LOGO_UIM_.png" width="300" alt="UIM Logo"></a></p>
 
-# Assesmen Lapangan Akreditasi Institusi Perguruan Tinggi (AIPT)
-Assessmen Lapangan dalam konteks akreditasi institusi perguruan tinggi merujuk pada tahap evaluasi langsung yang dilakukan oleh tim akreditasi ke lokasi fisik institusi. Proses ini seringkali merupakan tahap kunci dalam proses akreditasi yang bertujuan untuk mendapatkan pemahaman yang lebih mendalam tentang operasi, fasilitas, dan kualitas pendidikan yang ditawarkan oleh institusi perguruan tinggi tersebut.
+# Sistem Informasi Akreditasi Program Studi (SIAKSI)
+Sistem Informasi Akreditasi Program Studi Universitas Islam Makassar merujuk pada tahap evaluasi langsung yang dilakukan oleh tim akreditasi ke lokasi fisik institusi. Proses ini seringkali merupakan tahap kunci dalam proses akreditasi yang bertujuan untuk mendapatkan pemahaman yang lebih mendalam tentang operasi, fasilitas, dan kualitas pendidikan yang ditawarkan oleh institusi perguruan tinggi tersebut.
 
 ### Tujuan AIPT
 <ol>
