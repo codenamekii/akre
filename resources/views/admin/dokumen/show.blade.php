@@ -16,7 +16,7 @@
           <div class="text">
             <h4 class="pe-4" style="font-size:1.2rem; ">{{ $dokumen->nama }}</h4>
             <p class="text-secondary pb-3">
-              {{ __(($dokumen->kriteria > 9 ? ['Kondisi Eksternal', 'Profil Institusi', 'Analisis & Penetapan Program Pengembangan'][$dokumen->kriteria-10] : 'Kriteria '.$dokumen->kriteria)) }}
+              {{ __(($dokumen->kriteria > 9 ? ['Mutu Internal', 'Profil Fakultas & Prodi', 'Analisis & Penetapan Program Pengembangan'][$dokumen->kriteria-10] : 'Kriteria '.$dokumen->kriteria)) }}
             </p>
             <p style="font-size:1.3rem; "> {{ $dokumen->sub_kriteria }}</p>
             <p>{{ $dokumen->catatan }}</p>

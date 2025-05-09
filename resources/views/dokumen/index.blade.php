@@ -16,8 +16,8 @@
           @for ($i = 1; $i <= 9; $i++)
           <option value="{{ $i }}" {{ request()->input('kriteria') == $i ? 'selected' : '' }}>{{ 'Kriteria '.$i }}</option>
           @endfor
-          <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Kondisi Eksternal</option>
-          <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Institusi</option>
+          <option value="10" {{ request()->input('kriteria') == '10' ? 'selected' : '' }}>Mutu Internal</option>
+          <option value="11" {{ request()->input('kriteria') == '11' ? 'selected' : '' }}>Profil Fakultas & Prodi</option>
           <option value="12" {{ request()->input('kriteria') == '12' ? 'selected' : '' }}>Gugus Jaminan Mutu</option>
         </select>
         <select class="form-select p2  bg-success text-light shadow" name="tipe" id="" style="width: 60px;">
@@ -58,7 +58,7 @@
             <div class="text">
               <h4 class="pe-4">{{ $dokumen->nama }}</h4>
               <p class="text-secondary pb-3">
-                {{ __(($dokumen->kriteria > 9 ? ['Kondisi Eksternal', 'Profil Institusi', 'Analisis & Penetapan Program Pengembangan'][$dokumen->kriteria-10] : 'Kriteria '.$dokumen->kriteria)) }}
+                {{ __(($dokumen->kriteria > 9 ? ['Mutu Internal', 'Profil Fakultas & Prodi', 'Analisis & Penetapan Program Pengembangan'][$dokumen->kriteria-10] : 'Kriteria '.$dokumen->kriteria)) }}
               </p>
               <p>{{ $dokumen->catatan }}</p>
               <span class="d-flex justify-content-end"><p class="float-end">{{ \Carbon\Carbon::parse($dokumen->updated_at)->translatedFormat('d F Y') }}</p></span>

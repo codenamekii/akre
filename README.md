@@ -3,7 +3,7 @@
 # Sistem Informasi Akreditasi Program Studi (SIAKSI)
 Sistem Informasi Akreditasi Program Studi Universitas Islam Makassar merujuk pada tahap evaluasi langsung yang dilakukan oleh tim akreditasi ke lokasi fisik institusi. Proses ini seringkali merupakan tahap kunci dalam proses akreditasi yang bertujuan untuk mendapatkan pemahaman yang lebih mendalam tentang operasi, fasilitas, dan kualitas pendidikan yang ditawarkan oleh institusi perguruan tinggi tersebut.
 
-### Tujuan AIPT
+### SIAKSI FITUR
 <ol>
   <li>Verifikasi informasi yang disediakan oleh institusi.</li>
   <li>Evaluasi kualitas fasilitas dan infrastruktur.</li>

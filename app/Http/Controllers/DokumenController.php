@@ -28,8 +28,8 @@ class DokumenController extends Controller
             7 => 'Kriteria 7',
             8 => 'Kriteria 8',
             9 => 'Kriteria 9',
-            10 => 'Kondisi Eksternal',
-            11 => 'Profil Institusi',
+            10 => 'Mutu Internal',
+            11 => 'Profil Fakultas & Prodi',
             12 => 'Gugus Jaminan Mutu',
         ];
         $h2 = $h2s[$kriteria];

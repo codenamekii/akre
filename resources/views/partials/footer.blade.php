@@ -9,11 +9,11 @@
             <div class="textwidget">
             </div>
             <div class="social-icon" style="justify-content: center;">
-              <a class="facebook" href="https://www.facebook.com/uinsuofficial/"><i class="lni-facebook-filled"></i></a>
-              <a class="twitter" href="https://www.instagram.com/uinsu_official/"><i class="lni lni-x"></i></a>
-              <a class="instagram" href="https://twitter.com/UINSumutMedan"><i class="lni-instagram-filled"></i></a>
-              <a class="instagram" href="https://twitter.com/UINSumutMedan"><i class="lni lni-tiktok"></i></a>
-              <a class="instagram" href="https://twitter.com/UINSumutMedan"><i class="lni lni-github"></i></a>
+              <a class="facebook" href=""><i class="lni-facebook-filled"></i></a>
+              <a class="twitter" href=""><i class="lni lni-x"></i></a>
+              <a class="instagram" href=""><i class="lni-instagram-filled"></i></a>
+              <a class="instagram" href=""><i class="lni lni-tiktok"></i></a>
+              <a class="instagram" href=""><i class="lni lni-github"></i></a>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@
           <h3 class="footer-titel">Kontak</h3>
           <ul class="address">
             <li>
-              <a href="#"><i class="lni-map-marker"></i>Jl. Perintis Kemerdekaan No.KM.9 Tamalanrea <br> Indah, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245</a>
+              <a href="https://g.co/kgs/gR1RyUJ"><i class="lni-map-marker"></i>Jl. Perintis Kemerdekaan No.KM.9 Tamalanrea <br> Indah, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245</a>
             </li>
             <li>
               <a href="#"><i class="lni-phone-handset"></i>+6282296444165</a>

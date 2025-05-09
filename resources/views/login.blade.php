@@ -41,8 +41,7 @@
               <div class="title">Login </div>
             </div>
             <div class="col-3">
-              <span><img src="https://newuinsu.uinsu.ac.id/wp-content/uploads/2024/02/uin-dan-blu-png-2.png"
-                  alt=""></span>
+              <span><img src="" alt=""></span>
             </div>
           </div>
           @if (session()->has('error'))
